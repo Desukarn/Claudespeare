@@ -23,6 +23,13 @@ For YOLO mode projects: transforms fuzzy concepts into workable premises with ba
 
 See: yolo-expand.md
 
+### `/write:style`
+Analyze writing samples and define voice (STYLE.md)
+
+Define your writing style through sample analysis and voice configuration. Analyzes 2-3 sample paragraphs for measurable patterns (sentence length, vocabulary level, tone markers) and combines with explicit voice preferences (POV, tense, formality, narrative distance). Creates STYLE.md profile for use in chapter generation.
+
+See: style-seed.md
+
 ### Future Commands
 
 <!-- Placeholder for future commands -->
