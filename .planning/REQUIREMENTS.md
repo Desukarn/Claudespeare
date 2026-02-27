@@ -80,10 +80,10 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **FLOW-01**: Writer can start new project with `/write:new-project` (comprehensive initialization like GSD)
 - [x] **FLOW-02**: System asks clarifying questions during project initialization
 - [x] **FLOW-03**: System presents options at each workflow step (like GSD does)
-- [ ] **FLOW-04**: Writer can run `/write:discuss-phase N` before planning each phase
-- [ ] **FLOW-05**: Discussion phase asks adaptive questions to clarify phase goals
-- [ ] **FLOW-06**: Workflow follows consistent pattern: new project → discuss → plan → execute → revisions → next phase
-- [ ] **FLOW-07**: System provides clear next-step guidance after each command completion
+- [x] **FLOW-04**: Writer can run `/write:discuss-phase N` before planning each phase
+- [x] **FLOW-05**: Discussion phase asks adaptive questions to clarify phase goals
+- [x] **FLOW-06**: Workflow follows consistent pattern: new project → discuss → plan → execute → revisions → next phase
+- [x] **FLOW-07**: System provides clear next-step guidance after each command completion
 
 ### Character Bank
 - [ ] **BANK-01**: System maintains persistent character database across all chapters
@@ -194,10 +194,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | FLOW-01 | Phase 4 | Complete |
 | FLOW-02 | Phase 4 | Complete |
 | FLOW-03 | Phase 4 | Complete |
-| FLOW-04 | Phase 4 | Pending |
-| FLOW-05 | Phase 4 | Pending |
-| FLOW-06 | Phase 4 | Pending |
-| FLOW-07 | Phase 4 | Pending |
+| FLOW-04 | Phase 4 | Complete |
+| FLOW-05 | Phase 4 | Complete |
+| FLOW-06 | Phase 4 | Complete |
+| FLOW-07 | Phase 4 | Complete |
 | BANK-01 | Phase 4 | Pending |
 | BANK-02 | Phase 4 | Pending |
 | BANK-03 | Phase 4 | Pending |
