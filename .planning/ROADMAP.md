@@ -81,10 +81,12 @@ Plans:
   9. Writer can compile full manuscript from all chapters
   10. Exported files follow standard manuscript format (title page, headers, page numbers)
   11. Writer can export to .txt format for submission platforms
-**Plans**: TBD
+**Plans**: 3 plans in 1 wave
 
 Plans:
-- [ ] TBD
+- [ ] 03-01-PLAN.md — Consistency checking system with 5 violation types
+- [ ] 03-02-PLAN.md — Length-adapted pacing guidance and chapter recommendations
+- [ ] 03-03-PLAN.md — Manuscript export with 3 formats (markdown, text, standard manuscript)
 
 ## Progress
 
@@ -95,4 +97,4 @@ Phases execute in numeric order: 1 → 2 → 3
 |-------|----------------|--------|-----------|
 | 1. Project Foundation & Adaptive Story Setup | 0/3 | Planned | - |
 | 2. Style-Aware Writing & Comprehensive AI Detection | 0/4 | Planned | - |
-| 3. Consistency, Pacing & Export | 0/TBD | Not started | - |
+| 3. Consistency, Pacing & Export | 0/3 | Planned | - |
