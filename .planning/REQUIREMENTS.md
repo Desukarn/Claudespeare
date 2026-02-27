@@ -86,19 +86,19 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **FLOW-07**: System provides clear next-step guidance after each command completion
 
 ### Character Bank
-- [ ] **BANK-01**: System maintains persistent character database across all chapters
-- [ ] **BANK-02**: Writer can add new characters to bank with full profile
-- [ ] **BANK-03**: Writer can update character details in bank
-- [ ] **BANK-04**: Writer can query character bank for specific character
-- [ ] **BANK-05**: System auto-populates character bank from planning phase
-- [ ] **BANK-06**: Chapter generation references character bank for consistency
+- [x] **BANK-01**: System maintains persistent character database across all chapters
+- [x] **BANK-02**: Writer can add new characters to bank with full profile
+- [x] **BANK-03**: Writer can update character details in bank
+- [x] **BANK-04**: Writer can query character bank for specific character
+- [x] **BANK-05**: System auto-populates character bank from planning phase
+- [x] **BANK-06**: Chapter generation references character bank for consistency
 
 ### Version Control
-- [ ] **VER-01**: System tracks chapter revision history
-- [ ] **VER-02**: Writer can view previous versions of a chapter
-- [ ] **VER-03**: Writer can restore previous chapter version
-- [ ] **VER-04**: System maintains revision metadata (timestamp, revision number)
-- [ ] **VER-05**: Writer can compare two versions of same chapter
+- [x] **VER-01**: System tracks chapter revision history
+- [x] **VER-02**: Writer can view previous versions of a chapter
+- [x] **VER-03**: Writer can restore previous chapter version
+- [x] **VER-04**: System maintains revision metadata (timestamp, revision number)
+- [x] **VER-05**: Writer can compare two versions of same chapter
 
 ## v2 Requirements
 
@@ -198,17 +198,17 @@ Which phases cover which requirements. Updated during roadmap creation.
 | FLOW-05 | Phase 4 | Complete |
 | FLOW-06 | Phase 4 | Complete |
 | FLOW-07 | Phase 4 | Complete |
-| BANK-01 | Phase 4 | Pending |
-| BANK-02 | Phase 4 | Pending |
-| BANK-03 | Phase 4 | Pending |
-| BANK-04 | Phase 4 | Pending |
-| BANK-05 | Phase 4 | Pending |
-| BANK-06 | Phase 4 | Pending |
-| VER-01 | Phase 4 | Pending |
-| VER-02 | Phase 4 | Pending |
-| VER-03 | Phase 4 | Pending |
-| VER-04 | Phase 4 | Pending |
-| VER-05 | Phase 4 | Pending |
+| BANK-01 | Phase 4 | Complete |
+| BANK-02 | Phase 4 | Complete |
+| BANK-03 | Phase 4 | Complete |
+| BANK-04 | Phase 4 | Complete |
+| BANK-05 | Phase 4 | Complete |
+| BANK-06 | Phase 4 | Complete |
+| VER-01 | Phase 4 | Complete |
+| VER-02 | Phase 4 | Complete |
+| VER-03 | Phase 4 | Complete |
+| VER-04 | Phase 4 | Complete |
+| VER-05 | Phase 4 | Complete |
 
 **Coverage:**
 - v1 requirements: 65 total
