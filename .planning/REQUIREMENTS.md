@@ -77,9 +77,9 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **OUT-04**: Writer can export to .txt for submission platforms
 
 ### Workflow Orchestration
-- [ ] **FLOW-01**: Writer can start new project with `/write:new-project` (comprehensive initialization like GSD)
-- [ ] **FLOW-02**: System asks clarifying questions during project initialization
-- [ ] **FLOW-03**: System presents options at each workflow step (like GSD does)
+- [x] **FLOW-01**: Writer can start new project with `/write:new-project` (comprehensive initialization like GSD)
+- [x] **FLOW-02**: System asks clarifying questions during project initialization
+- [x] **FLOW-03**: System presents options at each workflow step (like GSD does)
 - [ ] **FLOW-04**: Writer can run `/write:discuss-phase N` before planning each phase
 - [ ] **FLOW-05**: Discussion phase asks adaptive questions to clarify phase goals
 - [ ] **FLOW-06**: Workflow follows consistent pattern: new project → discuss → plan → execute → revisions → next phase
@@ -191,9 +191,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | OUT-02 | Phase 3 | Pending |
 | OUT-03 | Phase 3 | Pending |
 | OUT-04 | Phase 3 | Pending |
-| FLOW-01 | Phase 4 | Pending |
-| FLOW-02 | Phase 4 | Pending |
-| FLOW-03 | Phase 4 | Pending |
+| FLOW-01 | Phase 4 | Complete |
+| FLOW-02 | Phase 4 | Complete |
+| FLOW-03 | Phase 4 | Complete |
 | FLOW-04 | Phase 4 | Pending |
 | FLOW-05 | Phase 4 | Pending |
 | FLOW-06 | Phase 4 | Pending |
