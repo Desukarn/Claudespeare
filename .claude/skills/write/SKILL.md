@@ -96,6 +96,77 @@ Export individual chapters or compile full manuscript in submission-ready format
 
 See: export.md
 
+## Character Management
+
+### `/write:character <name>`
+View character profile from persistent bank
+
+Query the character bank to view full profile for any character. Character bank lives in `.writing/characters/` and persists across all chapters. If character not in bank yet, offers to populate from CHARACTERS.md or create new entry. Use this to reference character details before writing scenes to ensure consistency. Essential for maintaining consistent voice, appearance, and behavior across chapters.
+
+**Retrieves:** Full character profile with appearance locks, voice markers, behavior patterns, goals, arc, and chapter references
+**When to use:** Before writing chapters, when referencing character details, to check consistency
+**Duration:** < 1 minute
+
+See: character-bank.md
+
+### `/write:update-character <name>`
+Update character details in bank
+
+Modify character profile in the bank: appearance, personality, voice markers, consistency locks, background, goals, arc. Updates timestamp and preserves existing information. Use after chapters where character develops or new details are revealed. Maintains single source of truth for character consistency.
+
+**Updates:** Any section of character profile (appearance, personality, background, goals, arc, chapter references)
+**When to use:** After character development moments, when new details revealed, to add chapter references
+**Duration:** 3-8 minutes depending on scope
+
+See: character-bank.md
+
+### `/write:populate-bank`
+Auto-populate character bank from CHARACTERS.md
+
+Create character bank entries automatically from existing CHARACTERS.md or yolo-characters.md file. Runs during project initialization or on-demand. Extracts character information and creates `.writing/characters/{slug}.md` files with comprehensive format. Initializes empty sections for consistency notes and chapter references.
+
+**Creates:** Character bank files in `.writing/characters/` directory
+**When to use:** During project setup, after planning phase, before writing first chapter
+**Duration:** 5-15 minutes depending on character count
+
+See: character-bank.md
+
+## Version Control
+
+### `/write:revisions <chapter-name>`
+View chapter revision history
+
+Display all saved versions of a chapter with timestamps, word counts, and notes. Shows version number, date, time, word count, change summary, and revision notes. Use this to track chapter development and decide if rollback is needed. Revisions are saved automatically every time a chapter is updated.
+
+**Shows:** Version history table with metadata, current version indicator, change summaries
+**When to use:** After multiple chapter revisions, before restoring version, to track chapter evolution
+**Duration:** < 1 minute
+
+See: chapter-versions.md
+
+### `/write:restore <chapter-name> <version>`
+Restore previous chapter version
+
+Roll back a chapter to a previous version. Shows preview before restoring. Current version is automatically saved as a new revision so no work is lost. Use when a revision didn't work out and you want to return to an earlier draft. Safe experimentation—all versions preserved.
+
+**Restores:** Any previous chapter version to current
+**Safety:** Current version saved before restore, no data lost
+**When to use:** After unsuccessful revision, to compare different approaches, to recover earlier draft
+**Duration:** 1-2 minutes
+
+See: chapter-versions.md
+
+### `/write:diff <chapter-name> <v1> <v2>`
+Compare two chapter versions
+
+View differences between two versions of a chapter. Shows word count changes and paragraph-level additions/deletions in human-readable format. Use to understand what changed between revisions. Helps identify improvement patterns and revision effectiveness.
+
+**Shows:** Word count delta, paragraph-level changes (added/removed/modified), change summaries
+**When to use:** To see evolution from first draft to current, to compare recent revisions, to learn revision patterns
+**Duration:** 2-5 minutes
+
+See: chapter-versions.md
+
 ### Future Commands
 
 <!-- Placeholder for future commands -->
@@ -108,11 +179,14 @@ See: export.md
 
 - Starting a new story project (short story, novella, or novel)
 - Developing characters, plot, and world-building
+- Managing persistent character database for consistency across chapters
 - Defining your unique writing style through sample analysis
 - Drafting chapters with consistent voice and style matching
+- Tracking chapter revisions with automatic version control
 - Detecting and removing AI-generated language patterns
 - Checking story consistency (character details, timeline, world rules, POV)
 - Getting length-adapted pacing guidance and chapter recommendations
+- Comparing chapter versions and restoring previous drafts
 - Exporting finished manuscripts in professional formats
 - Revising to ensure authentic human voice
 - Maintaining story consistency across chapters
@@ -126,12 +200,16 @@ See: export.md
 2. `/write:discuss-phase 1` - Clarify planning approach
 3. `/write:expand` (YOLO) or `/write:plan` (In-Depth) - Develop story foundation
 4. `/write:style` - Define writing voice (optional but recommended)
-5. `/write:discuss-phase 2` - Plan writing phase (which chapters, focus areas)
-6. `/write:chapter N` - Draft chapters one by one
-7. `/write:detect` - Check for AI language patterns
-8. `/write:check` - Validate consistency
-9. `/write:discuss-phase 3` - Plan revisions if needed
-10. `/write:export` - Compile finished manuscript
+5. `/write:populate-bank` - Create character bank from CHARACTERS.md (optional but recommended)
+6. `/write:discuss-phase 2` - Plan writing phase (which chapters, focus areas)
+7. `/write:chapter N` - Draft chapters (automatically references character bank, saves revisions)
+8. `/write:character <name>` - Query character details as needed during writing
+9. `/write:revisions <chapter>` - View chapter history if needed
+10. `/write:detect` - Check for AI language patterns
+11. `/write:check` - Validate consistency
+12. `/write:discuss-phase 3` - Plan revisions if needed
+13. `/write:restore <chapter> <version>` - Roll back if needed during revisions
+14. `/write:export` - Compile finished manuscript
 
 Repeat steps 5-8 for additional writing phases as story develops.
 
