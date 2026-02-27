@@ -67,6 +67,19 @@ Get story-specific pacing recommendations based on your word count goal and stor
 
 See: pacing-guide.md
 
+### `/write:export`
+
+Export individual chapters or compile full manuscript in submission-ready formats. Supports markdown (.md), plain text (.txt), and standard manuscript format (.txt with industry conventions). Compiles chapters in sequence, generates professional title pages, applies proper formatting (headers, scene breaks, page structure). Choose single chapter export, chapter range, or full manuscript. Output to exports/ directory with automatic timestamping.
+
+**Modes:** Single chapter, chapter range, full manuscript
+**Formats:** Markdown (preserves formatting), Plain text (clean readable), Standard manuscript (industry submission format)
+**Includes:** Title page generation, chapter compilation, scene break formatting, word count calculation, headers
+**Input:** Story project directory, export mode, format, optional title page
+**Output:** Formatted manuscript file in exports/ directory
+**Duration:** 5-15 minutes depending on manuscript length
+
+See: export.md
+
 ### Future Commands
 
 <!-- Placeholder for future commands -->
@@ -82,8 +95,15 @@ See: pacing-guide.md
 - Defining your unique writing style through sample analysis
 - Drafting chapters with consistent voice and style matching
 - Detecting and removing AI-generated language patterns
+- Checking story consistency (character details, timeline, world rules, POV)
+- Getting length-adapted pacing guidance and chapter recommendations
+- Exporting finished manuscripts in professional formats
 - Revising to ensure authentic human voice
 - Maintaining story consistency across chapters
+
+## Complete Workflow
+
+Initialize → Plan → Style seed → Write chapters → Detect AI patterns → Check consistency → Get pacing guidance → Export finished manuscript
 
 ## Workflow modes
 
