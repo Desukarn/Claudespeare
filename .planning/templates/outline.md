@@ -75,6 +75,7 @@ Example: Truth revealed, mentor's name cleared posthumously, protagonist earns r
 
 ---
 
+<!--LENGTH:novel-->
 ## Subplots
 
 ### {Subplot Name}
@@ -91,6 +92,7 @@ Example:
 **Thread:** {Description}
 
 ---
+<!--/LENGTH:novel-->
 
 ## Plot Threads to Track
 
@@ -101,6 +103,7 @@ Use these to ensure continuity and proper setup/payoff:
 - [ ] {Thread 3 - e.g., The rival's suspicious behavior}
 - [ ] {Thread 4 - e.g., Ancient prophecy mentions}
 
+<!--LENGTH:novel-->
 ## Pacing Notes
 
 **Act 1 (25%):** {Target word count or chapter count}
@@ -114,6 +117,7 @@ Use these to ensure continuity and proper setup/payoff:
 1. Chapter 1: {Brief scene summary}
 2. Chapter 2: {Brief scene summary}
 3. Chapter 3: {Brief scene summary}
+<!--/LENGTH:novel-->
 
 ---
 

@@ -33,6 +33,7 @@ See ARCS.md for character transformation tracking from start to end.
 ### World Building
 See WORLD.md for setting details, rules, culture, and consistency tracking.
 
+<!--LENGTH:novel-->
 ## Development Notes
 
 ### Story Inspiration
@@ -46,6 +47,7 @@ See WORLD.md for setting details, rules, culture, and consistency tracking.
 
 ### Planned Length
 {Target word count: novella 20-40k, novel 60-100k, epic 100k+}
+<!--/LENGTH:novel-->
 
 ## Progress Tracking
 
@@ -66,6 +68,8 @@ See WORLD.md for setting details, rules, culture, and consistency tracking.
 - [ ] AI language patterns detected and revised
 - [ ] Final polish complete
 
+<!--LENGTH:novel-->
 ## Notes
 
 {Space for ongoing development notes, ideas, and reminders}
+<!--/LENGTH:novel-->

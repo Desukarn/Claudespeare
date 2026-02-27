@@ -98,6 +98,7 @@ Example: Provides crucial information about the mentor's past, serves as voice o
 
 ---
 
+<!--LENGTH:novel-->
 ## Character Relationships
 
 {Map the connections between characters - alliances, conflicts, romantic interests, family bonds, rivalries}
@@ -114,3 +115,4 @@ Example:
 - Ensure each character sounds distinct in dialogue
 - Check that actions align with established traits
 - Track any character growth or changes through the story
+<!--/LENGTH:novel-->

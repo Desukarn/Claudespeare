@@ -79,7 +79,8 @@ Example: Begins to question rather than blindly accept mentor's explanations.
 
 ---
 
-#### 4. {Event/Scene Name - Optional}
+<!--LENGTH:novel-->
+#### 4. {Event/Scene Name}
 
 **What happens:**
 {Description}
@@ -91,6 +92,20 @@ Example: Begins to question rather than blindly accept mentor's explanations.
 {Transformation}
 
 ---
+
+#### 5. {Event/Scene Name}
+
+**What happens:**
+{Description}
+
+**What they learn:**
+{Lesson}
+
+**How they change:**
+{Transformation}
+
+---
+<!--/LENGTH:novel-->
 
 ### Ending Point
 
@@ -111,6 +126,7 @@ Example: Learned to trust own judgment over authority, willing to stand alone fo
 
 ---
 
+<!--LENGTH:novel-->
 ### Tracking
 
 Use this checklist to ensure the arc is properly executed:
@@ -122,6 +138,7 @@ Use this checklist to ensure the arc is properly executed:
 - [ ] Arc feels earned, not convenient for plot
 - [ ] Character's actions reflect their current state of growth
 - [ ] Other characters notice and react to the change
+<!--/LENGTH:novel-->
 
 ---
 

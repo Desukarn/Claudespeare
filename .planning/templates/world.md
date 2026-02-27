@@ -75,11 +75,13 @@ Example: Unauthorized magic use, questioning royal decrees, interfaith marriage,
 - {Custom 2 - e.g., Magic users must wear identifying robes}
 - {Custom 3 - e.g., Seasonal festivals celebrating harvest and winter solstice}
 
+<!--LENGTH:novel-->
 **Religion/Beliefs:**
 {Dominant faith or belief system, role in society}
 
 **Language:**
 {Any notable linguistic details, dialects, or how magic/tech affects language}
+<!--/LENGTH:novel-->
 
 ---
 
@@ -118,6 +120,7 @@ Example: Center of political and magical power; protagonist's home; site of clim
 
 ---
 
+<!--LENGTH:novel-->
 ## History
 
 ### Timeline
@@ -172,6 +175,7 @@ Before writing each scene, verify:
 - [ ] Geography and travel times are consistent
 - [ ] Historical references align with established timeline
 - [ ] Social hierarchies are maintained or challenged intentionally
+<!--/LENGTH:novel-->
 
 ---
 
