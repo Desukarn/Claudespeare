@@ -40,6 +40,10 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **WRITE-04**: System tracks plot threads to prevent dropped storylines
 - [ ] **WRITE-05**: Generated prose matches writer's style seed patterns
 - [ ] **WRITE-06**: System adapts output length based on story type (short story = concise, novel = detailed)
+- [ ] **WRITE-07**: Writer can set word count goals for project (short story: 1k-7.5k, novella: 7.5k-40k, novel: 40k+)
+- [ ] **WRITE-08**: System tracks current word count across all chapters
+- [ ] **WRITE-09**: System displays progress toward word count goal
+- [ ] **WRITE-10**: Writer can set chapter target word counts
 
 ### AI Language Detection
 - [ ] **AI-01**: System flags "delve/delved/delving" and suggests alternatives
