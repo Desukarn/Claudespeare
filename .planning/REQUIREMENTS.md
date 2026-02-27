@@ -46,16 +46,16 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **WRITE-10**: Writer can set chapter target word counts
 
 ### AI Language Detection
-- [ ] **AI-01**: System flags "delve/delved/delving" and suggests alternatives
-- [ ] **AI-02**: System flags "tapestry" and suggests alternatives
-- [ ] **AI-03**: System flags "navigate/navigated" and suggests alternatives
-- [ ] **AI-04**: System flags "testament to" and suggests alternatives
-- [ ] **AI-05**: System flags "juxtaposition" and suggests alternatives
-- [ ] **AI-06**: System flags overly formal academic language
-- [ ] **AI-07**: System flags "it's worth noting" and similar AI phrases
-- [ ] **AI-08**: System flags purple prose patterns
-- [ ] **AI-09**: System provides concrete replacement suggestions for each flagged phrase
-- [ ] **AI-10**: Writer can add custom phrases to detection list
+- [x] **AI-01**: System flags "delve/delved/delving" and suggests alternatives
+- [x] **AI-02**: System flags "tapestry" and suggests alternatives
+- [x] **AI-03**: System flags "navigate/navigated" and suggests alternatives
+- [x] **AI-04**: System flags "testament to" and suggests alternatives
+- [x] **AI-05**: System flags "juxtaposition" and suggests alternatives
+- [x] **AI-06**: System flags overly formal academic language
+- [x] **AI-07**: System flags "it's worth noting" and similar AI phrases
+- [x] **AI-08**: System flags purple prose patterns
+- [x] **AI-09**: System provides concrete replacement suggestions for each flagged phrase
+- [x] **AI-10**: Writer can add custom phrases to detection list
 
 ### Consistency Checking
 - [ ] **CONS-01**: System tracks character details (appearance, personality, background, voice)
@@ -146,16 +146,16 @@ Which phases cover which requirements. Updated during roadmap creation.
 | WRITE-04 | Phase 2 | Complete |
 | WRITE-05 | Phase 2 | Complete |
 | WRITE-06 | Phase 2 | Complete |
-| AI-01 | Phase 2 | Pending |
-| AI-02 | Phase 2 | Pending |
-| AI-03 | Phase 2 | Pending |
-| AI-04 | Phase 2 | Pending |
-| AI-05 | Phase 2 | Pending |
-| AI-06 | Phase 2 | Pending |
-| AI-07 | Phase 2 | Pending |
-| AI-08 | Phase 2 | Pending |
-| AI-09 | Phase 2 | Pending |
-| AI-10 | Phase 2 | Pending |
+| AI-01 | Phase 2 | Complete |
+| AI-02 | Phase 2 | Complete |
+| AI-03 | Phase 2 | Complete |
+| AI-04 | Phase 2 | Complete |
+| AI-05 | Phase 2 | Complete |
+| AI-06 | Phase 2 | Complete |
+| AI-07 | Phase 2 | Complete |
+| AI-08 | Phase 2 | Complete |
+| AI-09 | Phase 2 | Complete |
+| AI-10 | Phase 2 | Complete |
 | CONS-01 | Phase 3 | Pending |
 | CONS-02 | Phase 3 | Pending |
 | CONS-03 | Phase 3 | Pending |
