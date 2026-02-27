@@ -6,6 +6,9 @@
 **Genre:** {GENRE}
 **Status:** Planning
 **Created:** {DATE}
+**Word Count Goal:** {null or target like 50000}
+**Current Word Count:** 0
+**Target Chapters:** {null or estimated chapter count}
 
 ## Premise
 
@@ -50,6 +53,30 @@ See WORLD.md for setting details, rules, culture, and consistency tracking.
 <!--/LENGTH:novel-->
 
 ## Progress Tracking
+
+### Word Count
+
+**Goal:** {word_count_goal or "Not set"}
+**Current:** {current_word_count} words
+**Progress:** {percentage or "Set goal to track progress"}
+**Average per chapter:** {current/chapter_count or "-"} words
+
+**Setting your goal:**
+- Short story: Typically 1,000-7,500 words
+- Novella: Typically 7,500-40,000 words
+- Novel: Typically 40,000-100,000+ words
+
+*(Note: These are guidelines, not limits. Set any goal that fits your story.)*
+
+### Chapter Targets (Optional)
+
+Writers can define target word counts per chapter for pacing control.
+
+| Chapter | Target | Actual | Status |
+|---------|--------|--------|--------|
+| 1 | - | - | - |
+| 2 | - | - | - |
+| ... | - | - | - |
 
 ### Phase: Planning
 - [ ] Core concept defined
