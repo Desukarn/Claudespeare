@@ -81,37 +81,37 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| SETUP-01 | TBD | Pending |
-| SETUP-02 | TBD | Pending |
-| SETUP-03 | TBD | Pending |
-| SETUP-04 | TBD | Pending |
-| STORY-01 | TBD | Pending |
-| STORY-02 | TBD | Pending |
-| STORY-03 | TBD | Pending |
-| STORY-04 | TBD | Pending |
-| WRITE-01 | TBD | Pending |
-| WRITE-02 | TBD | Pending |
-| WRITE-03 | TBD | Pending |
-| WRITE-04 | TBD | Pending |
-| AI-01 | TBD | Pending |
-| AI-02 | TBD | Pending |
-| AI-03 | TBD | Pending |
-| AI-04 | TBD | Pending |
-| AI-05 | TBD | Pending |
-| AI-06 | TBD | Pending |
-| CONS-01 | TBD | Pending |
-| CONS-02 | TBD | Pending |
-| CONS-03 | TBD | Pending |
-| CONS-04 | TBD | Pending |
-| OUT-01 | TBD | Pending |
-| OUT-02 | TBD | Pending |
-| OUT-03 | TBD | Pending |
+| SETUP-01 | Phase 1 | Pending |
+| SETUP-02 | Phase 1 | Pending |
+| SETUP-03 | Phase 1 | Pending |
+| SETUP-04 | Phase 1 | Pending |
+| STORY-01 | Phase 1 | Pending |
+| STORY-02 | Phase 1 | Pending |
+| STORY-03 | Phase 1 | Pending |
+| STORY-04 | Phase 1 | Pending |
+| WRITE-01 | Phase 2 | Pending |
+| WRITE-02 | Phase 2 | Pending |
+| WRITE-03 | Phase 2 | Pending |
+| WRITE-04 | Phase 2 | Pending |
+| AI-01 | Phase 2 | Pending |
+| AI-02 | Phase 2 | Pending |
+| AI-03 | Phase 2 | Pending |
+| AI-04 | Phase 2 | Pending |
+| AI-05 | Phase 2 | Pending |
+| AI-06 | Phase 2 | Pending |
+| CONS-01 | Phase 3 | Pending |
+| CONS-02 | Phase 3 | Pending |
+| CONS-03 | Phase 3 | Pending |
+| CONS-04 | Phase 3 | Pending |
+| OUT-01 | Phase 3 | Pending |
+| OUT-02 | Phase 3 | Pending |
+| OUT-03 | Phase 3 | Pending |
 
 **Coverage:**
 - v1 requirements: 24 total
-- Mapped to phases: 0
-- Unmapped: 24 ⚠️
+- Mapped to phases: 24
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-02-27*
-*Last updated: 2026-02-27 after initial definition*
+*Last updated: 2026-02-26 after roadmap creation*
