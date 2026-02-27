@@ -46,10 +46,11 @@ Plans:
   4. System provides concrete replacement suggestions for each flagged phrase
   5. Character voices remain consistent across all generated content
   6. Plot threads are tracked to prevent dropped storylines
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 02-01: TBD
+- [ ] 02-01-PLAN.md — Chapter and scene generation templates with context awareness
+- [ ] 02-02-PLAN.md — AI language pattern detection library and workflow integration
 
 ### Phase 3: Consistency & Export
 **Goal**: Writers can verify story consistency and export completed manuscripts in standard format
@@ -74,5 +75,5 @@ Phases execute in numeric order: 1 → 2 → 3
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Project Foundation & Story Setup | 0/3 | Ready to execute | - |
-| 2. Writing System & AI Detection | 0/TBD | Not started | - |
+| 2. Writing System & AI Detection | 0/2 | Ready to plan | - |
 | 3. Consistency & Export | 0/TBD | Not started | - |
