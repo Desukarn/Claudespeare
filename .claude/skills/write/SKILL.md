@@ -1,11 +1,11 @@
 ---
 name: write
-description: Commands for creative writing workflow - story development from initialization through drafting and revision. Supports both quick-start (YOLO) and detailed planning (In-Depth) modes, with adaptive templates for different story lengths.
+description: Commands for creative writing workflow - story development from initialization through drafting and revision. Supports both quick-start (YOLO) and detailed planning (In-Depth) modes, with adaptive templates for different story lengths. Tracks full story context across chapters with style matching and consistency features.
 ---
 
 # Write - Story Development Skill
 
-Commands for structured creative writing workflow.
+Commands for structured creative writing workflow with context-aware chapter generation.
 
 ## Commands
 
@@ -29,6 +29,13 @@ Analyze writing samples and define voice (STYLE.md)
 Define your writing style through sample analysis and voice configuration. Analyzes 2-3 sample paragraphs for measurable patterns (sentence length, vocabulary level, tone markers) and combines with explicit voice preferences (POV, tense, formality, narrative distance). Creates STYLE.md profile for use in chapter generation.
 
 See: style-seed.md
+
+### `/write:chapter`
+Generate chapters and scenes with story context (chapters/*.md)
+
+Write chapters with full story awareness - matches your style seed, maintains character voices, tracks plot threads, and adapts output length to story type. Loads STYLE.md, CHARACTERS.md, OUTLINE.md, ARCS.md, WORLD.md, and existing chapters for consistency. Generates prose scene-by-scene for long chapters or single-pass for short chapters.
+
+See: write-chapter.md
 
 ### Future Commands
 
