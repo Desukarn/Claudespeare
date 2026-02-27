@@ -9,10 +9,19 @@ Commands for structured creative writing workflow with context-aware chapter gen
 
 ## Commands
 
-### `/write:init`
-Initialize new story project
+### `/write:new-project`
+Initialize new story project with guided setup
 
-Creates project directory structure and captures foundational story information (title, genre, premise, story length, workflow mode).
+Comprehensive project initialization with clarifying questions and option presentation. Asks about story length (short story, novella, novel), workflow mode (YOLO vs In-Depth), genre, premise, and optional goals. Creates project directory with all necessary template files. Provides clear next steps based on your choices.
+
+This is the recommended starting point for new users. Experience similar to GSD's new-project workflow with clear option presentation, validation, and guidance.
+
+See: new-project.md
+
+### `/write:init`
+Initialize new story project (quick setup)
+
+Direct project initialization for advanced users who know their preferences. Creates project directory structure and captures foundational story information (title, genre, premise, story length, workflow mode) with minimal prompting.
 
 See: init-project.md
 
@@ -103,7 +112,9 @@ See: export.md
 
 ## Complete Workflow
 
-Initialize → Plan → Style seed → Write chapters → Detect AI patterns → Check consistency → Get pacing guidance → Export finished manuscript
+New project → Plan (YOLO: expand | In-Depth: plan) → Style seed → Write chapters → Detect AI patterns → Check consistency → Get pacing guidance → Export finished manuscript
+
+**Starting point:** Run `/write:new-project` for guided setup with clear options, or `/write:init` for quick direct setup.
 
 ## Workflow modes
 
