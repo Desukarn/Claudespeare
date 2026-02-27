@@ -2,7 +2,7 @@
 
 ## Overview
 
-Claudespeare transforms Claude Code into a structured creative writing environment. Phase 1 establishes the project foundation and story setup workflow. Phase 2 builds the core writing system with integrated AI language detection to flag common AI patterns. Phase 3 adds consistency checking and manuscript export capabilities, completing the v1 writer's toolkit.
+Claudespeare transforms Claude Code into a structured creative writing environment supporting both quick-start (YOLO) and in-depth workflows for short stories through novels. Phase 1 establishes dual-mode project initialization with story length adaptation. Phase 2 builds the core writing system with style seeding and comprehensive AI language detection (10 patterns). Phase 3 adds consistency checking and manuscript export capabilities, completing the v1 writer's toolkit.
 
 ## Phases
 
@@ -12,60 +12,71 @@ Claudespeare transforms Claude Code into a structured creative writing environme
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Project Foundation & Story Setup** - Initialize story projects and define story elements
-- [ ] **Phase 2: Writing System & AI Detection** - Core writing workflow with AI pattern detection
-- [ ] **Phase 3: Consistency & Export** - Consistency checking and manuscript output
+- [ ] **Phase 1: Project Foundation & Adaptive Story Setup** - Initialize projects with story length, workflow mode (YOLO vs In-Depth), and complete story elements
+- [ ] **Phase 2: Style-Aware Writing & Comprehensive AI Detection** - Core writing workflow with style seeding and 10-pattern AI detection
+- [ ] **Phase 3: Consistency, Pacing & Export** - Consistency checking, length-adapted pacing, and manuscript output
 
 ## Phase Details
 
-### Phase 1: Project Foundation & Story Setup
-**Goal**: Writers can initialize new story projects with all foundational story elements defined
+### Phase 1: Project Foundation & Adaptive Story Setup
+**Goal**: Writers can initialize story projects with configurable depth (short story vs novel, YOLO vs In-Depth mode) and define all foundational story elements
 **Depends on**: Nothing (first phase)
-**Requirements**: SETUP-01, SETUP-02, SETUP-03, SETUP-04, STORY-01, STORY-02, STORY-03, STORY-04
+**Requirements**: INIT-01, INIT-02, INIT-03, INIT-04, INIT-05, YOLO-01, YOLO-02, YOLO-03, YOLO-04, STORY-01, STORY-02, STORY-03, STORY-04, STORY-05, LENGTH-01, LENGTH-02
 **Success Criteria** (what must be TRUE):
-  1. Writer can create new story project with title, genre, premise, and themes
-  2. Writer can define character profiles with names, roles, and personality traits
-  3. Writer can outline plot structure with major story beats
-  4. Writer can document character arcs and world-building details
-  5. All story elements are stored and retrievable for later phases
-**Plans**: 3 plans
-
-Plans:
-- [ ] 01-01-PLAN.md — Project initialization structure and templates
-- [ ] 01-02-PLAN.md — Character and plot development templates
-- [ ] 01-03-PLAN.md — Character arc and world-building templates
-
-### Phase 2: Writing System & AI Detection
-**Goal**: Writers can generate chapters and scenes with automatic AI language pattern detection
-**Depends on**: Phase 1
-**Requirements**: WRITE-01, WRITE-02, WRITE-03, WRITE-04, AI-01, AI-02, AI-03, AI-04, AI-05, AI-06
-**Success Criteria** (what must be TRUE):
-  1. Writer can generate chapters with story context awareness
-  2. Writer can generate scenes within chapters
-  3. System flags AI language patterns (delve, tapestry, navigate, testament to, overly formal language) during writing
-  4. System provides concrete replacement suggestions for each flagged phrase
-  5. Character voices remain consistent across all generated content
-  6. Plot threads are tracked to prevent dropped storylines
-**Plans**: 2 plans
-
-Plans:
-- [ ] 02-01-PLAN.md — Chapter and scene generation templates with context awareness
-- [ ] 02-02-PLAN.md — AI language pattern detection library and workflow integration
-
-### Phase 3: Consistency & Export
-**Goal**: Writers can verify story consistency and export completed manuscripts in standard format
-**Depends on**: Phase 2
-**Requirements**: CONS-01, CONS-02, CONS-03, CONS-04, OUT-01, OUT-02, OUT-03
-**Success Criteria** (what must be TRUE):
-  1. System tracks character details (appearance, personality, background) across all chapters
-  2. System flags character inconsistencies when detected
-  3. System tracks timeline events and world rules, flagging violations
-  4. Writer can export individual chapters as properly formatted markdown files
-  5. Writer can compile full manuscript from all chapters in standard manuscript format
+  1. Writer can select story length (short story, novella, novel) and system adapts template depth accordingly
+  2. Writer can choose YOLO mode (quick start from vague idea) or In-Depth mode (detailed planning)
+  3. In YOLO mode: Writer provides vague idea, system expands to premise, generates basic character sketches, and suggests simple plot structure
+  4. In In-Depth mode: Writer can create detailed character profiles (name, role, personality, background, voice)
+  5. In In-Depth mode: Writer can outline plot structure with major beats, define character arcs, document world-building, and define themes/motifs
+  6. Short story projects use lighter templates (minimal planning), novel projects use extensive templates (full planning depth)
+  7. All story elements are stored in structured files and retrievable for later phases
+  8. Writer can skip directly to writing phase in YOLO mode without extensive planning
 **Plans**: TBD
 
 Plans:
-- [ ] 03-01: TBD
+- [ ] TBD
+
+### Phase 2: Style-Aware Writing & Comprehensive AI Detection
+**Goal**: Writers can generate prose matching their personal style with comprehensive AI language pattern detection and removal
+**Depends on**: Phase 1
+**Requirements**: STYLE-01, STYLE-02, STYLE-03, STYLE-04, WRITE-01, WRITE-02, WRITE-03, WRITE-04, WRITE-05, WRITE-06, AI-01, AI-02, AI-03, AI-04, AI-05, AI-06, AI-07, AI-08, AI-09, AI-10
+**Success Criteria** (what must be TRUE):
+  1. Writer can provide sample paragraphs of desired writing style for system analysis
+  2. System analyzes style samples for patterns (sentence length, vocabulary, tone, formality)
+  3. Writer can define voice characteristics (POV, tense, formality level)
+  4. Writer can generate chapters and scenes with story context awareness
+  5. Generated prose matches writer's style seed patterns (sentence structure, vocabulary, tone)
+  6. System maintains character voice consistency across chapters
+  7. System tracks plot threads to prevent dropped storylines
+  8. System adapts output length based on story type (short story = concise, novel = detailed descriptions)
+  9. System flags 10 AI language patterns: "delve/delved/delving", "tapestry", "navigate/navigated", "testament to", "juxtaposition", overly formal academic language, "it's worth noting" phrases, purple prose patterns
+  10. System provides concrete replacement suggestions for each flagged phrase
+  11. Writer can add custom phrases to detection list
+**Plans**: TBD
+
+Plans:
+- [ ] TBD
+
+### Phase 3: Consistency, Pacing & Export
+**Goal**: Writers can verify story consistency with length-adapted pacing guidance and export completed manuscripts in standard format
+**Depends on**: Phase 2
+**Requirements**: CONS-01, CONS-02, CONS-03, CONS-04, CONS-05, LENGTH-03, LENGTH-04, OUT-01, OUT-02, OUT-03, OUT-04
+**Success Criteria** (what must be TRUE):
+  1. System tracks character details (appearance, personality, background, voice) across all chapters
+  2. System flags character inconsistencies when detected (e.g., eye color changes, voice shifts)
+  3. System tracks timeline events and flags continuity errors
+  4. System tracks world rules and flags violations
+  5. System maintains POV consistency within scenes
+  6. System suggests appropriate chapter count based on story type (short story vs novel)
+  7. System provides pacing guidance adapted to story length
+  8. Writer can export individual chapters as properly formatted markdown files
+  9. Writer can compile full manuscript from all chapters
+  10. Exported files follow standard manuscript format (title page, headers, page numbers)
+  11. Writer can export to .txt format for submission platforms
+**Plans**: TBD
+
+Plans:
+- [ ] TBD
 
 ## Progress
 
@@ -74,6 +85,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Project Foundation & Story Setup | 0/3 | Ready to execute | - |
-| 2. Writing System & AI Detection | 0/2 | Ready to plan | - |
-| 3. Consistency & Export | 0/TBD | Not started | - |
+| 1. Project Foundation & Adaptive Story Setup | 0/TBD | Ready to plan | - |
+| 2. Style-Aware Writing & Comprehensive AI Detection | 0/TBD | Not started | - |
+| 3. Consistency, Pacing & Export | 0/TBD | Not started | - |

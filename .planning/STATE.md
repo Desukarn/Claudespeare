@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-02-27T07:18:51.142Z"
+last_updated: "2026-02-26T00:00:00.000Z"
 progress:
-  total_phases: 1
-  completed_phases: 1
-  total_plans: 3
-  completed_plans: 3
+  total_phases: 3
+  completed_phases: 0
+  total_plans: 0
+  completed_plans: 0
 ---
 
 # Project State
@@ -17,15 +17,15 @@ progress:
 
 See: .planning/PROJECT.md (updated 2026-02-27)
 
-**Core value:** Writers can develop complete, consistent long-form stories with automated detection and removal of AI-generated language patterns, ensuring authentic human voice.
-**Current focus:** Phase 1 - Project Foundation & Story Setup
+**Core value:** Writers can develop complete, consistent stories (short stories to novels) with automated detection and removal of AI-generated language patterns, ensuring authentic human voice.
+**Current focus:** Phase 1 - Project Foundation & Adaptive Story Setup
 
 ## Current Position
 
-Phase: 1 of 3 (Project Foundation & Story Setup)
+Phase: 1 of 3 (Project Foundation & Adaptive Story Setup)
 Plan: 0 of TBD in current phase
 Status: Ready to plan
-Last activity: 2026-02-26 — Roadmap created
+Last activity: 2026-02-27 — Roadmap revised with expanded scope (47 requirements)
 
 Progress: [░░░░░░░░░░] 0%
 
@@ -55,10 +55,13 @@ Progress: [░░░░░░░░░░] 0%
 Decisions are logged in PROJECT.md Key Decisions table.
 Recent decisions affecting current work:
 
-- Roadmap created with 3 phases (user requirement)
-- Phase 1 covers setup and story development foundation
-- Phase 2 delivers core writing system with AI detection (differentiator)
-- Phase 3 adds consistency checking and export
+- 2026-02-27: Roadmap revised to support expanded scope (24→47 requirements)
+- 2026-02-27: Phase 1 now includes dual-mode initialization (YOLO vs In-Depth)
+- 2026-02-27: Phase 1 now includes story length adaptation (short story vs novel)
+- 2026-02-27: Phase 2 now includes style seeding and 10-pattern AI detection (expanded from 6)
+- 2026-02-27: Phase 3 now includes length-adapted pacing guidance
+- Maintained exactly 3 phases as per original constraint
+- Each phase enriched with additional requirements instead of adding new phases
 
 ### Pending Todos
 
@@ -70,6 +73,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-26
-Stopped at: Roadmap creation complete, ready to begin planning Phase 1
+Last session: 2026-02-27
+Stopped at: Roadmap revision complete with 47 requirements mapped across 3 phases
 Resume file: None

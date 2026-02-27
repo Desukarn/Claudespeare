@@ -114,11 +114,66 @@ Deferred to future release.
 
 Which phases cover which requirements. Updated during roadmap creation.
 
+| Requirement | Phase | Status |
+|-------------|-------|--------|
+| INIT-01 | Phase 1 | Pending |
+| INIT-02 | Phase 1 | Pending |
+| INIT-03 | Phase 1 | Pending |
+| INIT-04 | Phase 1 | Pending |
+| INIT-05 | Phase 1 | Pending |
+| YOLO-01 | Phase 1 | Pending |
+| YOLO-02 | Phase 1 | Pending |
+| YOLO-03 | Phase 1 | Pending |
+| YOLO-04 | Phase 1 | Pending |
+| STORY-01 | Phase 1 | Pending |
+| STORY-02 | Phase 1 | Pending |
+| STORY-03 | Phase 1 | Pending |
+| STORY-04 | Phase 1 | Pending |
+| STORY-05 | Phase 1 | Pending |
+| LENGTH-01 | Phase 1 | Pending |
+| LENGTH-02 | Phase 1 | Pending |
+| STYLE-01 | Phase 2 | Pending |
+| STYLE-02 | Phase 2 | Pending |
+| STYLE-03 | Phase 2 | Pending |
+| STYLE-04 | Phase 2 | Pending |
+| WRITE-01 | Phase 2 | Pending |
+| WRITE-02 | Phase 2 | Pending |
+| WRITE-03 | Phase 2 | Pending |
+| WRITE-04 | Phase 2 | Pending |
+| WRITE-05 | Phase 2 | Pending |
+| WRITE-06 | Phase 2 | Pending |
+| AI-01 | Phase 2 | Pending |
+| AI-02 | Phase 2 | Pending |
+| AI-03 | Phase 2 | Pending |
+| AI-04 | Phase 2 | Pending |
+| AI-05 | Phase 2 | Pending |
+| AI-06 | Phase 2 | Pending |
+| AI-07 | Phase 2 | Pending |
+| AI-08 | Phase 2 | Pending |
+| AI-09 | Phase 2 | Pending |
+| AI-10 | Phase 2 | Pending |
+| CONS-01 | Phase 3 | Pending |
+| CONS-02 | Phase 3 | Pending |
+| CONS-03 | Phase 3 | Pending |
+| CONS-04 | Phase 3 | Pending |
+| CONS-05 | Phase 3 | Pending |
+| LENGTH-03 | Phase 3 | Pending |
+| LENGTH-04 | Phase 3 | Pending |
+| OUT-01 | Phase 3 | Pending |
+| OUT-02 | Phase 3 | Pending |
+| OUT-03 | Phase 3 | Pending |
+| OUT-04 | Phase 3 | Pending |
+
 **Coverage:**
-- v1 requirements: 44 total
-- Mapped to phases: 0 (roadmap needs updating)
-- Unmapped: 44 ⚠️
+- v1 requirements: 47 total
+- Mapped to phases: 47/47 ✓
+- Unmapped: 0 ✓
+
+**Distribution:**
+- Phase 1 (Foundation & Adaptive Setup): 16 requirements
+- Phase 2 (Style-Aware Writing & AI Detection): 20 requirements
+- Phase 3 (Consistency, Pacing & Export): 11 requirements
 
 ---
 *Requirements defined: 2026-02-27*
-*Last updated: 2026-02-27 after scope expansion per user feedback*
+*Last updated: 2026-02-27 after roadmap revision (scope expanded to 47 requirements)*
