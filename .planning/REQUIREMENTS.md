@@ -28,10 +28,10 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **YOLO-04**: Writer can skip detailed planning and start writing immediately
 
 ### Style & Voice
-- [ ] **STYLE-01**: Writer can provide sample paragraphs of desired writing style
-- [ ] **STYLE-02**: System analyzes style samples for patterns (sentence length, vocabulary, tone)
+- [x] **STYLE-01**: Writer can provide sample paragraphs of desired writing style
+- [x] **STYLE-02**: System analyzes style samples for patterns (sentence length, vocabulary, tone)
 - [ ] **STYLE-03**: System references style seed when generating prose
-- [ ] **STYLE-04**: Writer can define voice characteristics (POV, tense, formality level)
+- [x] **STYLE-04**: Writer can define voice characteristics (POV, tense, formality level)
 
 ### Writing Workflow
 - [ ] **WRITE-01**: Writer can generate chapters with story context awareness
@@ -136,10 +136,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | STORY-05 | Phase 1 | Pending |
 | LENGTH-01 | Phase 1 | Pending |
 | LENGTH-02 | Phase 1 | Pending |
-| STYLE-01 | Phase 2 | Pending |
-| STYLE-02 | Phase 2 | Pending |
+| STYLE-01 | Phase 2 | Complete |
+| STYLE-02 | Phase 2 | Complete |
 | STYLE-03 | Phase 2 | Pending |
-| STYLE-04 | Phase 2 | Pending |
+| STYLE-04 | Phase 2 | Complete |
 | WRITE-01 | Phase 2 | Pending |
 | WRITE-02 | Phase 2 | Pending |
 | WRITE-03 | Phase 2 | Pending |
