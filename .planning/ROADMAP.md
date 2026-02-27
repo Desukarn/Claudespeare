@@ -31,10 +31,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   6. Short story projects use lighter templates (minimal planning), novel projects use extensive templates (full planning depth)
   7. All story elements are stored in structured files and retrievable for later phases
   8. Writer can skip directly to writing phase in YOLO mode without extensive planning
-**Plans**: TBD
+**Plans**: 3 plans in 2 waves
 
 Plans:
-- [ ] TBD
+- [ ] 01-01-PLAN.md — Initialization system and mode selection
+- [ ] 01-02-PLAN.md — YOLO mode implementation with light templates
+- [ ] 01-03-PLAN.md — In-Depth mode and template adaptation
 
 ### Phase 2: Style-Aware Writing & Comprehensive AI Detection
 **Goal**: Writers can generate prose matching their personal style with comprehensive AI language pattern detection and removal
@@ -85,6 +87,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Project Foundation & Adaptive Story Setup | 0/TBD | Ready to plan | - |
+| 1. Project Foundation & Adaptive Story Setup | 0/3 | Planned | - |
 | 2. Style-Aware Writing & Comprehensive AI Detection | 0/TBD | Not started | - |
 | 3. Consistency, Pacing & Export | 0/TBD | Not started | - |
