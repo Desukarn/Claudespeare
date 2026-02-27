@@ -1,57 +1,85 @@
 # Requirements: Claudespeare
 
 **Defined:** 2026-02-27
-**Core Value:** Writers can develop complete, consistent long-form stories with automated detection and removal of AI-generated language patterns, ensuring authentic human voice.
+**Core Value:** Writers can develop complete, consistent stories (short stories to novels) with automated detection and removal of AI-generated language patterns, ensuring authentic human voice.
 
 ## v1 Requirements
 
 Requirements for initial release. Each maps to roadmap phases.
 
-### Project Setup
-- [ ] **SETUP-01**: Writer can initialize new story project with title
-- [ ] **SETUP-02**: Writer can define genre (fantasy, sci-fi, romance, mystery, etc.)
-- [ ] **SETUP-03**: Writer can write premise/logline (1-2 sentences)
-- [ ] **SETUP-04**: Writer can define core themes
+### Project Initialization
+- [ ] **INIT-01**: Writer can choose story length (short story, novella, novel)
+- [ ] **INIT-02**: Writer can choose workflow mode (YOLO vs In-Depth)
+- [ ] **INIT-03**: Writer can initialize project with title
+- [ ] **INIT-04**: Writer can define genre (fantasy, sci-fi, romance, mystery, literary, etc.)
+- [ ] **INIT-05**: Writer can provide premise/logline (or let YOLO mode expand vague idea)
 
-### Story Development
-- [ ] **STORY-01**: Writer can create character profiles with name, role, personality traits
+### Story Development (In-Depth Mode)
+- [ ] **STORY-01**: Writer can create detailed character profiles (name, role, personality, background, voice)
 - [ ] **STORY-02**: Writer can outline plot structure with major beats
-- [ ] **STORY-03**: Writer can define character arcs
-- [ ] **STORY-04**: Writer can track world-building details
+- [ ] **STORY-03**: Writer can define character arcs and transformation
+- [ ] **STORY-04**: Writer can document world-building details
+- [ ] **STORY-05**: Writer can define themes and motifs
+
+### Quick Start (YOLO Mode)
+- [ ] **YOLO-01**: Writer can provide vague idea and system expands it into premise
+- [ ] **YOLO-02**: System generates basic character sketches from premise
+- [ ] **YOLO-03**: System suggests simple plot structure from premise
+- [ ] **YOLO-04**: Writer can skip detailed planning and start writing immediately
+
+### Style & Voice
+- [ ] **STYLE-01**: Writer can provide sample paragraphs of desired writing style
+- [ ] **STYLE-02**: System analyzes style samples for patterns (sentence length, vocabulary, tone)
+- [ ] **STYLE-03**: System references style seed when generating prose
+- [ ] **STYLE-04**: Writer can define voice characteristics (POV, tense, formality level)
 
 ### Writing Workflow
 - [ ] **WRITE-01**: Writer can generate chapters with story context awareness
 - [ ] **WRITE-02**: Writer can generate scenes within chapters
 - [ ] **WRITE-03**: System maintains character voice consistency across chapters
 - [ ] **WRITE-04**: System tracks plot threads to prevent dropped storylines
+- [ ] **WRITE-05**: Generated prose matches writer's style seed patterns
+- [ ] **WRITE-06**: System adapts output length based on story type (short story = concise, novel = detailed)
 
 ### AI Language Detection
 - [ ] **AI-01**: System flags "delve/delved/delving" and suggests alternatives
 - [ ] **AI-02**: System flags "tapestry" and suggests alternatives
 - [ ] **AI-03**: System flags "navigate/navigated" and suggests alternatives
 - [ ] **AI-04**: System flags "testament to" and suggests alternatives
-- [ ] **AI-05**: System flags overly formal academic language
-- [ ] **AI-06**: System provides replacement suggestions for flagged phrases
+- [ ] **AI-05**: System flags "juxtaposition" and suggests alternatives
+- [ ] **AI-06**: System flags overly formal academic language
+- [ ] **AI-07**: System flags "it's worth noting" and similar AI phrases
+- [ ] **AI-08**: System flags purple prose patterns
+- [ ] **AI-09**: System provides concrete replacement suggestions for each flagged phrase
+- [ ] **AI-10**: Writer can add custom phrases to detection list
 
 ### Consistency Checking
-- [ ] **CONS-01**: System tracks character details (appearance, personality, background)
-- [ ] **CONS-02**: System flags character inconsistencies
-- [ ] **CONS-03**: System tracks timeline events
+- [ ] **CONS-01**: System tracks character details (appearance, personality, background, voice)
+- [ ] **CONS-02**: System flags character inconsistencies (e.g., eye color changes)
+- [ ] **CONS-03**: System tracks timeline events and flags continuity errors
 - [ ] **CONS-04**: System tracks world rules and flags violations
+- [ ] **CONS-05**: System maintains POV consistency within scenes
 
-### Output
+### Story Length Adaptation
+- [ ] **LENGTH-01**: Short story workflow limits planning depth (lighter templates)
+- [ ] **LENGTH-02**: Novel workflow provides extensive planning depth (full templates)
+- [ ] **LENGTH-03**: System suggests appropriate chapter count for story type
+- [ ] **LENGTH-04**: System provides pacing guidance based on story length
+
+### Output & Export
 - [ ] **OUT-01**: Writer can export individual chapters as markdown files
 - [ ] **OUT-02**: Writer can compile full manuscript from all chapters
-- [ ] **OUT-03**: Exported files follow standard manuscript format
+- [ ] **OUT-03**: Exported files follow standard manuscript format (title page, headers, page numbers)
+- [ ] **OUT-04**: Writer can export to .txt for submission platforms
 
 ## v2 Requirements
 
 Deferred to future release.
 
 ### Advanced AI Detection
-- **AI-07**: Machine learning model for AI pattern detection
-- **AI-08**: Custom phrase dictionary for user-specific patterns
-- **AI-09**: Style transfer to match specific author voices
+- **AI-ADVANCED-01**: Machine learning model for AI pattern detection
+- **AI-ADVANCED-02**: Sentence structure analysis (avoid repetitive patterns)
+- **AI-ADVANCED-03**: Vocabulary diversity scoring
 
 ### Collaboration
 - **COLLAB-01**: Multiple writers can work on same project
@@ -62,7 +90,13 @@ Deferred to future release.
 - **PUB-01**: Export to epub format
 - **PUB-02**: Export to PDF with formatting
 - **PUB-03**: Generate query letter templates
-- **PUB-04**: Generate synopsis at various lengths
+- **PUB-04**: Generate synopsis at various lengths (1-page, 2-page, 5-page)
+
+### Advanced Features
+- **ADV-01**: Scene-by-scene pacing analysis
+- **ADV-02**: Dialogue tag analysis and suggestions
+- **ADV-03**: Show vs tell detection
+- **ADV-04**: Emotional arc tracking
 
 ## Out of Scope
 
@@ -74,44 +108,17 @@ Deferred to future release.
 | Publishing platform integration | Manual submission process is standard |
 | E-book reader integration | Focus on writing, not reading |
 | Test execution frameworks | Stories are subjective, no automated tests |
+| AI writing of full chapters without oversight | Writer maintains creative control |
 
 ## Traceability
 
 Which phases cover which requirements. Updated during roadmap creation.
 
-| Requirement | Phase | Status |
-|-------------|-------|--------|
-| SETUP-01 | Phase 1 | Pending |
-| SETUP-02 | Phase 1 | Pending |
-| SETUP-03 | Phase 1 | Pending |
-| SETUP-04 | Phase 1 | Pending |
-| STORY-01 | Phase 1 | Pending |
-| STORY-02 | Phase 1 | Pending |
-| STORY-03 | Phase 1 | Pending |
-| STORY-04 | Phase 1 | Pending |
-| WRITE-01 | Phase 2 | Pending |
-| WRITE-02 | Phase 2 | Pending |
-| WRITE-03 | Phase 2 | Pending |
-| WRITE-04 | Phase 2 | Pending |
-| AI-01 | Phase 2 | Pending |
-| AI-02 | Phase 2 | Pending |
-| AI-03 | Phase 2 | Pending |
-| AI-04 | Phase 2 | Pending |
-| AI-05 | Phase 2 | Pending |
-| AI-06 | Phase 2 | Pending |
-| CONS-01 | Phase 3 | Pending |
-| CONS-02 | Phase 3 | Pending |
-| CONS-03 | Phase 3 | Pending |
-| CONS-04 | Phase 3 | Pending |
-| OUT-01 | Phase 3 | Pending |
-| OUT-02 | Phase 3 | Pending |
-| OUT-03 | Phase 3 | Pending |
-
 **Coverage:**
-- v1 requirements: 24 total
-- Mapped to phases: 24
-- Unmapped: 0 ✓
+- v1 requirements: 44 total
+- Mapped to phases: 0 (roadmap needs updating)
+- Unmapped: 44 ⚠️
 
 ---
 *Requirements defined: 2026-02-27*
-*Last updated: 2026-02-26 after roadmap creation*
+*Last updated: 2026-02-27 after scope expansion per user feedback*
