@@ -16,10 +16,16 @@ Creates project directory structure and captures foundational story information 
 
 See: init-project.md
 
+### `/write:expand`
+Expand YOLO project from vague idea to structured premise
+
+For YOLO mode projects: transforms fuzzy concepts into workable premises with basic character sketches and simple plot structure. Enables rapid transition to writing.
+
+See: yolo-expand.md
+
 ### Future Commands
 
 <!-- Placeholder for future commands -->
-<!-- `/write:expand` - Expand YOLO project from vague idea (Phase 1 Plan 02) -->
 <!-- `/write:plan` - Complete In-Depth story planning (Phase 1 Plan 03) -->
 <!-- `/write:chapter` - Draft new chapter -->
 <!-- `/write:revise` - Revision workflow -->
