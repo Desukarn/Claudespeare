@@ -39,21 +39,24 @@ Plans:
 - [ ] 01-03-PLAN.md — In-Depth mode and template adaptation
 
 ### Phase 2: Style-Aware Writing & Comprehensive AI Detection
-**Goal**: Writers can generate prose matching their personal style with comprehensive AI language pattern detection and removal
+**Goal**: Writers can generate prose matching their personal style with comprehensive AI language pattern detection, removal, and word count tracking
 **Depends on**: Phase 1
-**Requirements**: STYLE-01, STYLE-02, STYLE-03, STYLE-04, WRITE-01, WRITE-02, WRITE-03, WRITE-04, WRITE-05, WRITE-06, AI-01, AI-02, AI-03, AI-04, AI-05, AI-06, AI-07, AI-08, AI-09, AI-10
+**Requirements**: STYLE-01, STYLE-02, STYLE-03, STYLE-04, WRITE-01, WRITE-02, WRITE-03, WRITE-04, WRITE-05, WRITE-06, WRITE-07, WRITE-08, WRITE-09, WRITE-10, AI-01, AI-02, AI-03, AI-04, AI-05, AI-06, AI-07, AI-08, AI-09, AI-10
 **Success Criteria** (what must be TRUE):
   1. Writer can provide sample paragraphs of desired writing style for system analysis
   2. System analyzes style samples for patterns (sentence length, vocabulary, tone, formality)
   3. Writer can define voice characteristics (POV, tense, formality level)
-  4. Writer can generate chapters and scenes with story context awareness
-  5. Generated prose matches writer's style seed patterns (sentence structure, vocabulary, tone)
-  6. System maintains character voice consistency across chapters
-  7. System tracks plot threads to prevent dropped storylines
-  8. System adapts output length based on story type (short story = concise, novel = detailed descriptions)
-  9. System flags 10 AI language patterns: "delve/delved/delving", "tapestry", "navigate/navigated", "testament to", "juxtaposition", overly formal academic language, "it's worth noting" phrases, purple prose patterns
-  10. System provides concrete replacement suggestions for each flagged phrase
-  11. Writer can add custom phrases to detection list
+  4. Writer can set word count goals for project (short story: 1k-7.5k, novella: 7.5k-40k, novel: 40k+)
+  5. System tracks current word count across all chapters and displays progress
+  6. Writer can set chapter target word counts
+  7. Writer can generate chapters and scenes with story context awareness
+  8. Generated prose matches writer's style seed patterns (sentence structure, vocabulary, tone)
+  9. System maintains character voice consistency across chapters
+  10. System tracks plot threads to prevent dropped storylines
+  11. System adapts output length based on story type (short story = concise, novel = detailed descriptions)
+  12. System flags 10 AI language patterns: "delve/delved/delving", "tapestry", "navigate/navigated", "testament to", "juxtaposition", overly formal academic language, "it's worth noting" phrases, purple prose patterns
+  13. System provides concrete replacement suggestions for each flagged phrase
+  14. Writer can add custom phrases to detection list
 **Plans**: TBD
 
 Plans:
