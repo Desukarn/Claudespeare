@@ -131,7 +131,21 @@ For chapters with multiple scenes:
 - Generate as single piece
 - Review once at end
 
-### Step 6: Save Chapter
+### Step 6: Calculate Word Count
+
+After generating the prose, I'll:
+
+1. **Count words** in the chapter content (excluding frontmatter and markdown formatting)
+   - Split on whitespace
+   - Filter out markdown symbols
+   - Count actual prose words
+
+2. **Display chapter stats:**
+   ```
+   Chapter {N} complete: {word_count} words
+   ```
+
+### Step 7: Save Chapter
 
 I'll create `stories/{slug}/chapters/chapter-{NN}.md` using the chapter.md template with:
 
@@ -163,14 +177,48 @@ revised: null
 - World details: {what was revealed}
 ```
 
-### Step 7: Track Chapter in PROJECT.md
+### Step 8: Update Story Progress
 
-I'll update the Progress section in PROJECT.md:
-- Increment chapter count
-- Update word count total (if word count tracking is set up)
-- Note which plot beat was covered
+I'll update PROJECT.md with the new chapter:
 
-### Step 8: Suggest Next Chapter
+1. **Read current word count** from PROJECT.md frontmatter (`current_word_count`)
+
+2. **Calculate new total:**
+   ```
+   new_total = current_word_count + chapter_word_count
+   ```
+
+3. **Update PROJECT.md frontmatter:**
+   - Set `current_word_count: {new_total}`
+
+4. **Display progress:**
+   ```
+   ═══════════════════════════════════════
+   STORY PROGRESS
+   ═══════════════════════════════════════
+
+   Total: {new_total} / {goal} words ({percentage}%)
+   Chapters: {count}
+   Average: {avg} words per chapter
+   ```
+
+   If `word_count_goal` is null, show count without percentage:
+   ```
+   Total: {new_total} words ({count} chapters)
+   Average: {avg} words per chapter
+
+   (Set word_count_goal in PROJECT.md to track progress percentage)
+   ```
+
+5. **Check chapter target** (if set):
+   - Read Chapter Targets table from PROJECT.md Progress section
+   - If target exists for this chapter number, compare:
+     ```
+     Chapter {N}: {actual} words (target was {target})
+     Status: {under-target / on-target / over-target}
+     ```
+
+### Step 9: Suggest Next Chapter
 
 Based on OUTLINE.md, I'll suggest what the next chapter should cover:
 - "Ready for Chapter {N+1}: {next plot beat from outline}"
@@ -233,7 +281,7 @@ A: No—each character's voice from CHARACTERS.md is maintained. The detective t
 A: Currently one POV per chapter. For multiple POVs, create separate chapters or manually edit after generation.
 
 **Q: How does word count tracking work?**
-A: If you've set up word count goals in PROJECT.md (from Phase 2 Plan 03), the workflow automatically updates your running total after generating each chapter.
+A: The workflow automatically calculates word count for each chapter and updates PROJECT.md `current_word_count` field. If you've set `word_count_goal`, you'll see progress percentage. If you've defined chapter targets in the Progress section table, you'll see status (under/on/over target).
 
 **Q: Can I generate a chapter without an outline?**
 A: The workflow expects OUTLINE.md or yolo-outline.md. If you skipped planning, create a minimal outline with 3-5 plot beats first.
