@@ -57,10 +57,13 @@ Plans:
   12. System flags 10 AI language patterns: "delve/delved/delving", "tapestry", "navigate/navigated", "testament to", "juxtaposition", overly formal academic language, "it's worth noting" phrases, purple prose patterns
   13. System provides concrete replacement suggestions for each flagged phrase
   14. Writer can add custom phrases to detection list
-**Plans**: TBD
+**Plans**: 4 plans in 2 waves
 
 Plans:
-- [ ] TBD
+- [ ] 02-01-PLAN.md — Style seeding system with analysis and voice configuration
+- [ ] 02-02-PLAN.md — Chapter generation with context awareness and style matching
+- [ ] 02-03-PLAN.md — Word count tracking and goal management
+- [ ] 02-04-PLAN.md — AI pattern detection with 10 patterns and custom phrases
 
 ### Phase 3: Consistency, Pacing & Export
 **Goal**: Writers can verify story consistency with length-adapted pacing guidance and export completed manuscripts in standard format
@@ -91,5 +94,5 @@ Phases execute in numeric order: 1 → 2 → 3
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Project Foundation & Adaptive Story Setup | 0/3 | Planned | - |
-| 2. Style-Aware Writing & Comprehensive AI Detection | 0/TBD | Not started | - |
+| 2. Style-Aware Writing & Comprehensive AI Detection | 0/4 | Planned | - |
 | 3. Consistency, Pacing & Export | 0/TBD | Not started | - |
