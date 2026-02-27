@@ -28,10 +28,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Writer can outline plot structure with major story beats
   4. Writer can document character arcs and world-building details
   5. All story elements are stored and retrievable for later phases
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 01-01: TBD
+- [ ] 01-01-PLAN.md — Project initialization structure and templates
+- [ ] 01-02-PLAN.md — Character and plot development templates
+- [ ] 01-03-PLAN.md — Character arc and world-building templates
 
 ### Phase 2: Writing System & AI Detection
 **Goal**: Writers can generate chapters and scenes with automatic AI language pattern detection
@@ -71,6 +73,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Project Foundation & Story Setup | 0/TBD | Not started | - |
+| 1. Project Foundation & Story Setup | 0/3 | Ready to execute | - |
 | 2. Writing System & AI Detection | 0/TBD | Not started | - |
 | 3. Consistency & Export | 0/TBD | Not started | - |
