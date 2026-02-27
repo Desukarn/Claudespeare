@@ -37,6 +37,13 @@ Write chapters with full story awareness - matches your style seed, maintains ch
 
 See: write-chapter.md
 
+### `/write:detect`
+Scan prose for AI language patterns (AI-DETECTION-REPORT.md)
+
+Analyze your chapters for 10 common AI language patterns including 'delve', 'tapestry', 'navigate', 'testament to', 'juxtaposition', overly formal academic language, "it's worth noting" phrases, and purple prose excess. Get concrete replacement suggestions (3-5 alternatives per match) with context. Add custom phrases to watch for via AI-PATTERNS.md customization.
+
+See: ai-detect.md
+
 ### Future Commands
 
 <!-- Placeholder for future commands -->
@@ -49,9 +56,11 @@ See: write-chapter.md
 
 - Starting a new story project (short story, novella, or novel)
 - Developing characters, plot, and world-building
-- Drafting chapters with consistent voice
-- Revising to remove AI-generated language patterns
-- Ensuring story consistency and authentic human voice
+- Defining your unique writing style through sample analysis
+- Drafting chapters with consistent voice and style matching
+- Detecting and removing AI-generated language patterns
+- Revising to ensure authentic human voice
+- Maintaining story consistency across chapters
 
 ## Workflow modes
 
