@@ -76,6 +76,30 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **OUT-03**: Exported files follow standard manuscript format (title page, headers, page numbers)
 - [ ] **OUT-04**: Writer can export to .txt for submission platforms
 
+### Workflow Orchestration
+- [ ] **FLOW-01**: Writer can start new project with `/write:new-project` (comprehensive initialization like GSD)
+- [ ] **FLOW-02**: System asks clarifying questions during project initialization
+- [ ] **FLOW-03**: System presents options at each workflow step (like GSD does)
+- [ ] **FLOW-04**: Writer can run `/write:discuss-phase N` before planning each phase
+- [ ] **FLOW-05**: Discussion phase asks adaptive questions to clarify phase goals
+- [ ] **FLOW-06**: Workflow follows consistent pattern: new project → discuss → plan → execute → revisions → next phase
+- [ ] **FLOW-07**: System provides clear next-step guidance after each command completion
+
+### Character Bank
+- [ ] **BANK-01**: System maintains persistent character database across all chapters
+- [ ] **BANK-02**: Writer can add new characters to bank with full profile
+- [ ] **BANK-03**: Writer can update character details in bank
+- [ ] **BANK-04**: Writer can query character bank for specific character
+- [ ] **BANK-05**: System auto-populates character bank from planning phase
+- [ ] **BANK-06**: Chapter generation references character bank for consistency
+
+### Version Control
+- [ ] **VER-01**: System tracks chapter revision history
+- [ ] **VER-02**: Writer can view previous versions of a chapter
+- [ ] **VER-03**: Writer can restore previous chapter version
+- [ ] **VER-04**: System maintains revision metadata (timestamp, revision number)
+- [ ] **VER-05**: Writer can compare two versions of same chapter
+
 ## v2 Requirements
 
 Deferred to future release.
@@ -167,17 +191,36 @@ Which phases cover which requirements. Updated during roadmap creation.
 | OUT-02 | Phase 3 | Pending |
 | OUT-03 | Phase 3 | Pending |
 | OUT-04 | Phase 3 | Pending |
+| FLOW-01 | Phase 4 | Pending |
+| FLOW-02 | Phase 4 | Pending |
+| FLOW-03 | Phase 4 | Pending |
+| FLOW-04 | Phase 4 | Pending |
+| FLOW-05 | Phase 4 | Pending |
+| FLOW-06 | Phase 4 | Pending |
+| FLOW-07 | Phase 4 | Pending |
+| BANK-01 | Phase 4 | Pending |
+| BANK-02 | Phase 4 | Pending |
+| BANK-03 | Phase 4 | Pending |
+| BANK-04 | Phase 4 | Pending |
+| BANK-05 | Phase 4 | Pending |
+| BANK-06 | Phase 4 | Pending |
+| VER-01 | Phase 4 | Pending |
+| VER-02 | Phase 4 | Pending |
+| VER-03 | Phase 4 | Pending |
+| VER-04 | Phase 4 | Pending |
+| VER-05 | Phase 4 | Pending |
 
 **Coverage:**
-- v1 requirements: 47 total
-- Mapped to phases: 47/47 ✓
+- v1 requirements: 65 total
+- Mapped to phases: 65/65 ✓
 - Unmapped: 0 ✓
 
 **Distribution:**
 - Phase 1 (Foundation & Adaptive Setup): 16 requirements
 - Phase 2 (Style-Aware Writing & AI Detection): 20 requirements
 - Phase 3 (Consistency, Pacing & Export): 11 requirements
+- Phase 4 (Workflow Orchestration & GSD Integration): 18 requirements
 
 ---
 *Requirements defined: 2026-02-27*
-*Last updated: 2026-02-27 after roadmap revision (scope expanded to 47 requirements)*
+*Last updated: 2026-02-27 after Phase 4 addition (scope expanded to 65 requirements)*
