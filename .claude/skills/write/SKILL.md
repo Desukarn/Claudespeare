@@ -1,6 +1,6 @@
 ---
 name: write
-description: Commands for creative writing workflow - story development from initialization through drafting and revision. Supports both quick-start (YOLO) and detailed planning (In-Depth) modes, with adaptive templates for different story lengths. Tracks full story context across chapters with style matching and consistency features.
+description: Commands for creative writing workflow - story development from initialization through drafting and revision. Supports both quick-start (YOLO) and detailed planning (In-Depth) modes, with adaptive templates for different story lengths. Tracks full story context across chapters with style matching, consistency checking, pacing guidance, and manuscript export features.
 ---
 
 # Write - Story Development Skill
@@ -43,6 +43,17 @@ Scan prose for AI language patterns (AI-DETECTION-REPORT.md)
 Analyze your chapters for 10 common AI language patterns including 'delve', 'tapestry', 'navigate', 'testament to', 'juxtaposition', overly formal academic language, "it's worth noting" phrases, and purple prose excess. Get concrete replacement suggestions (3-5 alternatives per match) with context. Add custom phrases to watch for via AI-PATTERNS.md customization.
 
 See: ai-detect.md
+
+### `/write:check`
+
+Scan your story for consistency violations across all chapters. Checks character details (appearance, voice, personality), timeline continuity, world rule adherence, and POV consistency. Loads CHARACTERS.md, WORLD.md, and all chapters to detect contradictions. Generates CONSISTENCY-REPORT.md with flagged issues, locations, and suggestions. Run after writing 3-5 chapters or before major revisions to catch plot holes and continuity errors.
+
+**Checks:** Character appearance/voice consistency, timeline/event order, world rule violations, POV shifts, personality contradictions
+**Input:** Story project directory
+**Output:** CONSISTENCY-REPORT.md with detailed findings
+**Duration:** 5-15 minutes depending on chapter count
+
+See: check-consistency.md
 
 ### Future Commands
 
