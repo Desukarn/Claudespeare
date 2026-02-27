@@ -55,6 +55,18 @@ Scan your story for consistency violations across all chapters. Checks character
 
 See: check-consistency.md
 
+### `/write:pacing`
+
+Get story-specific pacing recommendations based on your word count goal and story type. Suggests appropriate chapter count (short story: 1-3, novella: 5-15, novel: 15-30, epic: 30+), provides act-based pacing breakdown adapted to your story length, and offers chapter length targets. Analyzes your OUTLINE.md structure and genre to provide tailored guidance. Updates PROJECT.md with recommended structure.
+
+**Analyzes:** Word count goal, story type, genre, outline structure
+**Provides:** Chapter count recommendation, act breakdown, chapter length targets, genre-specific notes
+**Input:** Story project directory
+**Output:** Pacing recommendations displayed and optionally written to PROJECT.md
+**Duration:** 5-10 minutes
+
+See: pacing-guide.md
+
 ### Future Commands
 
 <!-- Placeholder for future commands -->

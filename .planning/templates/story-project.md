@@ -8,7 +8,7 @@
 **Created:** {DATE}
 **Word Count Goal:** {null or target like 50000}
 **Current Word Count:** 0
-**Target Chapters:** {null or estimated chapter count}
+**Target Chapters:** {null or estimated chapter count - run /write:pacing for recommendations}
 
 ## Premise
 
@@ -94,6 +94,49 @@ Writers can define target word counts per chapter for pacing control.
 - [ ] Character consistency checked
 - [ ] AI language patterns detected and revised
 - [ ] Final polish complete
+
+## Pacing Guidance
+
+Run `/write:pacing` to get story-specific recommendations for chapter count and pacing structure.
+
+### Recommended Structure
+
+**Story Type:** {Based on word count goal - Short Story | Novella | Novel | Epic Novel}
+**Recommended Chapters:** {Number based on LENGTH-03 calculations}
+**Current Chapters:** {Actual count written so far}
+
+### Act Breakdown
+
+**Act I (Setup) - {percentage}%:**
+- Target word count: {calculated from word_count_goal * percentage}
+- Chapter range: {estimated start-end chapter numbers}
+- Key beats: Introduce world, inciting incident, first plot point
+
+**Act II (Confrontation) - {percentage}%:**
+- Target word count: {calculated}
+- Chapter range: {estimated}
+- Key beats: Rising action, midpoint, complications, darkest moment
+
+**Act III (Resolution) - {percentage}%:**
+- Target word count: {calculated}
+- Chapter range: {estimated}
+- Key beats: Final confrontation, climax, resolution
+
+### Chapter Length Targets
+
+- **Act I chapters:** {range} words per chapter (world-building focus)
+- **Act II chapters:** {range} words per chapter (variable for pacing)
+- **Act III chapters:** {range} words per chapter (faster pacing toward climax)
+
+Recommendation: Vary chapter length to maintain reader interest.
+
+### Genre Notes
+
+{Genre-specific pacing recommendations based on PROJECT metadata}
+
+Example (Fantasy): Allow longer chapters in Act I for world-building immersion. Fantasy readers expect detailed magic systems and setting establishment.
+
+---
 
 <!--LENGTH:novel-->
 ## Notes
