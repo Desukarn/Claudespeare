@@ -1,6 +1,6 @@
 ---
 name: write
-description: Commands for creative writing workflow - story development from initialization through drafting and revision. Supports both quick-start (YOLO) and detailed planning (In-Depth) modes, with adaptive templates for different story lengths. Tracks full story context across chapters with style matching, consistency checking, pacing guidance, and manuscript export features.
+description: Commands for creative writing workflow - story development from initialization through drafting and revision. Supports both quick-start (YOLO) and detailed planning (In-Depth) modes, with adaptive templates for different story lengths. Includes phase-based workflow orchestration with adaptive discussions before planning, writing, and revision phases. Tracks full story context across chapters with style matching, consistency checking, pacing guidance, and manuscript export features.
 ---
 
 # Write - Story Development Skill
@@ -24,6 +24,13 @@ Initialize new story project (quick setup)
 Direct project initialization for advanced users who know their preferences. Creates project directory structure and captures foundational story information (title, genre, premise, story length, workflow mode) with minimal prompting.
 
 See: init-project.md
+
+### `/write:discuss-phase N`
+Discuss and plan upcoming writing phase
+
+Adaptive discussion workflow that asks clarifying questions based on phase goals. For planning phases: asks about story elements to develop. For writing phases: asks which chapters to write, plot beats to cover, and consistency concerns. Creates PHASE-N-CONTEXT.md capturing decisions and provides clear next-step guidance. Run before starting each new phase of work.
+
+See: discuss-phase.md
 
 ### `/write:expand`
 Expand YOLO project from vague idea to structured premise
@@ -112,7 +119,21 @@ See: export.md
 
 ## Complete Workflow
 
-New project → Plan (YOLO: expand | In-Depth: plan) → Style seed → Write chapters → Detect AI patterns → Check consistency → Get pacing guidance → Export finished manuscript
+**New Project:** `/write:new-project` → discuss → plan → write → revise → export
+
+**Typical Flow:**
+1. `/write:new-project` - Initialize with guided setup
+2. `/write:discuss-phase 1` - Clarify planning approach
+3. `/write:expand` (YOLO) or `/write:plan` (In-Depth) - Develop story foundation
+4. `/write:style` - Define writing voice (optional but recommended)
+5. `/write:discuss-phase 2` - Plan writing phase (which chapters, focus areas)
+6. `/write:chapter N` - Draft chapters one by one
+7. `/write:detect` - Check for AI language patterns
+8. `/write:check` - Validate consistency
+9. `/write:discuss-phase 3` - Plan revisions if needed
+10. `/write:export` - Compile finished manuscript
+
+Repeat steps 5-8 for additional writing phases as story develops.
 
 **Starting point:** Run `/write:new-project` for guided setup with clear options, or `/write:init` for quick direct setup.
 
