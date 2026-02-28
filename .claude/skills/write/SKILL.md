@@ -39,7 +39,14 @@ For YOLO mode projects: transforms fuzzy concepts into workable premises with ba
 
 See: yolo-expand.md
 
-### `/write:style`
+### `/write:plan`
+Create detailed story planning (In-Depth mode)
+
+For In-Depth mode projects: comprehensive story planning with detailed character profiles, complete plot outline with beats, character arcs, world-building documentation, and theme definition. Creates CHARACTERS.md, OUTLINE.md, ARCS.md, WORLD.md, and THEMES.md. Provides structured framework before writing begins.
+
+See: indepth-plan.md
+
+### `/write:style-seed`
 Analyze writing samples and define voice (STYLE.md)
 
 Define your writing style through sample analysis and voice configuration. Analyzes 2-3 sample paragraphs for measurable patterns (sentence length, vocabulary level, tone markers) and combines with explicit voice preferences (POV, tense, formality, narrative distance). Creates STYLE.md profile for use in chapter generation.
@@ -56,43 +63,28 @@ See: write-chapter.md
 ### `/write:detect`
 Scan prose for AI language patterns (AI-DETECTION-REPORT.md)
 
-Analyze your chapters for 10 common AI language patterns including 'delve', 'tapestry', 'navigate', 'testament to', 'juxtaposition', overly formal academic language, "it's worth noting" phrases, and purple prose excess. Get concrete replacement suggestions (3-5 alternatives per match) with context. Add custom phrases to watch for via AI-PATTERNS.md customization.
+Analyze your chapters for 24+ common AI language patterns including 'delve', 'tapestry', 'navigate', 'testament to', 'juxtaposition', overly formal academic language, "it's worth noting" phrases, purple prose excess, and many more. Get concrete replacement suggestions (3-5 alternatives per match) with context. Add custom phrases to watch for via AI-PATTERNS.md customization.
 
 See: ai-detect.md
 
-### `/write:check`
+### `/write:check-consistency`
+Scan story for consistency violations (CONSISTENCY-REPORT.md)
 
 Scan your story for consistency violations across all chapters. Checks character details (appearance, voice, personality), timeline continuity, world rule adherence, and POV consistency. Loads CHARACTERS.md, WORLD.md, and all chapters to detect contradictions. Generates CONSISTENCY-REPORT.md with flagged issues, locations, and suggestions. Run after writing 3-5 chapters or before major revisions to catch plot holes and continuity errors.
-
-**Checks:** Character appearance/voice consistency, timeline/event order, world rule violations, POV shifts, personality contradictions
-**Input:** Story project directory
-**Output:** CONSISTENCY-REPORT.md with detailed findings
-**Duration:** 5-15 minutes depending on chapter count
 
 See: check-consistency.md
 
 ### `/write:pacing`
+Get length-adapted pacing guidance (PACING-GUIDE.md)
 
 Get story-specific pacing recommendations based on your word count goal and story type. Suggests appropriate chapter count (short story: 1-3, novella: 5-15, novel: 15-30, epic: 30+), provides act-based pacing breakdown adapted to your story length, and offers chapter length targets. Analyzes your OUTLINE.md structure and genre to provide tailored guidance. Updates PROJECT.md with recommended structure.
-
-**Analyzes:** Word count goal, story type, genre, outline structure
-**Provides:** Chapter count recommendation, act breakdown, chapter length targets, genre-specific notes
-**Input:** Story project directory
-**Output:** Pacing recommendations displayed and optionally written to PROJECT.md
-**Duration:** 5-10 minutes
 
 See: pacing-guide.md
 
 ### `/write:export`
+Export manuscript in professional formats
 
 Export individual chapters or compile full manuscript in submission-ready formats. Supports markdown (.md), plain text (.txt), and standard manuscript format (.txt with industry conventions). Compiles chapters in sequence, generates professional title pages, applies proper formatting (headers, scene breaks, page structure). Choose single chapter export, chapter range, or full manuscript. Output to exports/ directory with automatic timestamping.
-
-**Modes:** Single chapter, chapter range, full manuscript
-**Formats:** Markdown (preserves formatting), Plain text (clean readable), Standard manuscript (industry submission format)
-**Includes:** Title page generation, chapter compilation, scene break formatting, word count calculation, headers
-**Input:** Story project directory, export mode, format, optional title page
-**Output:** Formatted manuscript file in exports/ directory
-**Duration:** 5-15 minutes depending on manuscript length
 
 See: export.md
 
@@ -199,14 +191,14 @@ See: chapter-versions.md
 1. `/write:new-project` - Initialize with guided setup
 2. `/write:discuss-phase 1` - Clarify planning approach
 3. `/write:expand` (YOLO) or `/write:plan` (In-Depth) - Develop story foundation
-4. `/write:style` - Define writing voice (optional but recommended)
+4. `/write:style-seed` - Define writing voice (optional but recommended)
 5. `/write:populate-bank` - Create character bank from CHARACTERS.md (optional but recommended)
 6. `/write:discuss-phase 2` - Plan writing phase (which chapters, focus areas)
 7. `/write:chapter N` - Draft chapters (automatically references character bank, saves revisions)
 8. `/write:character <name>` - Query character details as needed during writing
 9. `/write:revisions <chapter>` - View chapter history if needed
 10. `/write:detect` - Check for AI language patterns
-11. `/write:check` - Validate consistency
+11. `/write:check-consistency` - Validate consistency
 12. `/write:discuss-phase 3` - Plan revisions if needed
 13. `/write:restore <chapter> <version>` - Roll back if needed during revisions
 14. `/write:export` - Compile finished manuscript
