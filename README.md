@@ -11,7 +11,7 @@ Transform Claude Code into a structured writing environment for developing compl
 - **Dual Workflow Modes**: YOLO (quick-start) or In-Depth (detailed planning)
 - **Story Length Adaptation**: Auto-adjusts templates for short stories, novellas, novels
 - **Style Seeding**: Analyzes your writing samples to match your voice
-- **AI Language Detection**: Identifies and suggests replacements for 10+ AI patterns
+- **AI Language Detection**: Identifies and suggests replacements for 24+ AI patterns
 - **Character Bank**: Persistent database ensures cross-chapter consistency
 - **Version Control**: Automatic chapter revision tracking with rollback
 - **Consistency Checking**: Flags character, timeline, world-building, POV violations
@@ -133,19 +133,41 @@ Generate individual scenes for granular control.
 /write:ai-detect
 ```
 
-Scans for 10 patterns:
+Scans for 24+ patterns:
+
+**Core AI Words:**
 1. delve/delved/delving
-2. tapestry
-3. navigate/navigated
+2. tapestry (metaphorical)
+3. navigate/navigated (metaphorical)
 4. testament to
 5. juxtaposition
-6. Overly formal academic language
-7. "It's worth noting" phrases
-8. Purple prose (veritable, myriad, plethora)
-9. Repetitive sentence structures
-10. Generic descriptions
+6. landscape (metaphorical: "social landscape")
+7. interplay / intricacies / nuances
 
-Provides replacement suggestions with line numbers.
+**Phrase Patterns:**
+8. "It's worth noting" / "Notably" / "Interestingly"
+9. Inflated significance ("marks a pivotal moment")
+10. Superficial -ing analyses ("highlighting the importance")
+11. Negative parallelisms ("not only...but also")
+12. Generic positive conclusions ("the future looks bright")
+
+**Style Issues:**
+13. Overly formal academic language ("Furthermore," "Moreover")
+14. Purple prose (excessive adjectives, melodramatic adverbs)
+15. Promotional language ("vibrant," "stunning," "nestled")
+16. Copula avoidance ("serves as" instead of "is")
+17. Rule of three overuse
+18. Elegant variation (synonym cycling)
+19. Em dash overuse
+
+**Weak Constructions:**
+20. Filler phrases ("in order to" → "to")
+21. Excessive hedging (qualifier stacking)
+22. Chatbot formality ("Certainly!" "Of course!")
+23. False ranges ("from joy to despair")
+24. Knowledge disclaimers ("seemed to," "appeared to")
+
+Each flagged pattern includes line number, context, and 2-3 concrete replacement suggestions.
 
 **Consistency Check:**
 ```

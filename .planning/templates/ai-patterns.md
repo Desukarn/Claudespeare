@@ -186,6 +186,388 @@ This database defines the language patterns commonly found in AI-generated text,
 
 ---
 
+### Pattern 9: Inflated Significance Language
+**Category:** Over-dramatization
+**Why AI-ish:** AI adds unwarranted gravitas to mundane moments, making every scene "pivotal"
+
+**Detection patterns:**
+- "marks a pivotal moment"
+- "stands as a testament"
+- "reflects broader trends"
+- "represents a turning point"
+- "signals a shift"
+
+**Replacements:**
+- Show the significance through character reaction, not telling
+- Let the moment speak for itself
+- Remove the commentary entirely
+- If truly pivotal, the reader will feel it without announcement
+
+**Example:**
+- AI: "His decision marked a pivotal moment in their relationship."
+- Better: "His decision changed everything."
+- Better: "After that, she wouldn't look at him."
+
+---
+
+### Pattern 10: Superficial -ing Analyses
+**Category:** Fake analytical depth
+**Why AI-ish:** Tacks present participles onto sentences to create false insight
+
+**Detection patterns:**
+- "highlighting the" / "emphasizing the" / "reflecting the"
+- "demonstrating" / "showcasing" / "illustrating"
+- "contributing to" / "underscoring" / "reinforcing"
+- "suggesting" / "indicating" / "revealing"
+
+**Replacements:**
+- Show the thing directly instead of announcing it
+- Convert to active voice with concrete action
+- Remove the meta-commentary layer
+- Let details do their work without explanation
+
+**Example:**
+- AI: "Her silence reflected the deep mistrust between them."
+- Better: "She said nothing. The mistrust was obvious."
+- Better: "She didn't answer."
+
+---
+
+### Pattern 11: Promotional Language in Narrative
+**Category:** Marketing-speak
+**Why AI-ish:** Uses advertising adjectives that feel artificial in prose
+
+**Detection patterns:**
+- "vibrant" (culture, community, city)
+- "stunning" / "breathtaking" (views, beauty)
+- "nestled" (location descriptions)
+- "showcasing" / "boasting" / "featuring"
+- "renowned" / "acclaimed" (unless actually famous)
+- "picturesque" / "charming" / "quaint"
+
+**Replacements:**
+- Concrete sensory detail instead of vague praise
+- Specific observation from POV character
+- Show, don't label
+- Remove entirely if not adding value
+
+**Example:**
+- AI: "The vibrant marketplace showcased a stunning array of goods."
+- Better: "The marketplace smelled like curry and leather."
+- Better: "Vendors shouted over each other, waving silk scarves and mangoes."
+
+---
+
+### Pattern 12: Copula Avoidance (Elaborate "Is")
+**Category:** Over-complication
+**Why AI-ish:** Replaces simple "is/are/was" with needlessly elaborate constructions
+
+**Detection patterns:**
+- "serves as" → "is"
+- "stands as" → "is"
+- "boasts" → "has"
+- "features" → "has"
+- "represents" → "is"
+- "functions as" → "works as" or "is"
+
+**Replacements:**
+- Use simple "is/are/was/were/has/have"
+- Direct statement is stronger
+- Save elaborate constructions for genuine variety when simple form is overused
+
+**Example:**
+- AI: "The mansion serves as a symbol of her wealth and features twelve bedrooms."
+- Better: "The mansion is a symbol of her wealth and has twelve bedrooms."
+- Better: "The twelve-bedroom mansion showed how rich she was."
+
+---
+
+### Pattern 13: Negative Parallelisms
+**Category:** Forced comparisons
+**Why AI-ish:** Mechanical "not only...but also" structures feel unnatural
+
+**Detection patterns:**
+- "Not only...but also"
+- "It's not just about X, it's about Y"
+- "More than just X, it's Y"
+- "Not merely X, but Y"
+
+**Replacements:**
+- State both facts directly without forced parallel
+- Use "and" for simple addition
+- Separate into two sentences if needed
+- Remove the rhetorical flourish
+
+**Example:**
+- AI: "It wasn't just about the money, it was about power."
+- Better: "It was about power, not money."
+- Better: "Money mattered less than power."
+
+---
+
+### Pattern 14: Rule of Three Overuse
+**Category:** Artificial grouping
+**Why AI-ish:** Forces items into threes even when unnatural
+
+**Detection patterns:**
+- Every list has exactly three items
+- "innovation, inspiration, and insight" type patterns
+- Adjective triplets before nouns repeatedly
+- Three parallel clauses in succession frequently
+
+**Replacements:**
+- Use two items if two fit
+- Use four or five if that's natural
+- Vary list lengths
+- Don't force threes for rhythm if content doesn't support it
+
+**Example:**
+- AI: "She felt fear, anger, and determination."
+- Better: "She felt angry and afraid."
+- Better (if all three fit): "Fear and anger mixed with determination."
+
+---
+
+### Pattern 15: Elegant Variation (Synonym Cycling)
+**Category:** Repetition avoidance
+**Why AI-ish:** Mechanically substitutes synonyms to avoid repeating words
+
+**Detection patterns:**
+- "protagonist...main character...central figure...hero" in quick succession
+- "said...stated...remarked...declared...indicated" cycling through dialogue tags
+- Character descriptions constantly varying: "the woman...the female...the lady...she"
+- Location cycling: "the room...the chamber...the space...the area"
+
+**Replacements:**
+- Use pronouns naturally
+- Repeat the same word if that's clearest
+- Use "said" for most dialogue (variation for variation's sake is bad)
+- Stick with one term per scene unless there's a reason to switch
+
+**Example:**
+- AI: "The protagonist entered the chamber. The main character observed the room. The hero noticed the space was empty."
+- Better: "She entered the room. It was empty."
+
+---
+
+### Pattern 16: False Ranges
+**Category:** Meaningless scale
+**Why AI-ish:** Uses "from X to Y" where items lack meaningful progression
+
+**Detection patterns:**
+- "from joy to despair" (emotions without actual range)
+- "from the mundane to the extraordinary" (vague bookends)
+- "from whispers to screams" (unless literal volume range)
+- "from past to present" (temporal but often meaningless)
+
+**Replacements:**
+- List items directly: "X and Y"
+- Show the variety through specific examples
+- Remove range framing if not adding meaning
+- Use range only for genuine scales (temperature, volume, size)
+
+**Example:**
+- AI: "Emotions ranged from joy to despair."
+- Better: "She felt everything—joy, fear, despair."
+- Better: "One moment she'd laugh. The next, she'd cry."
+
+---
+
+### Pattern 17: Em Dash Overuse
+**Category:** Punctuation excess
+**Why AI-ish:** Excessive em dashes (—) mimicking punchy sales copy
+
+**Detection patterns:**
+- Multiple em dashes per paragraph
+- Em dashes for simple pauses where commas fit
+- Em dash replacing period/semicolon unnecessarily
+- "—and" / "—but" where comma would work
+
+**Replacements:**
+- Use commas for normal pauses
+- Use periods for full stops
+- Save em dashes for genuine interruptions or dramatic reveals
+- Aim for 1-2 per page maximum, not per paragraph
+
+**Example:**
+- AI: "She walked in—saw the body—screamed—ran."
+- Better: "She walked in, saw the body, screamed, and ran."
+- Better (one em dash for drama): "She walked in and saw the body—then screamed."
+
+---
+
+### Pattern 18: Chatbot Formality Artifacts
+**Category:** Service language
+**Why AI-ish:** Includes conversational service phrases in narrative prose
+
+**Detection patterns:**
+- "I hope this helps" (in character thought)
+- "Of course!" / "Certainly!" (overly formal character dialogue)
+- "Let me know if you'd like..." (in narration)
+- "Would you like..." (unless character is actually being servile)
+- "Feel free to..." (modern tech-speak)
+
+**Replacements:**
+- Remove entirely if narrator intrusion
+- Natural dialogue: "Sure" not "Certainly!"
+- Character-appropriate formality
+- Match dialogue to character's personality
+
+**Example:**
+- AI (narrator): "The detective examined the evidence. I hope this helps understand his process."
+- Fix: Remove the second sentence entirely
+- AI (dialogue): "Certainly! I would be delighted to assist you!"
+- Better: "Sure, I'll help."
+
+---
+
+### Pattern 19: Hedging & Knowledge Disclaimers
+**Category:** Defensive language
+**Why AI-ish:** Unnecessary qualification and hedging in narrative
+
+**Detection patterns:**
+- "seemed to" / "appeared to" (unless genuinely uncertain POV)
+- "might have" / "could have" / "may have" (when narrator knows)
+- "probably" / "possibly" / "perhaps" (narrator hedging unnecessarily)
+- "while specific details are limited" (AI disclaimer in prose!)
+- "based on available information" (narrator meta-commentary)
+
+**Replacements:**
+- State facts directly if narrator knows
+- Use uncertain language only when POV character is actually uncertain
+- Remove hedging in omniscient narration
+- Delete meta-commentary disclaimers entirely
+
+**Example:**
+- AI: "She seemed to be angry, possibly frustrated, based on her expression."
+- Better (limited POV): "She looked angry."
+- Better (omniscient): "She was furious."
+
+---
+
+### Pattern 20: Sycophantic Tone in Dialogue
+**Category:** Over-positive people-pleasing
+**Why AI-ish:** Characters sound like chatbots instead of humans
+
+**Detection patterns:**
+- "Great question!" (unless character is genuinely patronizing)
+- "You're absolutely right!" (people rarely talk this way)
+- "That's an excellent point!" (sounds like AI validation)
+- Excessive agreement: "I completely agree!" "Exactly!" "Precisely!"
+- "I appreciate your perspective!" (corporate-speak)
+
+**Replacements:**
+- Natural agreement: "Yeah" / "True" / "Right"
+- Disagreement: "Maybe" / "I don't know" / "Not sure"
+- Character-appropriate politeness
+- Real human speech patterns
+
+**Example:**
+- AI: "Great question! You're absolutely right! That's an excellent point!"
+- Better: "Yeah, you're right."
+- Better: "Huh. Never thought of it that way."
+
+---
+
+### Pattern 21: Filler Phrase Constructions
+**Category:** Wordiness
+**Why AI-ish:** Verbose constructions instead of simple words
+
+**Detection patterns:**
+- "in order to achieve" → "to"
+- "due to the fact that" → "because"
+- "at this point in time" → "now"
+- "for the purpose of" → "to" / "for"
+- "in the event that" → "if"
+- "with regard to" → "about"
+- "a majority of" → "most"
+
+**Replacements:**
+- Use the simple word
+- Cut unnecessary words
+- Direct statement is stronger
+
+**Example:**
+- AI: "In order to achieve her goal, she worked hard due to the fact that success was important."
+- Better: "To achieve her goal, she worked hard because success mattered."
+- Best: "She worked hard. Success mattered."
+
+---
+
+### Pattern 22: Excessive Hedging (Qualifier Stacking)
+**Category:** Over-qualification
+**Why AI-ish:** Piles qualifiers until meaning is diluted
+
+**Detection patterns:**
+- "could potentially possibly"
+- "might perhaps maybe"
+- "some evidence suggests it may be possible that"
+- "arguably one could say"
+- Three or more qualifiers in one sentence
+
+**Replacements:**
+- Pick ONE qualifier if genuinely uncertain
+- State the fact with appropriate confidence
+- Remove hedge layers
+- If narrator/character doesn't know, say so simply
+
+**Example:**
+- AI: "It could potentially possibly be argued that the policy might perhaps have some effect."
+- Better: "The policy might work."
+- Better (certain): "The policy worked."
+
+---
+
+### Pattern 23: Generic Positive Conclusions
+**Category:** Vague uplift
+**Why AI-ish:** Robotic optimism with no specific content
+
+**Detection patterns:**
+- "The future looks bright"
+- "Exciting times lie ahead"
+- "represents a major step forward"
+- "Things are looking up"
+- "The best is yet to come"
+- "A new chapter begins"
+
+**Replacements:**
+- Specific detail about actual future event
+- Character's genuine emotion (could be positive, negative, or mixed)
+- Concrete next action
+- Remove generic platitude
+
+**Example:**
+- AI: "Despite everything, the future looked bright and exciting times lay ahead."
+- Better: "She smiled. Maybe this would work."
+- Better: "Tomorrow she'd start fresh."
+
+---
+
+### Pattern 24: Landscape/Interplay/Intricacies Vocabulary
+**Category:** AI word overuse
+**Why AI-ish:** Post-2023 AI high-frequency vocabulary in narrative
+
+**Detection patterns:**
+- "landscape" (metaphorical: social landscape, political landscape)
+- "interplay" (between X and Y)
+- "intricacies" / "nuances"
+- "crucial" / "pivotal" / "vital" (everything is critical)
+- "underscore" / "underscore the importance"
+- "multifaceted" / "complex tapestry"
+
+**Replacements:**
+- Be specific instead of meta-describing complexity
+- Simple words: "important" not "crucial"
+- Concrete details instead of abstract nouns
+- Show the complexity through action/detail
+
+**Example:**
+- AI: "The social landscape's intricacies underscored the crucial interplay between the factions."
+- Better: "The factions hated each other, but needed each other."
+- Better: "Three groups, locked in mutual suspicion and dependence."
+
+---
+
 ## Custom Phrases
 
 Writers can add their own overused words or phrases to watch for.
