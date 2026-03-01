@@ -311,10 +311,25 @@ MANUAL REVIEW REQUIRED
 NEXT STEPS
 ═══════════════════════════════════════
 
-✓ Review manual items in chapters
-✓ Run /write:detect again to verify fixes
-✓ Run /write:check-consistency for final check
-✓ Ready for /write:export when satisfied
+{IF MANUAL REVIEW ITEMS EXIST:}
+1. Review flagged items
+   → Open chapters and address concerns
+   → Make editorial decisions on plot/style
+
+2. Verify fixes (optional)
+   → /write:detect - Check AI patterns removed
+   → /write:check-consistency - Verify continuity
+
+{IF NO MANUAL ITEMS OR AFTER REVIEW:}
+3. Export manuscript
+   → /write:export
+   → Multiple formats available
+   → Ready for submission/publication
+
+Other options:
+• /write:chapter N - Rewrite specific chapter
+• Edit chapters manually for final polish
+• /write:revisions chapter-{NN} - View history
 ```
 
 ## Integration with Detection Commands

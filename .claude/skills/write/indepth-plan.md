@@ -638,14 +638,48 @@ fi
 - If template files missing: Report path and offer to create from defaults
 - If writer wants to skip a section: Mark with "TODO" placeholder for later
 
-## Future Extensions
+## Completion Message
 
-Phase 2 will add:
-- `/write:chapter` for drafting chapters with planned character voices and arcs
-- Consistency checking against planning documents
-- Chapter progress tracking
+After creating all planning documents, show:
 
-Phase 3 will add:
-- AI pattern detection in drafted chapters
-- Voice authenticity verification against planned style
-- Pacing analysis based on length targets
+```
+✓ IN-DEPTH PLANNING COMPLETE
+═══════════════════════════════════════
+
+Your story foundation is ready:
+✓ Detailed character profiles ({count} characters)
+✓ Complete plot outline (3-act structure)
+✓ Character arcs mapped
+✓ World-building documented
+✓ Themes defined
+
+Files created:
+- CHARACTERS.md
+- OUTLINE.md
+- ARCS.md
+- WORLD.md
+- THEMES.md
+
+═══════════════════════════════════════
+NEXT STEPS
+═══════════════════════════════════════
+
+1. OPTIONAL: Create style profile
+   → /write:style-seed
+   → Paste 2-3 paragraphs of your writing
+   → Better voice matching in chapters
+
+2. REQUIRED: Plan first arc
+   → /write:discuss 1
+   → Answer questions about Arc 1
+   → Creates ARC-1-CONTEXT.md
+
+3. Then write Arc 1
+   → /write:arc 1
+   → Writes chapters in parallel
+   → ~15-20 minutes
+
+OR skip discuss and let /write:arc 1 ask questions interactively.
+
+Estimated time to first draft: ~6-8 hours total
+```

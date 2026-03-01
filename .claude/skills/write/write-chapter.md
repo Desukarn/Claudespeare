@@ -204,16 +204,27 @@ Chapters: {count}
 Average: {avg} words/chapter
 
 ═══════════════════════════════════════
-Next Steps
+NEXT STEPS
 ═══════════════════════════════════════
 
-✓ Review chapter for quality
-✓ Run /write:detect to scan for AI patterns
-✓ Run /write:check-consistency for continuity
-
+{IF MORE CHAPTERS IN OUTLINE:}
 Continue writing:
-• /write:chapter {N+1} - Write next chapter
-• /write:arc - Write multiple chapters in parallel
+→ /write:chapter {N+1}
+  Write next chapter ({title_from_outline})
+
+→ /write:arc
+  Write remaining chapters in parallel
+  (Faster than one-by-one)
+
+{IF ALL CHAPTERS COMPLETE:}
+→ /write:revise
+  Scan and fix quality issues
+  (~15-30 min for full story)
+
+{ALWAYS AVAILABLE:}
+• /write:detect - Check this chapter for AI patterns
+• /write:check-consistency - Verify continuity
+• /write:revisions chapter-{NN} - View edit history
 ```
 
 ## Context-Aware Examples

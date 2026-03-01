@@ -399,7 +399,26 @@ A: Yes, works on any story project regardless of planning mode.
 
 ---
 
-Ready? Let's scan for AI patterns.
+## After Detection
+
+After scanning, you'll receive a report with all AI patterns and replacement suggestions.
+
+**Next steps:**
+
+1. **Apply fixes manually**
+   → Edit chapter files with suggested replacements
+
+2. **OR use automated workflow**
+   → /write:revise
+   → Auto-fixes patterns + checks consistency
+
+3. **Verify clean**
+   → /write:detect again
+   → Should show fewer or no patterns
+
+4. **Continue to completion**
+   → /write:check-consistency - Verify story logic
+   → /write:export - Export manuscript
 
 ## Usage
 
@@ -408,4 +427,4 @@ In your story project directory:
 /write:detect
 ```
 
-I'll ask for scope (chapter, all chapters, or paste text), scan for all 10 pattern types plus custom patterns, and generate a detailed report with location, context, and concrete replacement suggestions for every match.
+I'll ask for scope (chapter, all chapters, or paste text), scan for all 24+ pattern types plus custom patterns, and generate a detailed report with location, context, and concrete replacement suggestions for every match.

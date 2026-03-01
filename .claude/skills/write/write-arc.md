@@ -326,17 +326,36 @@ Quality notes:
 - Character voices tracked to profiles
 
 ═══════════════════════════════════════
-Next Steps
+NEXT STEPS
 ═══════════════════════════════════════
 
-✓ Read chapters for quality review
-✓ Run /write:detect to scan for AI patterns
-✓ Run /write:check-consistency to verify continuity
+{IF YOLO MODE AND MORE ARCS REMAINING:}
+→ /write:arc
+  Continues automatically to next arc
+  (Arc {N+1} of {total})
 
-Ready to continue:
-• /write:arc 2 - Write Act 2 chapters
-• /write:revise - Auto-fix detected issues
+{IF YOLO MODE AND ALL ARCS COMPLETE:}
+→ /write:revise
+  Scan and fix AI patterns, consistency issues
+  (~15-30 min)
+
+{IF IN-DEPTH MODE AND MORE ARCS REMAINING:}
+→ /write:discuss {N+1}
+  Plan next arc before writing
+  (~5-10 min)
+
+→ /write:arc {N+1}
+  Write Arc {N+1} chapters after planning
+
+{IF IN-DEPTH MODE AND ALL ARCS COMPLETE:}
+→ /write:revise
+  Comprehensive quality pass
+  (~15-30 min)
+
+{ALWAYS AVAILABLE:}
 • /write:chapter N - Rewrite specific chapter
+• /write:detect - Quick AI pattern scan
+• /write:check-consistency - Continuity check
 ```
 
 ## Word Count Calculation
