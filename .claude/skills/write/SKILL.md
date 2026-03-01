@@ -11,15 +11,20 @@ Complete creative writing system from idea to finished manuscript.
 
 **YOLO Mode (Fast - 2 hours for first draft):**
 ```
-/write:new-project → /write:expand → /write:style-seed →
-/write:arc → /write:revise → /write:export
+/write:new-project → /write:expand → /write:arc → /write:revise → /write:export
 ```
+- `/expand` includes optional style seed
+- `/arc` writes ALL chapters automatically
 
 **In-Depth Mode (Thorough - 6-8 hours for first draft):**
 ```
-/write:new-project → /write:plan → /write:style-seed →
-/write:arc → /write:revise → /write:export
+/write:new-project → /write:plan →
+/write:discuss 1 → /write:arc 1 →
+/write:discuss 2 → /write:arc 2 → ... →
+/write:revise → /write:export
 ```
+- `/discuss N` plans each arc
+- `/arc N` writes that arc's chapters
 
 ## Core Commands
 
@@ -42,9 +47,14 @@ See: init-project.md
 ### Planning
 
 #### `/write:expand`
-**YOLO mode:** Expand vague idea into structured premise
+**YOLO mode:** Complete one-step expansion
 
-Transforms fuzzy concepts into workable premises with character sketches and simple plot. Fast transition to writing.
+Transforms fuzzy concepts into writing-ready project:
+- Expands premise
+- Creates character sketches
+- Generates 3-act outline with arc breakdown
+- **Optionally creates style profile from your samples**
+- Ready for `/write:arc` immediately
 
 See: yolo-expand.md
 
@@ -55,26 +65,38 @@ Detailed character profiles, complete plot outline, character arcs, world-buildi
 
 See: indepth-plan.md
 
-#### `/write:style-seed`
-Analyze writing samples to create style profile
+#### `/write:discuss [N]`
+**In-Depth mode:** Plan specific arc before writing
 
-Analyzes 2-3 paragraphs to capture sentence patterns, vocabulary, tone. Essential for authentic voice matching.
+Interactive questions about arc {N}: chapter count, POV pattern, emphasis, tone. Creates ARC-{N}-CONTEXT.md. Run before `/write:arc N`.
+
+See: discuss-arc.md
+
+#### `/write:style-seed`
+Add/update style profile (optional)
+
+Analyzes 2-3 paragraphs to capture sentence patterns, vocabulary, tone. Can also be done during `/write:expand`.
 
 See: style-seed.md
 
 ### Writing
 
-#### `/write:arc [name or range]`
-**Main writing command.** Write multiple chapters in parallel
+#### `/write:arc [N]`
+**Main writing command.** Write chapters in parallel
 
-Spawns parallel writing agents. Each writes one chapter independently with full story context. Automatic progress tracking and quality aggregation.
+Spawns parallel writing agents. Each writes one chapter independently with full story context.
 
-**Examples:**
-- `/write:arc` - Write next unwritten chapters
-- `/write:arc 1` - Write Act 1 chapters
-- `/write:arc 5-8` - Write chapters 5 through 8
+**YOLO mode:**
+- `/write:arc` - Writes ALL chapters automatically (no arguments)
+- Goes through arcs in sequence
+- Fully automated
 
-**Time:** ~15-20 minutes for 3-5 chapters
+**In-Depth mode:**
+- `/write:arc N` - Writes specific arc (argument required)
+- After `/write:discuss N` planning
+- One arc at a time
+
+**Time:** ~15-20 minutes per arc (3-5 chapters)
 
 See: write-arc.md
 

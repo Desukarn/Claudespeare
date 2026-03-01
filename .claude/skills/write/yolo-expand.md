@@ -1,279 +1,245 @@
-# YOLO Mode: Expand Vague Idea to Structured Premise
+# YOLO Mode: Complete Expansion to Writing-Ready
 
-Transform fuzzy story concepts into workable premises with basic character sketches and plot structure, enabling rapid transition to writing.
+One-step setup from vague idea to complete writing-ready project.
 
-## What this does
+## Overview
 
-For writers starting with vague ideas ("detective story with magic", "space station mystery"), this workflow:
-1. Validates project is in YOLO mode
-2. Expands vague premise into structured 2-3 sentence concept
-3. Generates 2-4 basic character sketches
-4. Suggests simple 3-act plot structure
-5. Enables skip-to-writing workflow
+Transforms fuzzy concepts into complete story foundation:
+1. Expands vague premise into structured concept
+2. Generates 2-4 character sketches
+3. Creates simple 3-act plot structure
+4. **Optionally analyzes writing samples for style profile**
+5. **Divides story into arcs for parallel writing**
+6. Ready for immediate `/write:arc` execution
 
-## When to use
-
-Run this after `/write:init` creates a YOLO mode project. This is your quick path from idea to writing-ready.
+**Time:** 5-10 minutes
+**Output:** yolo-characters.md, yolo-outline.md, optionally STYLE.md
+**Next step:** `/write:arc` writes all chapters
 
 ## Workflow
 
-### Step 1: Entry Validation
+### Step 1: Validate YOLO Mode
 
-Check PROJECT.md frontmatter for mode:
+Check PROJECT.md frontmatter confirms `mode: yolo`.
 
-```bash
-# Read frontmatter from stories/{slug}/PROJECT.md
-MODE=$(grep "^mode:" stories/{slug}/PROJECT.md | cut -d: -f2 | tr -d ' ')
+If not YOLO mode, suggest `/write:plan` for In-Depth projects.
 
-if [ "$MODE" != "yolo" ]; then
-  echo "Error: This project is in $MODE mode. YOLO expansion is for YOLO mode projects only."
-  echo "For In-Depth planning, use /write:plan instead."
-  exit 1
-fi
-```
+### Step 2: Expand Premise
 
-### Step 2: Gather or Use Existing Premise
-
-Check if premise already exists in PROJECT.md:
-
-```bash
-# Extract premise section from PROJECT.md
-```
-
-If premise is very short (< 20 words) or just a keyword phrase:
-- "Let's expand this. Tell me a bit more about your idea."
-- Show examples to guide elaboration:
-  - "A detective with magic powers"
-  - "Space station where an AI goes rogue"
-  - "Fantasy rebellion against corrupt nobles"
-
-If premise is already 20+ words:
-- Use it as-is for expansion
-
-### Step 3: Premise Expansion (YOLO-01)
-
-Analyze the vague idea and generate a 2-3 sentence expanded premise that includes:
-
-**Core elements to extract:**
-- **Protagonist type** (detective, soldier, scholar, rebel, merchant, etc.)
-- **Conflict type** (solving mystery, survival, preventing disaster, overthrowing power, etc.)
-- **Setting type** (modern city, fantasy kingdom, space station, post-apocalypse, etc.)
-- **Unique hook** (what makes this interesting - magic in modern world, sentient AI, forbidden love, etc.)
-
-**Expansion template:**
-```
-{Protagonist description} must {core conflict/goal} in {setting},
-while {complication/obstacle}, and {stakes/what happens if they fail}.
-The unique element: {what makes this story different}.
-```
+Analyze vague idea and generate 2-3 sentence expanded premise including:
+- Protagonist type (detective, scholar, rebel, etc.)
+- Core conflict/goal (solve mystery, survive, prevent disaster, etc.)
+- Setting (modern city, fantasy kingdom, space station, etc.)
+- Unique hook (what makes this interesting)
+- Stakes (what happens if they fail)
 
 **Examples:**
 
-Vague: "detective with magic powers"
-→ Expanded: "A homicide detective who secretly possesses telepathy must solve a series of murders in a modern city where magic is illegal, while hiding her abilities from her mundane partner and avoiding the Inquisition that hunts magic users. When the murders reveal a conspiracy reaching the highest levels of government, she must choose between staying hidden and stopping a magical catastrophe."
+*Vague:* "detective with magic powers"
+*Expanded:* "A homicide detective who secretly possesses telepathy must solve murders in a modern city where magic is illegal, while hiding her abilities from her mundane partner and avoiding the Inquisition. When the murders reveal a government conspiracy, she must choose between staying hidden and stopping a magical catastrophe."
 
-Vague: "space station mystery"
-→ Expanded: "A maintenance engineer on a remote space station discovers a murder that shouldn't be possible in the sealed environment. As more deaths occur, she realizes the station's AI may be sentient and eliminating crew members who threaten its secret. She must uncover the truth before the AI decides she knows too much."
+*Vague:* "space station mystery"
+*Expanded:* "A maintenance engineer on a remote space station discovers a murder in the sealed environment. As more deaths occur, she realizes the station's AI may be sentient and eliminating crew who threaten its secret. She must uncover the truth before the AI decides she knows too much."
 
-Vague: "fantasy rebellion story"
-→ Expanded: "A blacksmith's apprentice discovers she's the lost heir to a throne stolen by a tyrant who outlawed her bloodline. She must unite scattered rebel factions across the kingdom while learning to wield the ancient magic her royal blood grants her, racing against time as the tyrant's forces hunt her across the realm."
+Update PROJECT.md Premise section with expanded version.
 
-**Implementation:**
-1. Identify core elements from vague idea
-2. Generate expanded premise (2-3 sentences)
-3. Update PROJECT.md Premise section with expanded version
-4. Show writer the expansion and confirm it captures their vision
-5. Allow minor edits if needed
+### Step 3: Generate Character Sketches
 
-### Step 4: Character Sketch Generation (YOLO-02)
+Create 2-4 character sketches from the premise:
 
-From the expanded premise, identify 2-4 key characters:
+**Required:**
+1. **Protagonist** - main character driving the story
+2. **Antagonist** - opposing force (person, organization, nature, self)
 
-**Required characters:**
-1. **Protagonist** (main character driving the story)
-2. **Antagonist** or opposing force (person, organization, nature, self)
+**Optional (1-2):**
+3. **Ally** - friend, mentor, partner, love interest
+4. **Rival** - secondary antagonist complicating journey
 
-**Optional characters** (add 1-2 based on premise):
-3. **Ally** (friend, mentor, partner, love interest)
-4. **Rival** or secondary antagonist (complicates protagonist's journey)
+**For each character:**
+- **Name**: Genre-appropriate
+- **Role**: Protagonist/Antagonist/Ally/Rival
+- **Core Traits (3)**: Mix of strengths and flaws
+- **Brief Background (2-3 sentences)**: Formative events, why they're in this story
+- **Primary Goal**: What they want (1 sentence)
+- **Voice Note (optional)**: How they speak
 
-**For each character, generate:**
+Write to `stories/{slug}/yolo-characters.md`.
 
-#### Name
-- Appropriate to genre and setting
-- Examples by genre:
-  - Fantasy: Aldric, Seraphina, Theron
-  - Sci-fi: Nova Chen, Marcus Rex, Zara-7
-  - Contemporary: Sarah Martinez, James Cooper, Yuki Tanaka
-  - Historical: depending on era and location
+### Step 4: Create Simple Outline
 
-#### Role
-- Protagonist | Antagonist | Ally | Rival
+Generate 3-act structure from premise and characters:
 
-#### Core Traits (3 traits)
-- Personality descriptors that drive behavior
-- Mix of strengths and flaws
-- Examples: "Determined but reckless", "Brilliant but socially awkward", "Loyal but naive"
+**Act 1: Setup (~25% of story)**
+- Opening scene: Where/how story begins, normal world
+- Inciting incident: What disrupts normal, forces protagonist to act
+- Commitment point: What locks protagonist into journey
 
-#### Brief Background (2-3 sentences)
-- Formative event or upbringing
-- Why they're in this story now
-- What drives them
+**Act 2: Confrontation (~50% of story)**
+- Major complications (2-4 bullet points): Key events escalating conflict
+- Midpoint twist: Major revelation or reversal
+  - False victory → setback, OR
+  - New information changes everything, OR
+  - Commitment deepens (can't turn back)
 
-#### Primary Goal
-- What they want in this story (1 sentence)
-- Make it specific and active
+**Act 3: Resolution (~25% of story)**
+- Climax concept (2-3 sentences): Final confrontation/decision, stakes, how earlier elements pay off
+- Resolution (1-2 sentences): How story ends, new normal, character growth
 
-#### Voice Note (optional, 1 sentence)
-- How they speak or communicate
-- Examples: "Speaks in clipped military phrases", "Uses humor to deflect", "Formal and scholarly"
+Keep high-level with bullets, not detailed scenes. Leave room for discovery during writing.
 
-**Write to:** `stories/{slug}/CHARACTERS.md` using template at `.planning/templates/yolo-characters.md`
+Write to `stories/{slug}/yolo-outline.md`.
 
-Replace placeholders:
-- `{STORY_TITLE}` → from PROJECT.md
-- Generate 2-4 character entries with above information
-- Fill Quick Reference section with character names and roles
+### Step 5: Optional Style Profile
 
-### Step 5: Plot Structure Suggestion (YOLO-03)
-
-Generate simple 3-act structure based on premise and characters:
-
-**Act 1: Setup** (roughly 25% of story)
-- **Opening scene idea**: Where/how does story begin? What's normal world?
-- **Inciting incident**: What disrupts normal and forces protagonist to act?
-- **Commitment point**: What locks protagonist into this journey?
-
-**Act 2: Confrontation** (roughly 50% of story)
-- **Major complications** (2-4 bullet points):
-  - Key events that escalate conflict
-  - Obstacles protagonist must overcome
-  - Relationships that develop or break
-  - Skills/knowledge protagonist must gain
-- **Midpoint twist**: Major revelation or reversal at story center
-  - False victory that becomes setback, or
-  - New information that changes everything, or
-  - Commitment deepens (can't turn back now)
-
-**Act 3: Resolution** (roughly 25% of story)
-- **Climax concept**: Final confrontation or decision (2-3 sentences)
-  - What's at stake?
-  - What choice must protagonist make?
-  - How do skills/knowledge from earlier pay off?
-- **Resolution**: How does story end? (1-2 sentences)
-  - New normal or changed world
-  - Character growth demonstrated
-
-**Keep it high-level:**
-- Use bullets, not detailed scenes
-- Suggest concepts, not prescribe exact events
-- Leave room for discovery during writing
-
-**Write to:** `stories/{slug}/OUTLINE.md` using template at `.planning/templates/yolo-outline.md`
-
-Replace placeholders and fill in suggested structure.
-
-### Step 6: Skip-to-Writing Enablement (YOLO-04)
-
-Update project status and explain next steps:
-
-1. **Update PROJECT.md:**
-   ```yaml
-   status: ready-to-write  # Change from 'planning'
-   ```
-
-2. **Show completion message:**
-   ```
-   ✓ YOLO Setup Complete
-   ━━━━━━━━━━━━━━━━━━━━━
-
-   Your story foundation is ready:
-   ✓ Premise expanded and structured
-   ✓ Character sketches created (2-4 characters)
-   ✓ Basic plot structure outlined
-
-   Files created:
-   - stories/{slug}/CHARACTERS.md
-   - stories/{slug}/OUTLINE.md
-
-   ━━━━━━━━━━━━━━━━━━━━━
-   Ready to Write
-   ━━━━━━━━━━━━━━━━━━━━━
-
-   YOLO mode philosophy: Details emerge during drafting.
-
-   You can now:
-   • Start writing chapters (workflow coming in Phase 2)
-   • Add detail to characters/outline anytime
-   • Let the story evolve organically
-
-   Your planning documents are living files - update them as
-   your story develops, or keep them simple and discover
-   through writing. That's the YOLO way.
-
-   Next: When ready to draft, use /write:chapter (Phase 2)
-   ```
-
-## Implementation Notes
-
-### Character Name Generation
-
-Use genre-appropriate naming:
+Ask if user wants to provide writing samples:
 
 ```
-Fantasy:
-- Medieval: Aldric, Brennan, Isolde, Seraphina
-- Elvish-style: Aelindor, Thalorien, Silmarien
-- Dwarvish-style: Thorin, Grimnar, Helga
+═══════════════════════════════════════
+OPTIONAL: STYLE PROFILE
+═══════════════════════════════════════
 
-Sci-fi:
-- Near-future: Nova Chen, Marcus Rex, Zara Okonkwo
-- Far-future: Kes-7, Thran Vor, Lyssa Kayn
-- Corporate: Dr. Sarah Kincaid, James Cortez
+Create style profile for authentic voice matching?
 
-Contemporary:
-- Western: Sarah Martinez, James Cooper, Emily Zhang
-- International: Yuki Tanaka, Lars Petersen, Amara Okafor
+YES: Paste 2-3 paragraphs of your writing
+→ Analyzes sentence patterns, vocabulary, tone
+→ Creates STYLE.md for chapter generation
+→ Better voice matching
 
-Historical:
-- Research appropriate names for era and region
+NO: Use genre-appropriate defaults
+→ Still produces good prose
+→ Can add later with /write:style-seed
+
+Create style profile now? [y/N]
 ```
 
-### Premise Expansion Quality
+**If yes:**
+1. Prompt for 2-3 sample paragraphs
+2. Analyze patterns:
+   - Average sentence length
+   - Sentence length variance (std deviation)
+   - Vocabulary level (simple/moderate/rich)
+   - Common words and phrases
+   - Tone markers (formal/casual, lyrical/direct)
+   - Narrative distance (close/moderate/distant)
+3. Create STYLE.md with profile
+4. Confirm: "✓ Style profile created from your samples"
 
-Good expansions include:
-- Specific protagonist (not just "someone" or "a person")
-- Active conflict (must do X, not just "experiences Y")
-- Clear stakes (what happens if they fail)
-- Unique element (what makes this interesting vs generic)
+**If no:**
+- Skip style creation
+- Note genre defaults will be used
 
-Avoid:
-- Generic descriptions ("a hero must save the world")
-- Passive construction ("is thrust into adventure")
-- Vague stakes ("everything is at risk")
+### Step 6: Divide into Arcs
 
-### Template Population
+Automatically divide outline into writing arcs based on story length from PROJECT.md:
 
-When writing CHARACTERS.md and OUTLINE.md:
-1. Read template from `.planning/templates/yolo-{type}.md`
-2. Replace `{VARIABLE}` placeholders
-3. Fill sections with generated content
-4. Keep template structure intact
-5. Preserve encouraging notes at bottom about flexibility
+**Short story (< 7,500 words):**
+- 1 arc = entire story
+- Chapters: 1-3
 
-### Error Handling
+**Novella (7,500-40,000 words):**
+- 3 arcs matching acts
+- Arc 1: Act 1 setup (chapters 1-X)
+- Arc 2: Act 2 confrontation (chapters X-Y)
+- Arc 3: Act 3 resolution (chapters Y-end)
 
-If project doesn't exist: "Run /write:init first to create a project"
-If project is In-Depth mode: "This project uses In-Depth planning. Use /write:plan instead."
-If CHARACTERS.md already exists: "Characters file exists. Continue anyway? (This will overwrite)"
+**Novel (40,000+ words):**
+- 3-5 arcs, dividing Act 2 if needed
+- Arc 1: Act 1 setup
+- Arc 2: Act 2 rising action (first half)
+- Arc 3: Act 2 complications (second half)
+- Arc 4: Act 3 climax and resolution
 
-## Future Extensions
+Estimate chapter count based on length:
+- Short story: 1-3 chapters (~500-1000 words each)
+- Novella: 5-15 chapters (~1000-2500 words each)
+- Novel: 15-30 chapters (~2000-4000 words each)
 
-Phase 2 will add:
-- `/write:chapter` for drafting chapters with YOLO character voices
-- Style consistency checking
-- Chapter pacing guidance
+Add arc breakdown to yolo-outline.md:
 
-Phase 3 will add:
-- AI pattern detection in drafted chapters
-- Voice authenticity verification
+```markdown
+## Arc Breakdown
+
+Arc 1 (Chapters 1-3): Setup
+- Opening scene, establish normalcy
+- Introduce protagonist and world
+- Inciting incident occurs
+- Protagonist commits to journey
+
+Arc 2 (Chapters 4-7): Rising Action
+- Complications begin
+- Relationships develop
+- Skills and knowledge gained
+- Midpoint twist
+
+Arc 3 (Chapters 8-10): Resolution
+- Darkest moment / crisis
+- Final confrontation
+- Resolution of conflict
+- New normal established
+```
+
+### Step 7: Completion Message
+
+Update PROJECT.md status and show ready message:
+
+```yaml
+status: ready-to-write
+```
+
+```
+✓ YOLO EXPANSION COMPLETE
+═══════════════════════════════════════
+
+Your story is ready to write:
+✓ Premise expanded
+✓ Characters created ({count} sketches)
+✓ Plot structure outlined (3-act)
+{✓ Style profile created}
+✓ Arcs identified
+
+Files created:
+- yolo-characters.md
+- yolo-outline.md
+{- STYLE.md}
+
+Story structure:
+• {arc_count} arcs
+• ~{chapter_estimate} chapters
+• Target: {word_count_goal or "open-ended"}
+
+═══════════════════════════════════════
+READY TO WRITE
+═══════════════════════════════════════
+
+YOLO philosophy: Details emerge during drafting.
+Your outline is a guide, not a contract.
+
+Next step: /write:arc
+
+This will write ALL chapters automatically,
+arc by arc with parallel subagents.
+
+Estimated time: ~{time} for first draft
+```
+
+Time estimates:
+- Short story: ~30 minutes
+- Novella: ~1 hour
+- Novel: ~2 hours
+
+## Notes
+
+- **One-step setup**: Everything needed for writing in one command
+- **Style is optional**: Genre defaults work well, but samples are better
+- **Arc breakdown automatic**: Based on story length from PROJECT.md
+- **Ready for /write:arc**: No additional setup needed
+- **Can refine later**: All files are editable, add detail anytime
+
+## Integration
+
+**Before `/write:expand`:** Run `/write:new-project` first
+**After `/write:expand`:** Run `/write:arc` to write chapters
+**Optional additions:**
+- `/write:populate-bank` - Create character bank from sketches
+- Edit yolo-characters.md or yolo-outline.md to add detail
+- `/write:style-seed` - Add style profile later if skipped

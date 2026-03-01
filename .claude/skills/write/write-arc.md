@@ -1,12 +1,24 @@
 # Arc-Based Parallel Writing Workflow
 
-Write multiple chapters simultaneously using parallel subagents, each working independently to generate a complete chapter with full story context.
+Write multiple chapters simultaneously using parallel subagents.
 
 ## Overview
 
-This workflow:
+**YOLO Mode (no arguments):**
+- `/write:arc` writes ALL chapters automatically
+- Goes through each arc in sequence
+- Arc 1 → Arc 2 → Arc 3 → done
+- Fully automated based on `/write:expand` outline
+
+**In-Depth Mode (with arc number):**
+- `/write:arc N` writes specific arc
+- After `/write:discuss N` planning
+- One arc at a time, user-controlled
+- Discuss → write rhythm
+
+**How it works:**
 1. Loads complete story context (STYLE.md, CHARACTERS.md, OUTLINE.md, WORLD.md, existing chapters)
-2. Identifies chapters to write based on your outline
+2. Identifies chapters to write based on mode and arguments
 3. Spawns parallel writing subagents (one per chapter)
 4. Each subagent writes independently with full story context
 5. Aggregates results and reports progress
@@ -21,6 +33,21 @@ This workflow:
 Verify you're in a valid story project by checking for PROJECT.md at `stories/{slug}/`.
 
 If no project exists, prompt user to run `/write:new-project` first.
+
+### Step 2: Determine Mode and Scope
+
+Check PROJECT.md `mode` field:
+
+**If YOLO mode:**
+- Expects NO arguments (or ignores them)
+- Writes ALL arcs automatically in sequence
+- Uses arc breakdown from yolo-outline.md
+
+**If In-Depth mode:**
+- Expects arc number in $ARGUMENTS
+- Writes only that specific arc
+- Looks for ARC-{N}-CONTEXT.md for planning details
+- If missing, prompts: "Run `/write:discuss {N}` first to plan this arc"
 
 ### Step 2: Load Story Context
 
