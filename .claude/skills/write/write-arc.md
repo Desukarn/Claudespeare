@@ -10,11 +10,11 @@ Write multiple chapters simultaneously using parallel subagents.
 - Arc 1 → Arc 2 → Arc 3 → done
 - Fully automated based on `/write:expand` outline
 
-**In-Depth Mode (with arc number):**
-- `/write:arc N` writes specific arc
-- After `/write:discuss N` planning
+**In-Depth Mode:**
+- `/write:arc N` writes specific arc (after `/write:discuss N`)
+- `/write:arc auto` writes next unwritten arc automatically
 - One arc at a time, user-controlled
-- Discuss → write rhythm
+- Use `auto` to skip specifying arc numbers
 
 **How it works:**
 1. Loads complete story context (STYLE.md, CHARACTERS.md, OUTLINE.md, WORLD.md, existing chapters)
@@ -36,18 +36,29 @@ If no project exists, prompt user to run `/write:new-project` first.
 
 ### Step 2: Determine Mode and Scope
 
-Check PROJECT.md `mode` field:
+Check PROJECT.md `mode` field and parse $ARGUMENTS:
 
 **If YOLO mode:**
 - Expects NO arguments (or ignores them)
 - Writes ALL arcs automatically in sequence
 - Uses arc breakdown from yolo-outline.md
 
-**If In-Depth mode:**
-- Expects arc number in $ARGUMENTS
+**If In-Depth mode with arc number:**
+- `/write:arc 1` or `/write:arc 2` etc.
 - Writes only that specific arc
 - Looks for ARC-{N}-CONTEXT.md for planning details
 - If missing, prompts: "Run `/write:discuss {N}` first to plan this arc"
+
+**If In-Depth mode with "auto":**
+- `/write:arc auto`
+- Detects next unwritten arc automatically:
+  1. Check existing chapters/ directory
+  2. Identify which arcs are complete
+  3. Find next arc number in sequence
+  4. Look for ARC-{N}-CONTEXT.md
+  5. If missing, prompt: "Run `/write:discuss {N}` first"
+  6. If exists, write that arc
+- Continues workflow without manual arc numbering
 
 ### Step 2: Load Story Context
 
@@ -346,6 +357,10 @@ NEXT STEPS
 
 → /write:arc {N+1}
   Write Arc {N+1} chapters after planning
+
+→ /write:arc auto
+  Auto-detects next arc and writes it
+  (Skips manual numbering)
 
 {IF IN-DEPTH MODE AND ALL ARCS COMPLETE:}
 → /write:revise

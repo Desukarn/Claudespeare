@@ -20,11 +20,12 @@ Complete creative writing system from idea to finished manuscript.
 ```
 /write:new-project → /write:plan →
 /write:discuss 1 → /write:arc 1 →
-/write:discuss 2 → /write:arc 2 → ... →
+/write:discuss 2 → /write:arc auto → ... →
 /write:revise → /write:export
 ```
 - `/discuss N` plans each arc
-- `/arc N` writes that arc's chapters
+- `/arc N` or `/arc auto` writes chapters
+- `auto` detects next arc automatically
 
 ## Core Commands
 
@@ -81,20 +82,21 @@ See: style-seed.md
 
 ### Writing
 
-#### `/write:arc [N]`
+#### `/write:arc [N|auto]`
 **Main writing command.** Write chapters in parallel
 
 Spawns parallel writing agents. Each writes one chapter independently with full story context.
 
 **YOLO mode:**
-- `/write:arc` - Writes ALL chapters automatically (no arguments)
+- `/write:arc` - Writes ALL chapters automatically
 - Goes through arcs in sequence
 - Fully automated
 
 **In-Depth mode:**
-- `/write:arc N` - Writes specific arc (argument required)
+- `/write:arc N` - Writes specific arc N
+- `/write:arc auto` - Auto-detects next unwritten arc
 - After `/write:discuss N` planning
-- One arc at a time
+- Use `auto` to skip manual numbering
 
 **Time:** ~15-20 minutes per arc (3-5 chapters)
 

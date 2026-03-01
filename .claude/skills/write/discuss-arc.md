@@ -208,16 +208,19 @@ Saved to: ARC-{N}-CONTEXT.md
 READY TO WRITE
 ═══════════════════════════════════════
 
-Next step: /write:arc {N}
+Next step:
+→ /write:arc {N}
+  Write this arc's chapters in parallel
+  (~{time_estimate})
 
-This will write all {count} chapters for this arc
-in parallel, using the planning context above.
+OR
+→ /write:arc auto
+  Auto-detects and writes this arc
+  (Same result, skips manual numbering)
 
-Estimated time: ~{time_estimate}
-
-Or continue planning:
-• /write:discuss {N+1} - Plan next arc
-• Edit ARC-{N}-CONTEXT.md to refine details
+Continue planning:
+• /write:discuss {N+1} - Plan next arc first
+• Edit ARC-{N}-CONTEXT.md - Refine details
 ```
 
 ## Examples
