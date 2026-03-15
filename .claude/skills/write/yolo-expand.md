@@ -43,6 +43,65 @@ Analyze vague idea and generate 2-3 sentence expanded premise including:
 
 Update PROJECT.md Premise section with expanded version.
 
+### Step 2.5: Quick Trope Inspiration Research (ANTI-SLOP)
+
+**CRITICAL**: Even in YOLO mode, research fresh tropes to avoid cookie-cutter plots.
+
+**YOLO Streamlined Process** (faster but still authentic):
+
+**Prompt user**:
+```
+Would you like me to research story tropes for fresh inspiration?
+
+YOLO mode = Quick research (5 tropes instead of 10)
+Takes ~2 minutes but helps avoid common AI plot patterns:
+- "Strength becomes weakness"
+- "Final moral act"
+- "Power corrupts protagonist"
+- Standard chosen one narratives
+
+I'll browse TVTropes.org to find unexpected angle combinations.
+
+A. Yes - Quick trope research (recommended, 5 tropes)
+B. No - Skip and plan directly
+```
+
+**If YES**: Launch quick trope research (Task tool with modified prompt)
+
+**Modified prompt for YOLO speed**:
+```
+Research fresh story tropes for this premise: [premise]
+
+Browse TVTropes.org and find 5 unexpected tropes (instead of 10) that could inspire unique angles.
+
+Focus on:
+- Tropes that subvert genre expectations
+- Uncommon character dynamics
+- Plot patterns that avoid clichés
+
+Return 5 trope suggestions with brief explanations.
+```
+
+**Agent returns 5 trope suggestions**. Present to user, user selects 1-2 (instead of 2-3).
+
+**Store selected tropes** in PROJECT.md:
+```yaml
+inspiration_tropes:
+  - "Trope Name 1"
+  - "Trope Name 2"
+```
+
+**Reference these during character and plot creation** to avoid formulaic choices.
+
+**If NO**:
+- Note that story may risk AI plot patterns
+- Continue to character creation
+- Can add trope research later if needed
+
+**YOLO Mode Change**: 5 tropes instead of 10, select 1-2 instead of 2-3, but STILL AVAILABLE.
+
+**NO BYPASSING**: Fast mode ≠ slop mode. Quality shortcuts, not quality elimination.
+
 ### Step 3: Generate Character Sketches
 
 Create 2-4 character sketches from the premise:
@@ -56,7 +115,43 @@ Create 2-4 character sketches from the premise:
 4. **Rival** - secondary antagonist complicating journey
 
 **For each character:**
-- **Name**: Genre-appropriate
+
+#### Name Generation (ANTI-SLOP - REQUIRED)
+
+**CRITICAL**: Even in YOLO mode, use online name generator for authenticity.
+
+See `name-generator-requirement.md` for full details.
+
+**YOLO Streamlined Process** (faster but still authentic):
+
+1. Ask user for character context: "Tell me about this character (genre, culture/ethnicity, role, time period)"
+2. Choose appropriate generator:
+   - Fantasy: https://www.fantasynamegenerators.com/
+   - Historical/Modern: https://www.behindthename.com/random/
+   - Sci-Fi: https://www.fantasynamegenerators.com/sci-fi-names.php
+3. Use WebFetch to get **5 name options** (instead of 10 for In-Depth mode)
+4. Present options to user:
+   ```
+   Here are 5 authentic [context] names from [generator]:
+
+   1. [Name]
+   2. [Name]
+   3. [Name]
+   4. [Name]
+   5. [Name]
+
+   Pick a number (1-5), ask for more, or provide your own name.
+   ```
+5. User selects or requests regeneration
+
+**YOLO Mode Change**: 5 options instead of 10, but STILL REQUIRED.
+
+**NO BYPASSING**: Do NOT generate names directly. AI models are biased toward "Kael", "Elara", "Lyra", etc.
+
+**If user provides their own name**: Accept it (bypasses generator requirement)
+
+#### Character Details
+
 - **Role**: Protagonist/Antagonist/Ally/Rival
 - **Core Traits (3)**: Mix of strengths and flaws
 - **Brief Background (2-3 sentences)**: Formative events, why they're in this story
@@ -65,7 +160,7 @@ Create 2-4 character sketches from the premise:
 
 Write to `stories/{slug}/yolo-characters.md`.
 
-### Step 4: Create Simple Outline
+### Step 4: Create Simple Outline with Conflict & Exposition Analysis
 
 Generate 3-act structure from premise and characters:
 
@@ -85,9 +180,89 @@ Generate 3-act structure from premise and characters:
 - Climax concept (2-3 sentences): Final confrontation/decision, stakes, how earlier elements pay off
 - Resolution (1-2 sentences): How story ends, new normal, character growth
 
+**CRITICAL: Add Chapter-Level Goal/Conflict/Outcome**
+
+For EACH chapter in the outline, add this structure:
+
+```markdown
+Chapter {N}: "{Title}" ({POV character}, ~{words} words)
+  GOAL: What does the character want this chapter?
+  CONFLICT: What opposes them? What stands in their way?
+  OUTCOME: What changes? How does the story progress?
+
+  Plot beats:
+  - {Beat 1}
+  - {Beat 2}
+```
+
+**AUTOMATIC EXPOSITION DUMP DETECTION**
+
+While generating chapter summaries, scan for red flag patterns and FLAG them:
+
+**Red Flag Keywords:**
+- "learns about" / "discovers that" / "finds out" / "is told"
+- "overhears" / "eavesdrops" / "explained" / "describes"
+- "tavern" / "bar" / "inn" (often exposition dump locations)
+- "conversation reveals" / "discussion about"
+
+**Red Flag Patterns:**
+- "Character goes to [place] and learns [info]" (passive gathering)
+- "NPC tells character about [lore]" (convenient exposition)
+- "Character overhears [crucial info]" (lazy reveal)
+- "At tavern, meets [exposition NPC]"
+- "Mentor explains [system/prophecy/history]"
+
+**When detected, add WARNING to that chapter:**
+
+```markdown
+Chapter {N}: "{Title}"
+  ⚠️ POTENTIAL EXPOSITION DUMP
+  Pattern: {specific pattern found}
+  Problem: Information delivered passively, no conflict
+
+  ALTERNATIVE: Reveal through conflict
+  - Character NEGOTIATES for info (social cost)
+  - Character STEALS/DISCOVERS info (physical risk)
+  - Character DEDUCES info (intellectual challenge)
+  - Info revealed DURING action (chase/fight)
+  - Character WRONG, must correct (error cost)
+```
+
+**Example Comparison:**
+
+❌ **BAD (Passive):**
+```
+Chapter 3: "The Tavern"
+  - Sarah visits local tavern
+  - Meets old sage
+  - He tells her artifact history
+  - She learns the prophecy
+  - Returns to camp
+```
+*Problem: No conflict, passive listening*
+
+✅ **GOOD (Active):**
+```
+Chapter 3: "The Theft"
+  GOAL: Access restricted archives
+  CONFLICT: Locked, guarded, unauthorized
+  OUTCOME: Partial info + now hunted by guards
+
+  - Breaks into university at night
+  - Nearly caught, hides
+  - Photographs partial documents
+  - Alarm triggered, window escape
+  - Guard sees her face
+```
+*Better: Active, risk, consequences*
+
+**If any chapter lacks Goal/Conflict/Outcome: FLAG for Step 7 approval.**
+
 Keep high-level with bullets, not detailed scenes. Leave room for discovery during writing.
 
 Write to `stories/{slug}/yolo-outline.md`.
+
+**Store all flagged chapters for Step 7 checkpoint.**
 
 ### Step 5: Optional Style Profile
 
@@ -178,7 +353,171 @@ Arc 3 (Chapters 8-10): Resolution
 - New normal established
 ```
 
-### Step 7: Completion Message
+### Step 7: MANDATORY OUTLINE APPROVAL CHECKPOINT
+
+**⚠️ CRITICAL: This prevents cookie-cutter storytelling. DO NOT SKIP. ⚠️**
+
+Before proceeding to writing, present comprehensive outline for explicit approval.
+
+Generate and show this detailed breakdown:
+
+```
+═══════════════════════════════════════
+OUTLINE APPROVAL CHECKPOINT
+═══════════════════════════════════════
+
+⚠️ REVIEW THIS CAREFULLY ⚠️
+
+Once approved, parallel agents will write ALL chapters
+based on this outline. Fixing structural problems after
+writing is 10x harder than fixing them now.
+
+═══════════════════════════════════════
+OPENING STRATEGY
+═══════════════════════════════════════
+
+{Show the opening scene/chapter strategy}
+
+Opening type: {In medias res / Inciting incident / Character intro}
+Hook: {What grabs reader immediately}
+First scene summary: {Brief description}
+Conflict in opening: {What tension exists immediately}
+
+═══════════════════════════════════════
+ACT STRUCTURE
+═══════════════════════════════════════
+
+Act 1: Setup (~{word_count} words, Chapters {range})
+  → {Brief summary of Act 1 arc}
+
+Act 2: Confrontation (~{word_count} words, Chapters {range})
+  → {Brief summary of Act 2 arc}
+
+Act 3: Resolution (~{word_count} words, Chapters {range})
+  → {Brief summary of Act 3 arc}
+
+Total: {total_chapters} chapters, ~{total_words} words
+
+═══════════════════════════════════════
+CHAPTER-BY-CHAPTER BREAKDOWN
+═══════════════════════════════════════
+
+{For each chapter, show full details including warnings:}
+
+Chapter {N}: "{Title}" ({POV}, ~{words} words)
+  GOAL: {What character wants}
+  CONFLICT: {What opposes them}
+  OUTCOME: {What changes}
+
+  Plot beats:
+  - {Beat 1}
+  - {Beat 2}
+
+  {If exposition dump flagged:}
+  ⚠️ EXPOSITION DUMP WARNING
+  Pattern: {Pattern detected}
+  Fix: {Suggested alternative}
+
+═══════════════════════════════════════
+KEY PLOT BEATS
+═══════════════════════════════════════
+
+Inciting Incident: Ch {N} - {Description}
+Midpoint Twist: Ch {N} - {Description}
+Darkest Moment: Ch {N} - {Description}
+Climax: Ch {N} - {Description}
+
+═══════════════════════════════════════
+CHARACTER ARCS
+═══════════════════════════════════════
+
+{For each main character:}
+{Name}:
+  Start: {Initial state}
+  Change: {Growth/transformation}
+  End: {Final state}
+
+═══════════════════════════════════════
+QUALITY CHECK QUESTIONS
+═══════════════════════════════════════
+
+Before approving, answer these:
+
+1. OPENING HOOK
+   Does the opening hook immediately?
+   Is there tension/conflict in first scene?
+
+2. EXPOSITION DUMP CHECK
+   Any tavern/bar/inn exposition scenes?
+   Any "character learns about" passive scenes?
+   Any convenient NPC explanations?
+   {List flagged chapters if any}
+
+3. CHAPTER-LEVEL CONFLICT
+   Does EVERY chapter have Goal/Conflict/Outcome?
+   Can you identify what character WANTS each chapter?
+   Can you identify what OPPOSES them each chapter?
+
+4. CHARACTER AGENCY
+   Is protagonist ACTIVE (drives story) or PASSIVE (reacts)?
+   Do they make meaningful choices?
+   Do they pursue goals or wait for things to happen?
+
+5. STORY START POINT
+   Does story start at right moment?
+   Too late (too much setup)? Too early (mundane life)?
+   Is inciting incident in Ch 1 or early Ch 2?
+
+6. PLOT PROGRESSION
+   Does each chapter advance meaningfully?
+   Can you identify NEW info/obstacle/change in each?
+   Any wheel-spinning chapters?
+
+7. STAKES ESCALATION
+   Do stakes rise throughout Act 2?
+   Clear progression of tension?
+
+═══════════════════════════════════════
+APPROVAL DECISION
+═══════════════════════════════════════
+
+Type "YES" to approve and proceed to writing.
+Type "NO" to revise outline.
+Type chapter numbers to get detailed revision help.
+
+⚠️ LAST CHANCE to fix structural problems before
+   parallel agents write all chapters. Revising
+   structure AFTER writing is 10x more work.
+
+APPROVE OUTLINE? [YES/NO/chapter numbers]:
+```
+
+**WAIT for explicit user response. DO NOT PROCEED without it.**
+
+**If user types "YES":**
+- Proceed to Step 8 (Completion Message)
+- Note approval in PROJECT.md
+
+**If user types "NO":**
+- Ask what needs revision
+- Make requested changes to outline
+- Re-run this checkpoint (show full breakdown again)
+- Require new approval
+
+**If user types chapter numbers (e.g., "3, 5, 7"):**
+- For each flagged chapter, provide:
+  - Current structure analysis
+  - Specific problems (passive info-gathering, exposition, etc.)
+  - Suggested revisions with Goal/Conflict/Outcome
+  - Alternative approaches
+- Allow user to request changes
+- Update outline accordingly
+- Re-run checkpoint
+- Require new approval
+
+**DO NOT proceed to Step 8 until user explicitly types "YES".**
+
+### Step 8: Completion Message
 
 Update PROJECT.md status and show ready message:
 
@@ -196,6 +535,7 @@ Your story is ready to write:
 ✓ Plot structure outlined (3-act)
 {✓ Style profile created}
 ✓ Arcs identified
+✓ OUTLINE APPROVED (quality checkpoint passed)
 
 Files created:
 - yolo-characters.md

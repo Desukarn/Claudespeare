@@ -6,12 +6,13 @@ Scan your story for consistency violations across all chapters. Detects contradi
 
 **What it does:**
 - Scans chapters against established story context (CHARACTERS.md, WORLD.md, all chapters)
-- Detects 5 consistency violation types:
+- Detects 6 consistency violation types:
   1. Character detail contradictions (appearance, background)
   2. Character voice inconsistencies (speech patterns, tone)
   3. Timeline and continuity errors (temporal contradictions, event order)
-  4. World rule violations (magic/tech limits, established facts)
-  5. POV shifts within scenes (head-hopping, perspective breaks)
+  4. Character voice differentiation (are all characters distinguishable?)
+  5. World rule violations (magic/tech limits, established facts)
+  6. POV shifts within scenes (head-hopping, perspective breaks)
 - Generates detailed CONSISTENCY-REPORT.md with locations and specific issues
 - **Execution time:** 5-15 minutes for full story scan
 
@@ -142,7 +143,196 @@ Severity: Critical
 Suggestion: Reorder events in Ch 3 or clarify Marcus left temporarily, returned
 ```
 
-### Step 4: Scan for world rule violations (CONS-04)
+### Step 4: Scan for character voice differentiation (CONS-04)
+
+Beyond checking that individual characters are internally consistent (Step 2), verify that different characters have distinct voices. If all characters sound identical, it signals flat characterization or AI-generated dialogue.
+
+**Voice differentiation analysis:**
+
+For each character with significant dialogue (5+ speaking lines), analyze:
+
+**1. Vocabulary complexity per character:**
+
+Track word choice sophistication:
+- Count syllables per word in dialogue
+- Calculate average word length
+- Note use of technical/specialized vocabulary
+- Track formality markers ("cannot" vs "can't", "shall" vs "will")
+
+Example analysis:
+```
+Professor Sarah:
+  - Average word length: 5.2 letters
+  - Syllables per word: 1.8 average
+  - Formality: High ("cannot", "shall", "one must")
+  - Technical terms: 23% of dialogue (arcane terminology, Latin phrases)
+
+Street kid Marcus:
+  - Average word length: 3.9 letters
+  - Syllables per word: 1.3 average
+  - Formality: Low ("can't", "gonna", "ain't")
+  - Slang: 15% of dialogue ("yeah", "dude", street terms)
+```
+
+**Flag if differentiation is insufficient:**
+- All characters within 0.3 syllables/word of each other: Warning
+- All characters same formality level: Warning
+- No vocabulary distinctions visible: Critical
+
+**2. Sentence length patterns:**
+
+Analyze dialogue sentence structure:
+- Average words per sentence
+- Sentence length variation
+- Fragment usage vs. complete sentences
+- Complex vs. simple sentence preference
+
+Example analysis:
+```
+Sarah's dialogue:
+  - Average: 14 words per sentence
+  - Variation: 8-25 words (high variety)
+  - Fragments: 5% (rare)
+  - Complex sentences: 40% (subordinate clauses, semicolons)
+
+Marcus's dialogue:
+  - Average: 7 words per sentence
+  - Variation: 3-12 words (moderate variety)
+  - Fragments: 35% (common: "Yeah." "No way." "Whatever.")
+  - Complex sentences: 5% (mostly simple statements)
+```
+
+**Flag if patterns too similar:**
+- All characters within 2 words average: Warning
+- All characters same fragment usage rate: Warning
+- No structural differentiation: Critical
+
+**3. Speech quirks and patterns:**
+
+Check for distinctive voice markers:
+- Recurring phrases ("blessed be", "as it were", "you know")
+- Sentence structure preferences (questions vs. statements)
+- Interruption patterns (complete thoughts vs. trailing off)
+- Verbal tics (repetition, filler words)
+- Cultural/regional markers (accent indicators, dialect)
+
+Example analysis:
+```
+Sarah's quirks:
+  - Professorial hedging: "Perhaps", "One might say", "It could be argued"
+  - Rhetorical questions: 18% of dialogue ends with questions
+  - Complete thoughts: Rarely interrupted, finishes sentences
+  - Signature phrase: "In point of fact" (appears 7 times)
+
+Marcus's quirks:
+  - Verbal filler: "like", "y'know", "I mean" (12% of dialogue)
+  - Sentence fragments: Often trails off mid-thought
+  - Contradicts himself: "Yeah, no" / "No, yeah"
+  - Signature phrase: "For real?" (appears 9 times)
+```
+
+**Flag if quirks absent or identical:**
+- No character has distinctive phrases: Warning
+- All characters have same verbal patterns: Critical
+- Quirks mentioned in CHARACTERS.md but not present in dialogue: Critical
+
+**4. Overall voice differentiation score:**
+
+Synthesize findings:
+
+```
+Character Voice Differentiation: [PASS/WARNING/FAIL]
+
+Sarah vs. Marcus differentiation: STRONG
+  - Vocabulary: Distinct (academic vs. casual)
+  - Sentence structure: Distinct (complex vs. simple)
+  - Speech quirks: Present and different
+
+Sarah vs. Elena differentiation: WEAK
+  - Vocabulary: Similar (both formal, academic)
+  - Sentence structure: Similar (both 12-15 words avg, low fragments)
+  - Speech quirks: Both use Latin phrases, rhetorical questions
+  → Warning: These characters sound too similar
+```
+
+**Report format for voice differentiation issues:**
+```
+Issue: Insufficient character voice differentiation
+Characters: Sarah Martinez, Elena Rodriguez
+Problem: Both characters speak with identical patterns
+Analysis:
+  Vocabulary complexity:
+    - Sarah: 1.8 syllables/word average
+    - Elena: 1.7 syllables/word average (too similar)
+  Sentence length:
+    - Sarah: 14.2 words/sentence
+    - Elena: 13.8 words/sentence (too similar)
+  Speech patterns:
+    - Both use formal academic language
+    - Both favor complete sentences (low fragment rate)
+    - Both use Latin phrases and rhetorical questions
+    - No distinguishing quirks
+
+Location: Dialogue throughout Chapters 2, 4, 6, 8
+Severity: Warning
+Baseline: CHARACTERS.md establishes different backgrounds:
+  - Sarah: Former professor, magical academy training
+  - Elena: Street mage, self-taught, working-class background
+Violation: Elena should speak less formally, but dialogue is indistinguishable from Sarah's
+
+Suggestion: Revise Elena's dialogue to reflect background:
+  - Reduce word complexity (use simpler vocabulary)
+  - Increase fragments and incomplete sentences
+  - Remove Latin phrases (wouldn't know them)
+  - Add street slang or working-class speech markers
+  - Create unique verbal tic or phrase pattern
+
+Example revision:
+  Current (sounds like Sarah):
+    "One must consider the metaphysical implications of such an action."
+  Revised (fits Elena's background):
+    "You do that, whole thing could blow up in your face."
+```
+
+**Aggregate voice report:**
+
+If multiple character pairs have weak differentiation, flag as systemic issue:
+
+```
+Systemic Issue: Weak character voice differentiation across story
+Pattern: All characters sound similar despite different backgrounds
+Analysis:
+  - 6 major characters, all speak with similar:
+    * Vocabulary complexity (1.6-1.8 syllables/word)
+    * Sentence length (12-15 words average)
+    * Formality level (all moderately formal)
+    * Low quirk presence (no distinctive patterns)
+
+Severity: Critical
+Suggestion: This suggests AI-generated dialogue or insufficient character development
+Actions needed:
+  1. Review CHARACTERS.md for distinct voice notes
+  2. Rewrite dialogue for 2-3 characters to establish range:
+     - One highly educated formal speaker
+     - One casual/slang speaker
+     - One middle ground
+  3. Add speech quirks to each character
+  4. Vary sentence structure intentionally
+  5. Read dialogue aloud - can you tell who's speaking without tags?
+```
+
+**Character voice differentiation checklist:**
+
+For each major character pair, verify:
+- [ ] Different vocabulary complexity (±0.5 syllables/word minimum)
+- [ ] Different sentence length patterns (±3 words average minimum)
+- [ ] At least one has distinctive quirk/phrase
+- [ ] Formality levels differ OR other clear distinction exists
+- [ ] You can identify speaker from dialogue alone (without tags) at least 70% of the time
+
+If any pair fails 3+ checklist items, flag for revision.
+
+### Step 5: Scan for world rule violations (CONS-05)
 
 Read WORLD.md rules and check prose compliance.
 
@@ -180,7 +370,7 @@ Severity: Critical
 Suggestion: Reduce spell count, add exhaustion/consequences, or establish Sarah has special stamina
 ```
 
-### Step 5: Scan for POV inconsistencies (CONS-05)
+### Step 6: Scan for POV inconsistencies (CONS-06)
 
 Extract POV from chapter frontmatter `pov: {character}` field.
 
@@ -222,7 +412,7 @@ Severity: Warning
 Suggestion: Add scene break and switch to Marcus POV, or revise to "Marcus's expression suggested worry"
 ```
 
-### Step 6: Generate CONSISTENCY-REPORT.md
+### Step 7: Generate CONSISTENCY-REPORT.md
 
 Use `.planning/templates/consistency-report.md` template and populate:
 
@@ -254,6 +444,7 @@ Scanned {N} chapters totaling {word_count} words.
 - Character details: {N}
 - Character voice: {N}
 - Timeline/Continuity: {N}
+- Character voice differentiation: {N}
 - World rules: {N}
 - POV: {N}
 

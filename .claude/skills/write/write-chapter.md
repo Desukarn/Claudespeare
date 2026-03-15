@@ -134,6 +134,119 @@ Generate the complete chapter following these guidelines:
 - Show emotions and reactions
 - Advance plot organically
 
+## CRITICAL: Anti-Slop Writing Standards
+
+**BANNED AI WORDS** (Never use these):
+- "delve" / "delved" / "delving" → Use: explored, studied, examined, investigated
+- "tapestry" (metaphorical) → Use: web, mixture, blend, array, or be specific
+- "navigate" / "navigated" (metaphorical) → Use: faced, handled, dealt with, managed
+- "testament to" → Use: proof of, shows, demonstrates, or state directly
+- "beacon of" / "stands as a beacon" → Use: symbol, example, or be concrete
+- "serves as a reminder" → Use: reminds, shows, or remove
+- "speaks to" / "speaks volumes" (metaphorical) → Use: shows, reveals, indicates
+- "sheds light on" → Use: reveals, shows, clarifies, explains
+- "heartbeat of" / "pulse of" (metaphorical) → Use: center, core, or be specific
+- "juxtaposition" → Use: contrast, difference, side by side
+
+**PURPLE PROSE PREVENTION**:
+- MAX 2 adjectives before any noun (not "dark, cold, forbidding, ancient castle")
+- NO melodramatic adverbs: "unutterably," "ineffably," "indescribably," "impossibly"
+- NO overwrought metaphors: not every emotion is "soul-crushing" or "heart-wrenching"
+- Use NATURAL vocabulary: "house" not "domicile," "eat" not "masticate," "use" not "utilize"
+
+**DIALOGUE TAG DISCIPLINE**:
+- Use "said" for 80%+ of dialogue tags
+- "Said" is INVISIBLE - use it freely
+- Avoid fancy tags: NOT "breathed," "purred," "intoned," "huskily whispered"
+- Save unusual tags for rare emphasis only
+- Action beats > fancy dialogue tags
+
+**PROSE QUALITY GUIDELINES**:
+
+*Show, Don't Tell*:
+- Show emotions through ACTIONS and physical reactions, not by naming them
+- WEAK: "She felt afraid" / "He seemed angry" / "Sarah was nervous"
+- STRONG: "Sarah's hands trembled" / "He slammed the door" / "Her voice cracked"
+- Avoid filter words: "seemed," "appeared," "felt like," "looked like" (when narrating)
+- Exception: Filter words OK when character is guessing another's emotion
+- Example comparison:
+  * TELLING: "Marcus felt anxious about the meeting"
+  * SHOWING: "Marcus checked his phone for the third time in five minutes"
+
+*Concrete Details Over Abstractions*:
+- Use SPECIFIC sensory details, not vague descriptions
+- WEAK: "The room was messy" / "It was a nice day" / "The food tasted good"
+- STRONG: "Clothes covered the floor" / "Sun warmed her shoulders" / "The bread was still warm, crust crackling"
+- Appeal to multiple senses: sight, sound, smell, touch, taste
+- Make setting real: "The coffee shop smelled like burnt espresso and cinnamon"
+
+*Sentence Variety*:
+- Vary sentence length: mix short, medium, and long sentences
+- MONOTONOUS: All sentences same length and structure
+- GOOD: "She opened the door. The room beyond was dark, empty except for a single chair in the center. She stepped inside."
+- Vary sentence openings: Don't start every sentence with the subject
+- Mix simple, compound, and complex sentences
+- Use short sentences for impact: "He was gone."
+
+*Active Voice Preference*:
+- Prefer active voice for clarity and energy
+- PASSIVE: "The letter was written by Sarah" / "Mistakes were made"
+- ACTIVE: "Sarah wrote the letter" / "He made mistakes"
+- Passive OK when: actor unknown, actor unimportant, or deliberate de-emphasis
+- Example good passive: "The window had been broken" (don't know who did it)
+
+**DIALOGUE QUALITY GUIDELINES**:
+
+*Contractions and Fragments*:
+- Use contractions: "don't," "won't," "I'm," "we're" (unless character is formal)
+- Include sentence fragments for realism: "Yeah." "Not sure." "Maybe."
+- People don't speak in complete sentences
+- Example: "Can you help?" "Sure. What do you need?" (NATURAL)
+- vs: "Can you help?" "Certainly, I would be happy to assist." (UNNATURAL)
+
+*"Said" is Invisible*:
+- Use "said" freely - it disappears for readers
+- "Said" doesn't need replacement with "stated," "expressed," "voiced"
+- Save alternatives for genuine emphasis: "whispered," "shouted" (when volume matters)
+- Action beats often better than tags: "He crossed his arms. 'I don't think so.'"
+
+*Action Beats > Fancy Tags*:
+- Replace adverb + said with action beat
+- WEAK: "'I don't believe you,' she said angrily."
+- STRONG: "She slammed her coffee down. 'I don't believe you.'"
+- Action beats show emotion AND add movement to scene
+- Can replace tags entirely: "'What?' She looked up. 'When did this happen?'"
+
+*Avoid Chatbot Phrases*:
+- NO formal agreements: "Certainly!" "Absolutely right!" "Precisely!" "Indeed!"
+- REAL agreement: "Yeah" / "True" / "Right" / "Sure" / "Okay"
+- NO chatbot politeness: "Great question!" / "I appreciate that!" (unless character is literally a service worker)
+- People interrupt, overlap, misunderstand: "Wait, what?" "Hold on—"
+
+*Natural Agreement Examples*:
+- AI DIALOGUE: "That's an excellent point, Marcus. You're absolutely right."
+- NATURAL: "Huh. You might be right." OR just: "Yeah."
+- AI DIALOGUE: "Indeed, I concur with your assessment."
+- NATURAL: "Makes sense." OR: "I guess."
+- Vary agreement: "True," "Fair," "Yeah," "Mm," "I see," "Point taken"
+- Match each character's voice from their profile
+
+**AVOID INFO-DUMPS**:
+- NO paragraphs over 150 words with zero dialogue or action
+- NO "as you know" exposition between characters who both know it
+- NO encyclopedia-style thinking (character reciting Wikipedia entries)
+- Break up exposition with action, dialogue, sensory detail
+- Deliver world-building through conflict and discovery
+
+**PHYSICAL EMOTION CLICHES** (Find fresh alternatives):
+- NOT "held breath they didn't know they were holding"
+- NOT "heart pounding in chest" (overused - find specific variations)
+- NOT "blood ran cold" / "blood turned to ice"
+- NOT "shivers down spine"
+- NOT "tears pricked eyes"
+- NOT "stomach dropped"
+- Use SPECIFIC, VARIED physical reactions unique to your characters
+
 **Output Format:**
 
 Use this template:

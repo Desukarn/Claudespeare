@@ -260,7 +260,188 @@ Enter themes or press Enter to skip:
 
 **Store:** `THEMES` (array of strings or empty array)
 
-### Step 9: Confirmation Summary
+### Step 9: Sanderson Framework Evaluation (Recommended)
+
+**Purpose**: Establish story foundation using Brandon Sanderson's proven frameworks upfront.
+
+**Question:** "Would you like to define your story's framework foundation now?"
+
+**Prompt:**
+```
+Sanderson Framework Foundation (Recommended):
+
+Brandon Sanderson's frameworks provide proven story structure. Defining these upfront
+creates a strong foundation and prevents common storytelling pitfalls.
+
+This takes 5-10 minutes but will guide your entire planning and writing process.
+
+Would you like to establish your story foundation now?
+A. Yes - Answer Sanderson framework questions (recommended)
+B. Skip for now (you can add this later)
+```
+
+**If user selects A (Yes)**, proceed with framework questions:
+
+#### Framework Question 1: Major Dramatic Question
+
+**Prompt:**
+```
+MAJOR DRAMATIC QUESTION (Promise-Progress-Payoff Framework)
+
+This is the central question your story promises to answer. It drives reader engagement
+and must be clearly established by the end of Act I.
+
+Examples:
+- "Will the detective catch the serial killer?" (Mystery)
+- "Can the rebels overthrow the empire?" (Fantasy/Sci-Fi)
+- "Will they find love despite their differences?" (Romance)
+- "Can the protagonist survive this ordeal?" (Thriller)
+- "What is the truth about [mystery]?" (Literary/Mystery)
+
+Your premise: {PREMISE}
+
+Based on your premise, what is the Major Dramatic Question your story will answer?
+(1-2 sentences, should be clear and specific)
+```
+
+**Validation:**
+- Must be phrased as a question or clear goal
+- Should be specific, not vague ("Can hero save world?" too vague, "Can Kara stop the
+  ancient prophecy before the eclipse?" specific)
+- Minimum 5 words
+
+**Store:** `MAJOR_DRAMATIC_QUESTION`
+
+#### Framework Question 2: Character Triangle (Protagonist)
+
+**Prompt:**
+```
+CHARACTER TRIANGLE (Proactive-Relatable-Capable Framework)
+
+Sanderson's research shows successful protagonists have at least 2 of these 3 pillars:
+1. PROACTIVE: Takes action, makes choices, drives the story (not just reacting)
+2. RELATABLE: Has flaws, vulnerability, humor - readers connect emotionally
+3. CAPABLE: Demonstrates competence, has skills, can solve problems
+
+You can drop ONE pillar, but NEVER two (that's the "death spiral").
+
+Think about your protagonist in {PREMISE}:
+
+Which TWO OR THREE pillars will your protagonist have?
+A. Proactive + Relatable (capable of mistakes, drives story, emotionally connectable)
+B. Proactive + Capable (competent action hero, may lack emotional depth)
+C. Relatable + Capable (sympathetic expert, but more reactive than proactive)
+D. All Three (ideal but hardest to write)
+
+Which combination? (A, B, C, or D)
+```
+
+**Validation:**
+- Must select A, B, C, or D
+- If user selects combination that drops 2 pillars, warn and re-prompt
+
+**Follow-up after selection:**
+```
+Great! Your protagonist will be {COMBINATION}.
+
+{If missing Proactive}: Remember to give them agency through important decisions
+{If missing Relatable}: Remember to include vulnerability or humor moments
+{If missing Capable}: Remember to show competence even if limited
+
+This will guide character development in planning.
+```
+
+**Store:** `PROTAGONIST_TRIANGLE` (pillars selected)
+
+#### Framework Question 3: Story Progress Type
+
+**Prompt:**
+```
+PROGRESS TYPE (What drives your story forward?)
+
+Readers need regular "progress signposts" to feel the story is advancing. What type
+of progress will drive your story?
+
+Common progress types:
+1. Mystery: Information revealed (clues, discoveries, revelations)
+2. Quest: Geographic progress (journey milestones, destinations reached)
+3. Character Growth: Internal change (realizations, decisions, transformations)
+4. Relationship: Connection shifts (trust built/broken, alliances formed)
+5. Conflict Escalation: Rising stakes (obstacles increase, situations worsen)
+6. Combination: Multiple types working together
+
+Based on {PREMISE}, what will signal progress to readers?
+(Select 1-2 primary types)
+```
+
+**Validation:**
+- Must select at least one type
+- Can select up to two types
+
+**Store:** `PROGRESS_TYPE` (one or two types)
+
+#### Framework Question 4: Story Promise
+
+**Prompt:**
+```
+STORY PROMISE (What are you promising readers?)
+
+Your opening chapters make an implicit promise about what kind of story this will be.
+Breaking this promise frustrates readers.
+
+Based on your premise and genre, what are you promising?
+
+Examples:
+- "Action-packed adventure with clever protagonist"
+- "Mystery with psychological depth and twist ending"
+- "Romance with humor and emotional growth"
+- "Epic fantasy with magic and political intrigue"
+- "Thriller with tension and moral complexity"
+
+What is your story promising readers?
+(1-2 sentences describing the experience/type of story)
+```
+
+**Validation:**
+- Minimum 10 words
+- Should describe experience, not just plot
+
+**Store:** `STORY_PROMISE`
+
+**After all framework questions complete:**
+
+```
+✓ Framework Foundation Established!
+
+Your Sanderson Framework:
+- Major Dramatic Question: {MAJOR_DRAMATIC_QUESTION}
+- Protagonist Triangle: {PROTAGONIST_TRIANGLE}
+- Progress Type: {PROGRESS_TYPE}
+- Story Promise: {STORY_PROMISE}
+
+This foundation will be referenced during:
+- Planning (in-depth mode)
+- Chapter writing (to maintain structure)
+- Revision (to verify delivery)
+```
+
+**If user selects B (Skip):**
+```
+Framework foundation skipped. You can define this later during planning.
+
+Note: Establishing these upfront helps create stronger story structure.
+```
+
+**Store all framework answers in PROJECT.md frontmatter**:
+```yaml
+sanderson_framework:
+  major_dramatic_question: "{MDQ}"
+  protagonist_triangle: "{pillars}"
+  progress_type: "{types}"
+  story_promise: "{promise}"
+```
+
+### Step 10: Confirmation Summary
 
 Display summary of all choices:
 

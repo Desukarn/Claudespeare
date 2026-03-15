@@ -44,6 +44,53 @@ Rules are deliberately obscure, maintaining mystery and wonder.
 - Plots that don't hinge on magical problem-solving
 - When sense of wonder matters more than tactics
 
+##### Soft Magic Execution Techniques
+
+**IMPORTANT**: Soft magic is about HOW you write it, not just what you define.
+
+**1. Language and Description**
+- Use poetic, sensory language over mechanical description
+- Emphasize feeling and atmosphere over function
+- Example:
+  - ❌ Hard: "She channeled energy through the focal crystal"
+  - ✅ Soft: "The air shivered with possibility, and she felt the forest's attention turn toward her"
+
+**2. Maintaining Mystery**
+- Replace explanations with questions and wonder
+- Characters don't fully understand what's happening
+- Contradictions and uncertainties are features, not bugs
+- Example:
+  - ❌ "The spell requires three components because..."
+  - ✅ "No one knows why it requires three. Some say the number is sacred. Others whisper darker reasons."
+
+**3. Thematic Constraints (Instead of Mechanical)**
+- Magic follows thematic rules, not logical ones
+- Constrained by meaning, emotion, story significance
+- Example Themes:
+  - **Sacrifice**: Magic requires giving up something meaningful
+  - **Truth**: Magic works only when spoken with honesty
+  - **Balance**: Magic demands equivalent exchange of symbolic weight
+  - **Connection**: Magic flows through relationship, not power
+
+**4. POV Strategy**
+- Non-magical POV characters experience magic as mystery
+- Magical POV characters don't analyze mechanisms
+- Internal monologue focuses on feeling, not process
+- Example:
+  - ❌ "I gathered the threads of power and wove them according to the pattern..."
+  - ✅ "Power moved through me—or did I move through it? I couldn't tell. The distinction seemed meaningless."
+
+**5. Avoiding "Accidental Hardening"**
+- Track what you've explained—stop before full system emerges
+- When tempted to answer "how," ask "what does it mean?"
+- Keep some contradictions deliberately unresolved
+- Don't let characters discuss magic mechanics
+- **Warning Signs**:
+  - Characters analyzing "how" magic works
+  - Systematic categorization emerging
+  - Magic becoming predictable tool
+  - Power levels or quantification appearing
+
 **HARD MAGIC SYSTEMS**
 Clear, understandable rules enable strategic problem-solving.
 

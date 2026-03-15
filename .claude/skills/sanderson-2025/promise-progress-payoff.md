@@ -9,6 +9,21 @@ Storytelling is a three-part dance:
 2. **Progress**: Maintain narrative momentum (meaningful forward movement)
 3. **Payoff**: Deliver satisfying conclusions (surprising but inevitable)
 
+## How to Use This Framework
+
+**Structure = Scaffolding, Not Straitjacket**
+
+**Sanderson's Philosophy**: Plot frameworks are tools that "provide consistency without constraining creativity." Don't become "a cook rather than a chef"—frameworks should enhance your work, not limit it.
+
+**Best Use**:
+- **During Revision**: Use to identify weak spots and ensure reader satisfaction
+- **Not First Draft**: Don't let it paralyze you during initial creation
+- **For Diagnosis**: When something feels wrong, use framework to find the problem
+
+**Remember**: "You never know which technique will unlock the next breakthrough"—study frameworks widely, but let your story breathe.
+
+**Conflict Makes Story**: As Sanderson emphasizes, "The conflict and the struggle make the story, not the sequence of events." Focus on escalating conflict, not just moving plot pieces around.
+
 ## Skill Components
 
 ### 1. PROMISE ANALYSIS
@@ -28,6 +43,39 @@ When analyzing or creating story openings, evaluate these promise types:
 - Sets expectations for the entire arc
 
 **Check**: Is the main story question established by end of Act One?
+
+##### The Major Dramatic Question (CRITICAL)
+
+**Every story requires a central question** by the end of Act One that drives reader investment.
+
+**Sanderson's Teaching**: "This question clarifies by Act One's conclusion, unifying subplots and character arcs around central conflict."
+
+**Examples**:
+- *Star Wars*: Will Luke become a Jedi and defeat the Empire?
+- *Pride and Prejudice*: Will Elizabeth and Darcy overcome their pride and prejudice to be together?
+- *The Lord of the Rings*: Will Frodo destroy the Ring and save Middle-earth?
+- *The Hunger Games*: Will Katniss survive the Games?
+
+**Why It Matters**:
+- **Unifies** all subplots around central conflict
+- **Drives** reader investment (they want the answer)
+- **Guides** your plotting (everything serves answering this question)
+- **Determines** your climax (must answer this question)
+
+**Test**: Can you state your story's Major Dramatic Question in one sentence?
+```
+My story's Major Dramatic Question: _______________
+When is it established? (Must be by end of Act One): _______________
+How does the climax answer it? _______________
+```
+
+**Common Mistake**: Having multiple equally-important questions. You can have subquestions, but ONE must be primary.
+
+**Application**:
+- **Planning**: Define this before outlining
+- **Discovery Writing**: Identify it in revision, ensure it's clear by Act One
+- **Revision**: Check that every major scene relates to this question
+- **Climax**: Must provide satisfying answer
 
 #### Character and Conflict Promises
 Opening chapters must introduce:
@@ -75,6 +123,86 @@ Demonstrate:
 - Geography traversed
 - Obstacles overcome
 - Alliances formed
+
+#### Creating Escalation: Yes, But / No, And
+
+**Sanderson's fundamental escalation technique** ensures each scene raises stakes while moving story forward.
+
+**YES, BUT** Pattern:
+- Character achieves their goal (YES)
+- BUT complications arise that create new problems
+- Example: Hero steals the artifact (YES) BUT triggers alarm system (complication)
+
+**NO, AND** Pattern:
+- Character fails to achieve their goal (NO)
+- AND circumstances worsen beyond the initial failure
+- Example: Guards catch hero (NO) AND the artifact is cursed (worsens)
+
+**Why This Matters**:
+"Each scene should move forward while simultaneously raising stakes" - this creates the feeling of progress while maintaining tension.
+
+**Application**:
+```
+Scene Goal: _______________
+Outcome: YES, BUT / NO, AND (circle one)
+If YES, BUT: What complication arises? _______________
+If NO, AND: How do circumstances worsen? _______________
+Result: Stakes are now _______________ (higher than before)
+```
+
+**Common Pattern in Act 2**:
+- Early Act 2: More YES, BUT (victories with complications)
+- Mid Act 2: Mix of both
+- Late Act 2: More NO, AND (failures that compound)
+- This creates natural escalation toward darkest moment
+
+#### The Try-Fail Cycle
+
+**Sanderson's structural pattern** that "nearly all discovery writers employ variations of":
+
+**Cycle Structure**:
+
+**1. First Attempt**: Character tries obvious solution → FAILS
+- **Reveals**: Character underestimated the problem
+- **Reader learns**: Antagonist is more capable than expected
+- **Stakes**: Problem is harder than it seemed
+
+**2. Second Attempt**: Character tries more sophisticated approach → FAILS
+- **Reveals**: Internal flaws or deeper complications
+- **Reader learns**: There are layers to this problem
+- **Stakes**: Character must grow to succeed
+
+**3. Third Attempt**: Character succeeds after growth/transformation
+- **Reveals**: Character has truly changed
+- **Reader learns**: This victory was earned
+- **Stakes**: Payoff feels satisfying because we saw the struggle
+
+**Example Pattern**:
+```
+Problem: Defeat the dragon
+
+Attempt 1 (Obvious): Attack with sword → Dragon barely notices
+Reveal: Need magic, not just strength
+
+Attempt 2 (Sophisticated): Use ancient spell → Spell backfires
+Reveal: Hero's fear blocks magic; must overcome internal flaw
+
+Attempt 3 (Transformed): Embrace courage, channel spell properly → Success
+Reveal: Internal growth enabled external victory
+```
+
+**Note**: Robert Jordan exemplified this throughout *The Wheel of Time*. Each book often follows this pattern.
+
+**Why It Works**:
+- Each failure provides new information
+- Raises stakes organically
+- Forces character development
+- Makes final success feel earned, not lucky
+
+**Application for Different Writer Types**:
+- **Discovery Writers**: This emerges naturally; be aware and enhance it in revision
+- **Outliners**: Can structure this intentionally in planning
+- **Both**: Ensure failures reveal something new each time
 
 #### Signposting Techniques
 

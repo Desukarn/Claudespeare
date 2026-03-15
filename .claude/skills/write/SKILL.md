@@ -9,12 +9,15 @@ Complete creative writing system from idea to finished manuscript.
 
 ## Quick Start
 
-**YOLO Mode (Fast - 2 hours for first draft):**
+**YOLO Mode (Fast - 2 hours for first draft with quality safeguards):**
 ```
 /write:new-project → /write:expand → /write:arc → /write:revise → /write:export
 ```
 - `/expand` includes optional style seed
+- **MANDATORY outline approval checkpoint** (prevents cookie-cutter storytelling)
 - `/arc` writes ALL chapters automatically
+- **Automatic pre-writing scene analysis** (catches exposition dumps)
+- **Automatic post-generation review** (verifies quality)
 
 **In-Depth Mode (Thorough - 6-8 hours for first draft):**
 ```
@@ -26,6 +29,7 @@ Complete creative writing system from idea to finished manuscript.
 - `/discuss N` plans each arc
 - `/arc N` or `/arc auto` writes chapters
 - `auto` detects next arc automatically
+- **Same quality safeguards as YOLO** (scene analysis + review)
 
 ## Core Commands
 
@@ -48,14 +52,24 @@ See: init-project.md
 ### Planning
 
 #### `/write:expand`
-**YOLO mode:** Complete one-step expansion
+**YOLO mode:** Complete one-step expansion with quality safeguards
 
 Transforms fuzzy concepts into writing-ready project:
 - Expands premise
 - Creates character sketches
 - Generates 3-act outline with arc breakdown
+- **Adds Goal/Conflict/Outcome analysis for EVERY chapter**
+- **Automatic exposition dump detection with warnings**
+- **MANDATORY outline approval checkpoint** (cannot skip)
 - **Optionally creates style profile from your samples**
 - Ready for `/write:arc` immediately
+
+**New safeguards prevent:**
+- Tavern/inn exposition scenes
+- Passive "character learns about" chapters
+- Convenient NPC explanations
+- Lack of conflict in scenes
+- Protagonist passivity
 
 See: yolo-expand.md
 
@@ -83,7 +97,7 @@ See: style-seed.md
 ### Writing
 
 #### `/write:arc [N|auto]`
-**Main writing command.** Write chapters in parallel
+**Main writing command.** Write chapters in parallel with quality checks
 
 Spawns parallel writing agents. Each writes one chapter independently with full story context.
 
@@ -98,7 +112,27 @@ Spawns parallel writing agents. Each writes one chapter independently with full 
 - After `/write:discuss N` planning
 - Use `auto` to skip manual numbering
 
-**Time:** ~15-20 minutes per arc (3-5 chapters)
+**NEW: Automatic quality safeguards:**
+1. **Pre-Writing Scene Analysis** (runs before spawning writers)
+   - Verifies Goal/Conflict/Outcome for each scene
+   - Detects exposition dumps in scene structure
+   - Flags passive information gathering
+   - Pauses if 3+ issues detected for user decision
+
+2. **Chapter Writer Checklist** (mandatory for each writer)
+   - Show vs Tell commitment
+   - Exposition dump prevention
+   - Active character agency
+   - Prose quality standards
+   - Scene structure requirements
+
+3. **Post-Generation Structural Review** (runs after writing)
+   - Scans actual prose for exposition dumps
+   - Detects passive patterns that slipped through
+   - Offers auto-revision if 3+ issues found
+   - Pauses for user decision on quality concerns
+
+**Time:** ~15-20 minutes per arc (3-5 chapters) + review time if issues detected
 
 See: write-arc.md
 
@@ -190,12 +224,63 @@ Get story-specific pacing recommendations
 
 See: pacing-guide.md
 
+## Anti-Cookie-Cutter Safeguards
+
+**NEW (v2.0):** Comprehensive quality system prevents formulaic AI storytelling.
+
+### Multi-Layer Prevention
+
+**7 layers of protection against exposition dumps and passive storytelling:**
+
+1. **Trope Research** - Avoid AI plot patterns (optional but recommended)
+2. **Name Generator** - Prevent "Kael", "Elara", "Lyra" bias (mandatory)
+3. **Goal/Conflict/Outcome** - Chapter-level structure analysis
+4. **Exposition Detection** - Automatic pattern scanning (keywords + structure)
+5. **Outline Approval** - User review before writing (YOLO mode, mandatory)
+6. **Pre-Writing Analysis** - Scene verification before spawning writers
+7. **Post-Writing Review** - Catch patterns that slipped through
+
+### What Gets Detected
+
+**Exposition Dump Patterns:**
+- Tavern/inn/bar scenes where NPCs explain plot
+- "Character learns about X" passive information gathering
+- Convenient conversations that dump world-building
+- Mentor/sage characters who know everything
+- Overhearing crucial information
+- "As you know" conversations
+
+**Green Flags (GOOD patterns):**
+- Character PURSUES goals actively
+- Information has COST (risk, social price, effort)
+- Discovery through ACTION and conflict
+- Character WRONG, must correct mistakes
+- Meaningful obstacles in every scene
+
+### Quality Checkpoints
+
+**YOLO Mode (3 mandatory):**
+1. Outline approval after expansion (cannot skip)
+2. Pre-writing scene analysis (pauses if 3+ issues)
+3. Post-generation review (pauses if 3+ issues)
+
+**In-Depth Mode (3 per arc):**
+1. Arc planning (/write:discuss)
+2. Pre-writing scene analysis (pauses if 3+ issues)
+3. Post-generation review (pauses if 3+ issues)
+
+**User can override with warnings, but safeguards always run.**
+
+See: PROCESS-OVERVIEW.md for complete workflow details
+
 ## When to Use This Skill
 
 - Starting a new story project
 - Developing characters, plot, world-building
 - Defining your unique writing style
 - Drafting chapters with consistent voice
+- **Preventing cookie-cutter AI storytelling**
+- **Ensuring character agency and conflict**
 - Detecting and removing AI language patterns
 - Checking story consistency
 - Tracking chapter revisions

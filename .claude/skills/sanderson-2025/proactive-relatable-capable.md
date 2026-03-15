@@ -111,10 +111,45 @@ Fix: Give them small, medium, and large goals
 - Growing from reactive to proactive as arc
 
 **Making Low Proactivity Work**:
-- Demonstrate mental planning/proactivity
-- Show small agency within restrictions
-- Value attempts despite failure
-- Develop proactivity as character arc
+
+When characters are **physically or socially constrained** (imprisoned, powerless, children, oppressed), you can still create proactive engagement:
+
+**1. Mental Proactivity**
+- Show them planning and strategizing even when unable to act
+- Internal monologue reveals active problem-solving
+- Example: Prisoner mentally mapping guard patterns, planning future escape
+
+**2. Small Agency Within Constraints**
+- Let them make choices within limited options
+- Every small decision demonstrates will and desire
+- Example: Child choosing which parent's rule to break, when to be defiant
+
+**3. Micro-Actions That Matter**
+- Tiny rebellions or choices that have meaning
+- Building toward larger action when opportunity arises
+- Example: Slave learning to read in secret (proactive preparation)
+
+**4. Attempts That Fail But Reveal Character**
+- Value the *trying* even when circumstances prevent success
+- Failed attempts show determination and resourcefulness
+- Example: Repeatedly attempting escape, each failure teaching something
+
+**5. Verbal Proactivity**
+- Speaking up, arguing, negotiating within constraints
+- Words as action when physical action is impossible
+- Example: Hostage talking to captor, building relationship for later leverage
+
+**6. Proactivity as Character Arc**
+- Start constrained and reactive
+- Gradually gain agency
+- End with full proactive power
+- Example: Frodo (Shire hobbit → Ring-bearer → decisive hero)
+
+**Critical for Constrained Characters**:
+- **Don't let constraints equal passivity**
+- Find creative ways to show will, choice, and desire
+- Even thinking "I will escape" shows proactivity
+- Physical constraint ≠ narrative constraint
 
 ## PART 2: RELATABILITY (The Bridge to Reader)
 
@@ -902,6 +937,106 @@ Ending state: _______________
 - [  ] Defined growth/change
 - [  ] Ending state feels earned
 - [  ] Change occurs along one pillar primarily
+
+## ENSEMBLE CAST QUICK GUIDE
+
+### When You Have Multiple Protagonists (3-6 Characters)
+
+The three-pillar framework **scales excellently** for ensemble casts if you use it strategically.
+
+**Key Principle**: **No two characters should occupy the same triangle position**.
+
+#### Preventing Character Overlap
+
+**1. Map ALL Characters on Triangle**:
+```
+CHARACTER 1: High Proactive, High Relatable, Low Capable (learns capability)
+CHARACTER 2: Low Proactive, High Capable, Medium Relatable (learns agency)
+CHARACTER 3: Medium Proactive, Low Relatable, High Capable (antihero type)
+CHARACTER 4: High Proactive, Low Relatable, Low Capable (earnest but flawed)
+```
+
+**Result**: Four completely different character types that won't blur together.
+
+#### Voice Differentiation for Multiple POVs
+
+Each character needs **measurably distinct**:
+- **Sentence Structure**: Long flowing vs. short clipped
+- **Word Choice**: Formal vs. casual, jargon vs. plain speech
+- **Rhythm**: Interrupted vs. smooth, hesitant vs. confident
+- **Characteristic Phrases**: Unique verbal tics or metaphors
+
+**Test**: Can reader identify speaker without dialogue tags?
+
+#### Motivation Clarity with Frequent POV Switches
+
+**Rule**: Within first two sentences of POV switch, remind reader:
+- **WHO**: Character-specific detail or voice
+- **WHY**: What they want right now (tied to arc-level motivation)
+
+**Example POV Opening**:
+> The tumblers clicked like his daughter's piggy bank—each one another semester paid for. *Almost there, baby girl.* (Reader knows: This is Marcus, motivated by daughter's future)
+
+#### Ensemble Climax Structure
+
+**Problem**: Six character arcs need satisfying conclusion simultaneously.
+
+**Solution**: **Parallel Convergence**
+1. Each character faces their personal test related to their arc
+2. Tests occur simultaneously or in rapid sequence
+3. All contribute to solving central story problem
+4. Each demonstrates growth in their primary pillar
+
+**Example**:
+- High Proactive character takes initiative at critical moment
+- Low Relatable character makes sacrifice showing growth
+- Low Capable character's newfound skill proves essential
+- All converge to defeat shared antagonist
+
+#### Preventing "Favorite Child Syndrome"
+
+**Risk**: Unconsciously giving one character more development, screen time, or cool moments.
+
+**Prevention Checklist**:
+- [  ] Track page count per POV character (should be roughly equal or proportional to importance)
+- [  ] Each character gets at least one "cool moment" per act
+- [  ] Each character contributes meaningfully to plot resolution
+- [  ] Each character has clear arc with visible progress
+- [  ] No character exists just to support another's arc
+
+#### POV Distribution Strategy
+
+**Who gets POV when?**
+
+**Use High Proactive characters for**: Action scenes, decisive moments, plot advancement
+
+**Use High Relatable characters for**: Emotional scenes, moral dilemmas, reader connection
+
+**Use High Capable characters for**: Demonstrating expertise, solving complex problems, tactical scenes
+
+**Rotation Pattern**: Ensure each character gets POV time proportional to their story importance.
+
+#### Managing Ensemble Dialogue
+
+**When 4+ characters speak in one scene**:
+
+1. **Establish Speaking Order**: Give each character turn, then can be more fluid
+2. **Use Sub-Groups**: Characters naturally align (allies, rivals, etc.)
+3. **Blocking**: Physical position creates natural speaking patterns
+4. **Distinct Voices**: Reader should track who speaks without constant tags
+5. **Not Everyone Speaks**: Some can react non-verbally
+
+#### Scaling Limits
+
+**Framework Works Best For**:
+- 1-3 protagonists: EXCELLENT (as designed)
+- 4-6 protagonists: VERY GOOD (with above techniques)
+- 7-9 protagonists: POSSIBLE (needs careful management)
+- 10+ protagonists: CHALLENGING (consider sub-teams or geographic separation)
+
+**Beyond 6 Characters**: Consider having "main" protagonists (full arcs) and "secondary" protagonists (smaller arcs).
+
+---
 
 ## FINAL WISDOM FROM SANDERSON
 

@@ -576,3 +576,289 @@ A: Common during drafting. Options:
 - **Over target:** Tighten prose, cut subplots, remove filler scenes
 - **Under target:** Deepen character moments, add subplot complexity, expand world-building (but only if it serves the story)
 - **Accept new target:** If the story wants to be 90k instead of 75k, let it
+
+---
+
+## Pacing Audit System
+
+**Purpose**: Detect mechanical, formulaic pacing that feels robotic rather than organic.
+
+### When to Run Pacing Audit
+
+Run after completing a full draft or significant section (Act I, Act II, etc.) to check for:
+- Unnatural uniformity in chapter/scene lengths
+- Robotic patterns in story structure
+- Mechanical climax placement
+- Lack of organic pacing variation
+
+### Audit Checks
+
+#### Check 1: Chapter Length Uniformity
+
+**Flag if**: 80%+ of chapters are within 10% of same word count
+
+**What to check**:
+```
+Calculate standard deviation of chapter word counts
+Calculate mean chapter word count
+Flag if standard deviation < 10% of mean
+```
+
+**Example ROBOTIC pacing**:
+- Chapter 1: 3,000 words
+- Chapter 2: 3,100 words
+- Chapter 3: 2,950 words
+- Chapter 4: 3,050 words
+- All chapters 2,950-3,100 (suspiciously uniform)
+
+**Example ORGANIC pacing**:
+- Chapter 1: 3,500 words (world setup)
+- Chapter 2: 2,200 words (action sequence)
+- Chapter 3: 4,100 words (character development)
+- Chapter 4: 1,800 words (cliffhanger)
+- Natural variation 1,800-4,100
+
+**Why this matters**: Real writers vary chapter length based on scene needs, not formula.
+
+**Recommendation if flagged**:
+```
+⚠️ PACING WARNING: Chapter lengths are too uniform (SD: {value})
+
+Your chapters range from {min} to {max} words, with most around {mean}.
+This mechanical uniformity suggests formula rather than organic storytelling.
+
+Suggestions:
+- Identify fast-paced chapters (action, tension) and shorten them
+- Identify slow-paced chapters (world-building, reflection) and let them breathe
+- Use chapter length as pacing tool: short chapters = urgency, long chapters = immersion
+- Aim for natural variation: some 2k, some 4k, not all 3k
+
+Target: Standard deviation should be 20-30% of mean for organic feel.
+```
+
+#### Check 2: Scene Length Patterns
+
+**Flag if**: Scenes show rigid 3-paragraph or 5-paragraph structure across multiple chapters
+
+**What to check**:
+```
+Count paragraphs per scene across all chapters
+Look for repeated patterns (e.g., every scene is exactly 3-4 paragraphs)
+Calculate mode (most common scene length in paragraphs)
+Flag if >60% of scenes match the mode exactly
+```
+
+**Example ROBOTIC pacing**:
+- Scene 1: 3 paragraphs
+- Scene 2: 3 paragraphs
+- Scene 3: 4 paragraphs
+- Scene 4: 3 paragraphs
+- Too consistent (feels templated)
+
+**Example ORGANIC pacing**:
+- Scene 1: 6 paragraphs (character intro)
+- Scene 2: 2 paragraphs (quick transition)
+- Scene 3: 8 paragraphs (important dialogue)
+- Scene 4: 1 paragraph (punch line)
+- Natural variation
+
+**Why this matters**: Scenes should vary based on content, not template.
+
+**Recommendation if flagged**:
+```
+⚠️ PACING WARNING: Scene structure is too uniform
+
+{percentage}% of your scenes are {mode} paragraphs long.
+This suggests templated scene construction rather than organic flow.
+
+Suggestions:
+- Let scenes be as long as they need to be
+- Short scenes for impact, tension, or quick pacing
+- Long scenes for character development, complex action, or world immersion
+- Vary scene breaks based on dramatic beats, not paragraph count
+
+Natural stories have scenes ranging from 1 paragraph to 15+ paragraphs.
+```
+
+#### Check 3: Climax Positioning Formula
+
+**Flag if**: Climax occurs at exactly 75% through story (too perfectly on formula)
+
+**What to check**:
+```
+Identify climax scene (from outline or user input)
+Calculate climax position as percentage of total word count
+Flag if climax is at 74-76% (suspiciously perfect)
+```
+
+**Why 75% is suspicious**:
+- Story structure advice says "climax at 75%"
+- But REAL stories vary: 70%, 80%, 85%, sometimes earlier
+- Exact 75% suggests following formula, not story needs
+
+**Example ROBOTIC**: Novel is 80,000 words, climax at exactly 60,000 words (75.0%)
+
+**Example ORGANIC**: Novel is 80,000 words, climax at 64,000 words (80%) because story demanded it
+
+**Recommendation if flagged**:
+```
+⚠️ PACING WARNING: Climax positioning is suspiciously formulaic
+
+Your climax occurs at {percentage}% through the story, which is textbook "75% placement."
+
+This isn't necessarily wrong, but check:
+- Did the story organically reach climax here?
+- Or did you place it here because structure advice says to?
+
+Natural climaxes occur when story tension peaks, which might be:
+- 70% (faster pacing, urgent stories)
+- 80% (slower builds, epic fantasy)
+- 85% (mystery reveals that need more setup)
+
+Trust your story's natural rhythm over formulas.
+```
+
+#### Check 4: Act Length Mechanical Division
+
+**Flag if**: Acts are exactly 25/50/25 split (too perfectly formula)
+
+**What to check**:
+```
+Calculate Act I, II, III word counts
+Calculate as percentages of total
+Flag if within 2% of 25/50/25 split
+```
+
+**Why this matters**:
+- 25/50/25 is GUIDELINE, not law
+- Real stories might be 20/60/20 or 30/45/25
+- Exact adherence suggests following template
+
+**Recommendation if flagged**:
+```
+⚠️ PACING WARNING: Act structure is suspiciously perfect
+
+Your acts are {act1}% / {act2}% / {act3}%, nearly exact 25/50/25 split.
+
+While this structure works, check:
+- Does Act I need more setup? (might be 30%)
+- Does Act II need more complications? (might be 55%)
+- Does Act III need longer denouement? (might be 30%)
+
+Genre variations:
+- Mystery: Often 20/55/25 (longer middle for investigation)
+- Epic Fantasy: Often 30/50/20 (longer setup, quick resolution)
+- Thriller: Often 20/60/20 (sustained tension)
+
+Let your story's needs determine structure, not formulas.
+```
+
+### Running the Audit
+
+**Command**: `/write:pacing-audit` (or integrate into `/write:revise`)
+
+**Process**:
+1. Load all chapter files from chapters/ directory
+2. Calculate word counts per chapter and scene
+3. Identify structural markers (acts, climax)
+4. Run all four checks
+5. Generate report with flagged issues
+6. Provide specific recommendations
+
+**Output Format**:
+
+```
+═══════════════════════════════════════════════════════
+PACING AUDIT REPORT
+═══════════════════════════════════════════════════════
+
+Story: {Title}
+Total word count: {count}
+Chapters analyzed: {number}
+
+───────────────────────────────────────────────────────
+CHAPTER LENGTH ANALYSIS
+───────────────────────────────────────────────────────
+
+Mean chapter length: {mean} words
+Standard deviation: {sd} words ({percentage}% of mean)
+Range: {min} - {max} words
+
+Status: {✓ ORGANIC VARIATION | ⚠️ TOO UNIFORM}
+
+{If flagged: detailed recommendation}
+
+───────────────────────────────────────────────────────
+SCENE LENGTH ANALYSIS
+───────────────────────────────────────────────────────
+
+Total scenes: {count}
+Mode scene length: {mode} paragraphs
+Scenes matching mode: {percentage}%
+
+Status: {✓ NATURAL VARIETY | ⚠️ TEMPLATED STRUCTURE}
+
+{If flagged: detailed recommendation}
+
+───────────────────────────────────────────────────────
+CLIMAX POSITIONING
+───────────────────────────────────────────────────────
+
+Climax location: Chapter {N}, {word_count} words
+Position in story: {percentage}%
+
+Status: {✓ ORGANIC | ⚠️ FORMULAIC}
+
+{If flagged: detailed recommendation}
+
+───────────────────────────────────────────────────────
+ACT STRUCTURE
+───────────────────────────────────────────────────────
+
+Act I: {percentage}% ({word_count} words)
+Act II: {percentage}% ({word_count} words)
+Act III: {percentage}% ({word_count} words)
+
+Status: {✓ CUSTOM PACING | ⚠️ TEXTBOOK FORMULA}
+
+{If flagged: detailed recommendation}
+
+───────────────────────────────────────────────────────
+OVERALL ASSESSMENT
+───────────────────────────────────────────────────────
+
+Flags: {number}
+
+{If 0 flags}:
+✓ Your pacing shows organic variation appropriate for storytelling.
+  Chapter lengths, scene structures, and act divisions reflect story
+  needs rather than mechanical formulas.
+
+{If 1-2 flags}:
+⚠️ Minor pacing uniformity detected. Review flagged areas to ensure
+   they serve story rather than template.
+
+{If 3-4 flags}:
+❌ WARNING: Pacing shows significant mechanical patterns suggesting
+   formula-driven writing rather than organic storytelling.
+   Recommend revision to introduce natural variation.
+
+═══════════════════════════════════════════════════════
+```
+
+### Integration with Other Tools
+
+**Combine with**:
+- `/write:detect` - Check AI patterns
+- `/write:check-consistency` - Verify continuity
+- Comprehensive audit (see comprehensive-audit.md)
+
+**Best practice**: Run pacing audit AFTER completing draft, BEFORE final polish.
+
+### Notes
+
+- These audits detect MECHANICAL pacing, not bad pacing
+- Flagged issues suggest "check this," not "this is wrong"
+- Organic stories can occasionally match formulas by coincidence
+- Use judgment: if formula serves your story, keep it
+- Purpose: Prevent unconscious template-following

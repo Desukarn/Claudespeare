@@ -568,6 +568,140 @@ This database defines the language patterns commonly found in AI-generated text,
 
 ---
 
+### Pattern 25: Overused Physical Emotion Metaphors
+**Category:** Cliché physical reactions
+**Why AI-ish:** AI defaults to the same 6-8 physical emotion descriptions repeatedly
+
+**Detection patterns:**
+- "held breath they didn't know they were holding"
+- "held their breath" / "holding their breath" (overused)
+- "heart pounding in chest" / "heart pounded" / "heart racing"
+- "blood ran cold" / "blood turned to ice" / "blood froze"
+- "shivers down spine" / "shiver ran down" / "spine tingled"
+- "tears pricked eyes" / "tears pricked at" / "prickling tears"
+- "stomach dropped" / "stomach sank" / "stomach churned"
+- "pulse quickened" / "pulse raced" (overused)
+- "breath caught" / "breath hitched" (overused)
+
+**Why problematic:**
+- Same physical reactions for every character in every emotional moment
+- Becomes predictable and robotic
+- Loses impact through repetition
+- Characters all react identically regardless of personality
+
+**Replacements:**
+- Vary physical reactions: sweating, flushed face, clenched jaw, fidgeting, stillness
+- Character-specific reactions based on personality
+- Environmental interactions: gripping objects, pacing, posture changes
+- Vocal changes: pitch, volume, speed, trailing off
+- Internal physical sensations beyond the standard six
+- Sometimes NO physical marker - action or dialogue conveys emotion
+
+**Example:**
+- AI: "Her heart pounded in her chest. She held a breath she didn't know she was holding. Shivers ran down her spine."
+- Better: "Her hands went numb. She couldn't swallow."
+- Better: "His voice came out flat. Too controlled."
+- Better: "She gripped the doorframe until her knuckles went white."
+
+**Detection threshold:** Flag if 3+ of these appear in a single chapter, or if the same metaphor repeats within 5 pages.
+
+---
+
+### Pattern 26: Info-Dump and Exposition
+**Category:** Encyclopedia narrative
+**Why AI-ish:** AI tends to explain rather than dramatize, dumping information in unnatural blocks
+
+**Detection patterns:**
+- **Long paragraphs without dialogue/action:** 150+ words of pure description or explanation with no character interaction
+- **"As you know" exposition:** Characters telling each other things they both already know
+  - "As you know, the war started in 2045..."
+  - "You remember when we..." (explaining to each other)
+  - "Of course, the ancient ritual requires..." (explaining established lore)
+- **Wikipedia-style thinking:** Character mentally reciting encyclopedia entries
+  - "She thought about the history of the city, which was founded in..."
+  - "He considered the scientific principles: photosynthesis converts..."
+- **Narrator info-dumps:** Long explanatory passages about world/history/systems
+  - Multiple paragraphs explaining magic system with no character action
+  - Historical background with no present-scene grounding
+  - Technical explanations delivered as lecture
+
+**Why problematic:**
+- Stops narrative momentum
+- Feels like reading a textbook, not a story
+- Characters sound unnatural
+- Reader engagement drops
+
+**Replacements:**
+- **Dramatize exposition:** Deliver through conflict, argument, teaching scene, discovery
+- **Break with action:** Interrupt explanation with dialogue, physical action, sensory detail
+- **Character voice filters:** Information through character's personality/knowledge level/mood
+- **Reveal through consequences:** Show world rules through characters encountering them
+- **Spread it out:** Sprinkle exposition across scenes, don't dump all at once
+- **Cut mercilessly:** Only include what reader needs RIGHT NOW for current scene
+
+**Example:**
+- AI: "The city of Talvengard had been founded three hundred years ago by refugees from the northern wars. Its economy was based on trade, particularly in spices and textiles. The ruling council consisted of five merchant families who rotated leadership annually. Magic was strictly regulated by the Covenant of 2156, which limited practitioners to registered guilds."
+- Better: "Talvengard's merchant council met in the old spice warehouse—fitting, since spices had built this city. Maya's family had held one of the five seats for generations, but this year, someone wanted them out."
+
+**Detection threshold:** Flag paragraphs over 150 words with no dialogue, action beats, or sensory engagement. Flag "as you know" constructions. Flag historical/technical explanations spanning more than one paragraph without scene grounding.
+
+---
+
+### Pattern 27: Missing AI Buzzwords
+**Category:** AI-specific vocabulary overuse
+**Why AI-ish:** These phrases appear with high frequency in AI-generated text but rarely in human prose
+
+**Detection patterns:**
+- **"beacon of" / "stands as a beacon"**
+  - "She was a beacon of hope"
+  - "The lighthouse stood as a beacon of safety"
+  - Metaphorical beacon usage (literal lighthouses are fine)
+
+- **"serves as a reminder" / "serves to remind"**
+  - "The scar served as a reminder of his past"
+  - "This serves to remind us that..."
+
+- **"speaks to" (metaphorical, not literal speech)**
+  - "Her silence spoke to her uncertainty"
+  - "This speaks to a larger problem"
+  - "The design speaks to their values"
+
+- **"speaks volumes"**
+  - "His absence spoke volumes"
+  - "The look on her face spoke volumes"
+
+- **"sheds light on" / "shines a light on"**
+  - "This discovery sheds light on the mystery"
+  - "Her testimony shed light on the conspiracy"
+
+- **"heartbeat of" / "pulse of" (metaphorical)**
+  - "The market was the heartbeat of the city"
+  - "Music was the pulse of the community"
+  - Literal heartbeats/pulses are fine
+
+**Why problematic:**
+- High-frequency AI vocabulary markers
+- Often vague or abstract when concrete detail would be stronger
+- Feels meta-analytical rather than narrative
+- Distances reader from immediate scene
+
+**Replacements:**
+- **"beacon of"** → symbol, example, source, or concrete description
+- **"serves as a reminder"** → reminds, shows, proves, or just state the fact
+- **"speaks to"** → shows, reveals, indicates, demonstrates, or be direct
+- **"speaks volumes"** → showed everything, made it clear, revealed, or describe what it showed
+- **"sheds light on"** → reveals, explains, shows, clarifies, or be specific
+- **"heartbeat/pulse of"** → center, core, hub, or describe the actual relationship
+
+**Example:**
+- AI: "The marketplace served as a reminder that their city was the heartbeat of trade. Its vibrant energy spoke volumes about their resilience and shed light on their values, standing as a beacon of hope."
+- Better: "The marketplace buzzed with traders from six provinces. Talvengard lived on trade—always had."
+- Better: "The crowded market showed how far they'd recovered. Two years ago, these stalls were empty."
+
+**Detection threshold:** Flag any usage of these six phrases. None should appear in narrative prose unless there's a strong stylistic reason.
+
+---
+
 ## Custom Phrases
 
 Writers can add their own overused words or phrases to watch for.

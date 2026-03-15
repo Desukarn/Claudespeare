@@ -36,7 +36,45 @@ fi
 LENGTH=$(grep "^length:" stories/{slug}/PROJECT.md | cut -d: -f2 | tr -d ' ')
 ```
 
-### Step 2: Planning Phase Overview
+### Step 2: Trope Inspiration Research (ANTI-SLOP)
+
+**CRITICAL**: Before planning, research fresh tropes to avoid cookie-cutter plots.
+
+See `trope-inspiration-system.md` for full details.
+
+**Prompt user**:
+```
+Would you like me to research story tropes for fresh inspiration?
+
+This takes 2-3 minutes but helps avoid common AI plot patterns like:
+- "Strength becomes weakness"
+- "Final moral act"
+- "Power corrupts protagonist"
+- Standard chosen one narratives
+
+I'll browse TVTropes.org to find unexpected angle combinations for your story.
+
+A. Yes - Research tropes (recommended)
+B. No - Skip and plan directly
+```
+
+**If YES**: Launch trope research agent (Task tool with prompt from trope-inspiration-system.md)
+
+**Agent returns 8-10 trope suggestions**. Present to user, user selects 2-3.
+
+**Store selected tropes** in PROJECT.md:
+```yaml
+inspiration_tropes:
+  - "Earn Your Bad Ending"
+  - "Blue-and-Orange Morality"
+  - "Wrong Genre Savvy"
+```
+
+**Reference these during planning** to avoid formulaic choices.
+
+---
+
+### Step 3: Planning Phase Overview
 
 Explain the process to the writer:
 
@@ -44,8 +82,9 @@ Explain the process to the writer:
 In-Depth Planning Workflow
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-We'll create detailed planning documents for your story across five areas:
+We'll create detailed planning documents for your story across six areas:
 
+0. Trope Inspiration - Fresh angles to avoid clichés (completed above)
 1. Characters - Detailed profiles, backgrounds, goals, conflicts
 2. Plot - Three-act structure with major beats and subplots
 3. Character Arcs - Transformation tracking from start to end
@@ -72,9 +111,36 @@ Prompt for number of main characters:
 For each character, prompt through the following:
 
 #### Name
-"What's this character's name?"
 
-Provide genre-appropriate examples if needed.
+**CRITICAL REQUIREMENT**: Use online name generator - see `name-generator-requirement.md`
+
+**NEVER generate names directly**. AI models have strong biases toward names like "Kael", "Elara", "Lyra", "Aria" etc. These are AI slop.
+
+**Workflow**:
+1. Ask user for character context: "Tell me about this character (genre, culture/ethnicity, role, time period)"
+2. Based on context, choose appropriate generator:
+   - Fantasy: https://www.fantasynamegenerators.com/
+   - Historical/Modern: https://www.behindthename.com/random/
+   - Sci-Fi: https://www.fantasynamegenerators.com/sci-fi-names.php
+3. Use WebFetch to get 8-10 authentic name options
+4. Present options to user:
+   ```
+   Here are 8 authentic [context] names from [generator]:
+
+   1. [Name]
+   2. [Name]
+   3. [Name]
+   4. [Name]
+   5. [Name]
+   6. [Name]
+   7. [Name]
+   8. [Name]
+
+   Pick a number (1-8), ask for more options, or provide your own name.
+   ```
+5. User selects or requests regeneration
+
+**If user provides their own name**: Accept it (bypasses generator requirement)
 
 #### Role
 "What's their role in the story?"
@@ -108,6 +174,59 @@ Prompt for:
 - Why they're in this story at this time
 
 2-4 paragraphs for protagonists, 1-2 for supporting characters.
+
+#### Sanderson Character Triangle Assessment (Protagonist Only)
+
+**CRITICAL**: For protagonist, assess the Character Triangle from Sanderson's frameworks.
+
+See `.claude/skills/sanderson-2025/proactive-relatable-capable.md` for full details.
+
+Ask: "Let's assess your protagonist using Sanderson's Character Triangle. This ensures they're engaging and avoid 'boring protagonist' syndrome."
+
+**The Three Pillars:**
+
+**1. PROACTIVE (Agency)**
+"On a scale of 1-10, how proactive is this character?"
+- 1-3: Passive, reactive, things happen TO them
+- 4-7: Mix of proactive and reactive
+- 8-10: Highly proactive, drives the plot
+
+**Goal: 6+ for protagonists**
+
+If below 6, prompt: "How can we make them more proactive? What can they actively pursue rather than just react to?"
+
+**2. RELATABLE (Empathy)**
+"What makes readers connect with this character?"
+- Flaws they recognize
+- Struggles they understand
+- Emotions they share
+- Humor, vulnerability, or humanity
+
+List 2-3 relatable elements. These create emotional investment.
+
+**3. CAPABLE (Competence)**
+"What is this character good at? What's their area of expertise?"
+- Skills they possess
+- Knowledge they have
+- Talents that make them interesting
+- How they solve problems uniquely
+
+**Note from Sanderson**: "You can drop one pillar, but NEVER two."
+- Proactive + Capable but not Relatable = Cold, hard to root for
+- Proactive + Relatable but not Capable = Frustrating, incompetent
+- Relatable + Capable but not Proactive = Boring, passive protagonist
+
+**Assessment Result:**
+Record triangle strength:
+```
+Proactive: __/10
+Relatable: __/10 (list elements)
+Capable: __/10 (list competencies)
+
+Assessment: [Strong on all three / Strong on two / Needs work]
+```
+
+If weak on multiple pillars, prompt: "Let's strengthen [pillar]. How can we adjust the character to improve this?"
 
 #### External Goal
 "What do they want in this story? What are they trying to achieve?"
@@ -170,15 +289,51 @@ After gathering all characters, generate `stories/{slug}/CHARACTERS.md` from tem
 
 ### Step 4: Plot Structure (STORY-02)
 
-Guide through three-act structure:
+Guide through three-act structure with Sanderson framework integration:
 
 ```
 Plot Structure
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-We'll map your story using three-act structure. This provides the backbone
-for your narrative beats.
+We'll map your story using three-act structure enhanced with Sanderson's
+Promise-Progress-Payoff framework. This ensures engaging narrative momentum.
+
+Reference: .claude/skills/sanderson-2025/promise-progress-payoff.md
 ```
+
+#### Major Dramatic Question (MDQ) - CRITICAL FIRST STEP
+
+**Before outlining acts, define the central question.**
+
+See `.claude/skills/sanderson-2025/promise-progress-payoff.md` section on Major Dramatic Question.
+
+Ask: "What is your story's Major Dramatic Question? This is the ONE central question that drives reader investment."
+
+**Examples:**
+- Will Luke become a Jedi and defeat the Empire?
+- Will Elizabeth and Darcy overcome their pride and prejudice?
+- Will Katniss survive the Hunger Games?
+- Will Frodo destroy the Ring and save Middle-earth?
+
+**Template:**
+```
+Will [protagonist] [achieve goal] despite [obstacle]?
+```
+
+**Requirements:**
+- Must be clear by end of Act One
+- Must be answered in the climax
+- Unifies all subplots around central conflict
+- One primary question (can have sub-questions)
+
+**Record MDQ:**
+```
+Major Dramatic Question: _______________________
+When established: (Must be by Act One end)
+How climax answers it: _______________________
+```
+
+If user struggles, help them identify it from their premise and character goals.
 
 #### Act 1: Setup (First 25%)
 
@@ -216,14 +371,67 @@ For each scene:
 
 #### Act 2: Confrontation (Middle 50%)
 
+**Sanderson Progress Signposting Plan:**
+
+**CRITICAL**: Act 2 must maintain forward momentum or readers drop the book.
+
+See `.claude/skills/sanderson-2025/promise-progress-payoff.md` section on Progress Tracking.
+
+Ask: "Act 2 is where stories often stall. Let's plan progress signposts - breadcrumbs showing readers the story is moving forward."
+
+**What type of progress drives your story?**
+- Information-Based (Mystery/Thriller): Clues discovered, suspects eliminated
+- Relationship Progress (Romance/Drama): Connection moments alternating with setbacks
+- Character Internal (Literary): Beliefs questioned, skills developing
+- Plot/Action (Adventure/Epic): Quests advancing, geography traversed, obstacles overcome
+
+User selects primary type(s).
+
+**Yes-But / No-And Scene Pattern:**
+
+Explain escalation technique: "Every scene in Act 2 should either be YES, BUT or NO, AND."
+
+**YES, BUT**: Character achieves goal BUT complications arise
+- Example: "Hero steals artifact (YES) BUT triggers alarm (complication)"
+
+**NO, AND**: Character fails AND circumstances worsen
+- Example: "Guards catch hero (NO) AND artifact is cursed (worsens)"
+
+**Pattern for Act 2:**
+- Early Act 2: More YES, BUT (victories with complications)
+- Mid Act 2: Mix of both
+- Late Act 2: More NO, AND (failures that compound)
+- Creates natural escalation toward darkest moment
+
+**Try-Fail Cycle Structure:**
+
+Explain Sanderson's structural pattern: "Your protagonist will likely try and fail multiple times before succeeding."
+
+**Cycle:**
+1. **First Attempt**: Obvious solution → FAILS
+   - Reveals: Problem harder than expected
+   - Stakes: Protagonist underestimated challenge
+
+2. **Second Attempt**: More sophisticated approach → FAILS
+   - Reveals: Internal flaws or deeper complications
+   - Stakes: Character must grow to succeed
+
+3. **Third Attempt**: Succeeds after growth/transformation
+   - Reveals: Character has truly changed
+   - Stakes: Victory feels earned
+
+Ask: "What will your protagonist try? What will fail? How will they grow?"
+
+Record try-fail cycles in outline.
+
 **Rising Action / Complications:**
 "What obstacles and complications does your protagonist face?"
 
 Prompt for 4-6 major complications (more for novels, fewer for short stories):
-- New obstacles that escalate conflict
+- New obstacles that escalate conflict (using Yes-But/No-And)
 - Relationships that develop or break
-- Skills or knowledge protagonist must gain
-- Failures and setbacks
+- Skills or knowledge protagonist must gain (Try-Fail learning)
+- Failures and setbacks (each revealing new information)
 - Subplots that interweave
 
 **Midpoint:**
@@ -271,16 +479,57 @@ Length-aware prompting:
 
 #### Act 3: Resolution (Final 25%)
 
-**Climax:**
-"What's the final confrontation or ultimate test?"
+**Sanderson Payoff Design:**
+
+**CRITICAL**: Payoff must be "surprising yet inevitable."
+
+See `.claude/skills/sanderson-2025/promise-progress-payoff.md` section on Payoff Delivery.
+
+Ask: "Your climax must answer the Major Dramatic Question in a way that's both unexpected and feels earned. Let's design that payoff."
+
+**Payoff Approach Options:**
+
+**1. Straightforward Payoff** (Pride and Prejudice style)
+- Promise: Characters will marry (or achieve goal)
+- Sophistication: Complications make path difficult
+- Payoff: Delivers exactly what promised, but journey makes it satisfying
+
+**2. Twist Payoff** (While You Were Sleeping style)
+- Initial Promise: One outcome seems certain
+- Redirection: Gradually shift expectations toward different outcome
+- Payoff: Deliver the redirected outcome (feels right in hindsight)
+
+**3. Gandalf Promise / Dark-Then-Light** (Lord of the Rings style)
+- Promise: Made early, specific ("dawn of the fifth day")
+- Darkness: Escalate so darkly the promise is overshadowed/forgotten
+- Payoff: Deliver on promise precisely when hope seems lost
+- Effect: "When sun comes out, you're cheering"
+
+User selects approach or describes their vision.
+
+**Payoff Design Questions:**
 
 Prompt for:
-- What's at stake?
-- What choice must protagonist make?
-- How do earlier skills/knowledge pay off?
-- What's the moment of maximum tension?
+- **What's at stake?** (Must be highest stakes of entire story)
+- **What choice must protagonist make?** (Reflects character growth)
+- **How do earlier skills/knowledge pay off?** (Checklist of setups to pay off)
+- **What's the moment of maximum tension?**
+- **How does this answer the Major Dramatic Question?** (MUST answer MDQ)
+- **What's the surprising element?** (Unexpected twist or angle)
+- **What's the inevitable element?** (Foreshadowing that makes it feel "of course!")
 
-3-5 sentences describing the climax.
+**Payoff Checklist:**
+```
+[  ] Answers Major Dramatic Question
+[  ] Uses only elements established earlier (no deus ex machina)
+[  ] Both surprising AND inevitable
+[  ] Emotional satisfaction matches promise
+[  ] Protagonist has grown enough to earn this victory
+```
+
+**Climax Description:**
+
+3-5 sentences describing the climax, incorporating payoff design.
 
 **Resolution:**
 "How does the story end? What's the new normal?"
