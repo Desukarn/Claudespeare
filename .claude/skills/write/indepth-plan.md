@@ -679,14 +679,93 @@ Depth varies by genre:
 
 This section more relevant for novels and genre fiction.
 
-#### Geography (LENGTH:novel for detailed maps)
+#### Geography and Place Naming (LENGTH:novel for detailed maps)
 "What are the key locations we'll visit?"
 
-For each important location (2-6 depending on length):
-- Name and description
+**CRITICAL: Place Naming Anti-Slop**
+
+Before documenting locations, generate authentic place names using the same anti-AI-slop standards as character names.
+
+See `name-generator-requirement.md` Part 2 for full place naming system.
+
+**Workflow:**
+
+1. **Determine naming scope:**
+   ```
+   How many locations need names?
+   - Major cities/towns: [X]
+   - Regions/kingdoms: [X]
+   - Geographic features (mountains, rivers, forests): [X]
+   ```
+
+2. **Choose naming method:**
+   ```
+   What cultural/linguistic feel for place names?
+
+   A. Germanic (Eisenheim, Rotenburg, Schwarzwald)
+   B. Celtic (Caerdun, Brynmor, Lynhaven)
+   C. Arabic (Al-Hazan, Qalat-al-Nur, Ishdarabad)
+   D. Nordic (Fjordheim, Vikingstad, Holmgard)
+   E. Latin/Romance (Valoris, Montclair, Bellehaven)
+   F. Asian-inspired (Tianzhou, Hanshan, Longcheng)
+   G. Mixed cultures (specify which)
+   H. Wikipedia random method (unique evocative names)
+   ```
+
+3. **Generate place names:**
+
+   **For Cultural Patterns (A-G):**
+   - Research appropriate suffixes and roots for chosen culture
+   - Germanic: -heim (home), -burg (fortress), -wald (forest), -stadt (city)
+   - Celtic: -dun (fort), -ton (settlement), -bry (hill), -mor (great)
+   - Arabic: -abad (city), -dar (house), al- prefix (the)
+   - etc.
+   - Generate 8-10 options per location type
+   - Present to user with cultural context
+
+   **For Wikipedia Method (H):**
+   - Use Bash to fetch 10 random Wikipedia articles
+   - Extract evocative terms, syllables, place names
+   - Adapt into 8-10 fantasy place names
+   - Example: "Hastings" → "Hastinmere", "Byzantine" → "Byzara"
+   - Present to user with etymology notes
+
+4. **Verify anti-slop:**
+   - ❌ BANNED: Shadowmere, Darkwood, Stormkeep
+   - ❌ Pattern: [Color] + [Generic Noun]
+   - ❌ Pattern: [Adjective] + [Common Noun]
+   - ✅ Culturally consistent
+   - ✅ Pronounceable
+   - ✅ Memorable
+
+5. **Generate minor character name pools:**
+
+   While researching place names, also generate name pools for minor characters.
+
+   For each culture in the story:
+   - Use WebFetch with Behind the Name (cultural filter)
+   - Generate 30 male names, 30 female names, 20 surnames
+   - Store in CHARACTERS.md under "Name Pools for Minor Characters"
+
+   This prevents AI slop names for guards, shopkeepers, servants, etc.
+
+**Then document each important location (2-6 depending on length):**
+- Name (researched, not AI-generated) and description
 - Significance to story
 - Who inhabits or controls it
 - Atmosphere and sensory details
+
+**Add to WORLD.md:**
+```markdown
+## Naming Conventions
+
+All places in [region] follow [culture] patterns:
+- Suffixes: [list]
+- Phonetic style: [description]
+- Examples: [established names]
+
+When introducing new locations during writing, maintain this pattern.
+```
 
 #### History (LENGTH:novel)
 "What historical events shaped this world?"

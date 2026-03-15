@@ -160,6 +160,162 @@ See `name-generator-requirement.md` for full details.
 
 Write to `stories/{slug}/yolo-characters.md`.
 
+### Step 3.5: Place Naming & Name Pools (ANTI-SLOP)
+
+**CRITICAL:** Generate place names and minor character name pools BEFORE writing begins.
+
+#### Part A: Major Place Naming
+
+Ask user:
+```
+What cultural/linguistic feel for place names?
+
+A. Germanic (Eisenheim, Rotenburg, Schwarzwald)
+B. Celtic (Caerdun, Brynmor, Lynhaven)
+C. Arabic (Al-Hazan, Qalat-al-Nur, Ishdarabad)
+D. Nordic (Fjordheim, Vikingstad, Holmgard)
+E. Latin/Romance (Valoris, Montclair, Bellehaven)
+F. Asian-inspired (Tianzhou, Hanshan, Longcheng)
+G. Mixed cultures (specify which)
+H. Wikipedia random method (unique evocative names)
+I. Skip for now (can add later)
+```
+
+**If user chooses A-G (Cultural Pattern):**
+
+1. Determine what needs names:
+   - How many major cities? (2-5 typical for YOLO)
+   - How many regions/kingdoms? (1-3 typical)
+   - Major geographic features? (optional: 1-2)
+
+2. Use WebFetch or research cultural patterns:
+   - Germanic: Suffixes -heim, -burg, -wald, -stadt
+   - Celtic: Suffixes -dun, -ton, -bry, -mor
+   - Arabic: Suffixes -abad, -dar, prefixes al-
+   - etc. (see comprehensive-naming-guide.md)
+
+3. Generate 8 options per major location type
+
+4. Present to user:
+   ```
+   Major cities (Germanic pattern) - Pick 3:
+   1. Eisenheim (Iron-home, metalworking center)
+   2. Rotenburg (Red fortress)
+   3. Grünwald (Green forest)
+   4. Steinburg (Stone fortress)
+   5. Silberhof (Silver court)
+   6. Grauhaven (Gray harbor)
+   7. Neustadt (New city)
+   8. Altdorf (Old village)
+   ```
+
+5. User selects
+
+6. Document in `stories/{slug}/WORLD.md`:
+   ```markdown
+   ## Major Locations
+
+   ### [City Name]
+   Brief description (1-2 sentences)
+
+   ## Naming Conventions
+
+   All places follow [culture] patterns:
+   - Suffixes: [list]
+   - Examples: [established names]
+   - When introducing new locations, maintain this pattern
+   ```
+
+**If user chooses H (Wikipedia Random Method):**
+
+1. Use Bash to fetch 10 random Wikipedia articles:
+   ```bash
+   for i in {1..10}; do
+     curl -sL "https://en.wikipedia.org/api/rest_v1/page/random/summary" | \
+     python3 -c "import sys, json; data=json.load(sys.stdin); \
+     print(f\"Title: {data['title']}\nExtract: {data['extract'][:200]}...\")"
+     sleep 0.5
+   done
+   ```
+
+2. Extract evocative terms, syllables, place names
+
+3. Adapt into 8 fantasy place names:
+   ```
+   From articles (Hastings, Byzantine, Coral, Mionów):
+
+   Cities:
+   1. Hastinmere (Hastings + mere/lake)
+   2. Byzara (Byzantine inspired)
+   3. Koralvast (Coral + vast)
+   4. Mionwick (Mion + wick/bay)
+   5. Rifport (Reef + port)
+   6. Prudholm (Prud + holm)
+   7. Hastengard (Hasten + gard)
+   8. Opolen (Opole + suffix)
+   ```
+
+4. User picks 3-5
+
+5. Document in WORLD.md with etymology notes
+
+**If user chooses I (Skip):**
+- Note that place names can be added during revision
+- WARN: May need to rename AI-generated place names later
+- Continue to name pools
+
+#### Part B: Minor Character Name Pools
+
+**CRITICAL:** Pre-generate name pools to prevent AI slop during writing.
+
+Ask user:
+```
+I'll generate name pools for minor characters (guards, shopkeepers, servants).
+
+What culture(s) for your character names?
+- Match to place naming culture? [default]
+- Different? (specify)
+```
+
+**For EACH culture in story:**
+
+1. Use WebFetch with Behind the Name (appropriate cultural filter)
+2. Generate:
+   - 30 male names
+   - 30 female names
+   - 20 surnames/family names
+
+3. Add to `stories/{slug}/CHARACTERS.md`:
+   ```markdown
+   ## Name Pools for Minor Characters
+
+   ### [Culture] Names (e.g., Germanic-inspired)
+
+   **Male Names (30):**
+   [List of 30 names]
+
+   **Female Names (30):**
+   [List of 30 names]
+
+   **Surnames (20):**
+   [List of 20 names]
+
+   **Usage:** For guards, shopkeepers, servants, background characters.
+   Draw as needed. Track used names to avoid repeats in same scene.
+   ```
+
+**Time investment:** 3-5 minutes for both place naming and name pools
+
+**Benefits:**
+- Zero AI slop names (even for tiny roles)
+- Instant access while writing
+- Cultural consistency throughout
+- Professional authenticity
+
+**YOLO Mode Note:** This step adds 3-5 minutes but prevents hours of revision later removing AI slop names. RECOMMENDED even in YOLO mode.
+
+---
+
 ### Step 4: Create Simple Outline with Conflict & Exposition Analysis
 
 Generate 3-act structure from premise and characters:

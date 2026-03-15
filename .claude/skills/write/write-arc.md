@@ -221,7 +221,51 @@ Premise: {premise}
 
 1. **Read Context**: Review all story context above carefully
 
-2. **CRITICAL: Information Delivery Standards** (ANTI-COOKIE-CUTTER):
+2. **CRITICAL: Naming Rules** (ANTI-AI-SLOP):
+
+   **For NEW minor characters introduced in this chapter:**
+   - ❌ NEVER generate names spontaneously (AI slop risk)
+   - ✅ ALWAYS draw from name pools in CHARACTERS.md
+   - Location: See "Name Pools for Minor Characters" section
+   - Use names from appropriate cultural pool
+   - Track used names to avoid repeats within same chapter
+   - Examples: Guards, shopkeepers, servants, passersby, minor NPCs
+
+   **For NEW locations introduced in this chapter:**
+   - ❌ NEVER generate place names spontaneously
+   - ✅ ALWAYS follow naming conventions documented in WORLD.md
+   - Location: See "Naming Conventions" section
+   - Match established phonetic patterns exactly
+   - Example: If existing cities are "Eisenheim, Rotenburg" (Germanic), new city should be "Grünwald" (Germanic pattern), NOT "Shadowkeep" (AI slop)
+
+   **BANNED CHARACTER NAMES (AI Slop) - NEVER USE:**
+   - Kael, Kaelin, Kylar, Kain
+   - Elara, Elora, Elysia, Elira
+   - Lyra, Lira, Liora
+   - Aria, Arya, Ariana
+   - Theron, Talon, Zara, Zyra
+   - Seraphina, Celestia
+   - Any name ending in -ael, -ara, -lyn (check full list in name-generator-requirement.md)
+
+   **BANNED PLACE NAMES (AI Slop) - NEVER USE:**
+   - Shadow + [anything]: Shadowmere, Shadowkeep, Shadowfen
+   - Dark + [anything]: Darkwood, Darkhaven, Darkwater
+   - Storm + [anything]: Stormkeep, Stormreach, Stormhaven
+   - [Color] + [Generic]: Redwood, Blackwater, Greenmoor
+   - Generic fantasy: The Fallen Kingdom, The Lost City
+
+   **When in doubt about naming:**
+   - Use descriptive terms instead: "the guard," "the innkeeper," "the old woman"
+   - Note in your chapter summary that element needs naming
+   - Coordinator will provide authentic name in revision pass
+   - BETTER to use descriptor than risk AI slop name
+
+   **At end of chapter, note in summary:**
+   - List any new minor characters introduced (with names from pools)
+   - List any new locations mentioned (following conventions)
+   - Flag any elements that need naming verification
+
+3. **CRITICAL: Information Delivery Standards** (ANTI-COOKIE-CUTTER):
 
    **Before writing any scene where characters learn/discuss information, apply these rules:**
 

@@ -136,6 +136,51 @@ Generate the complete chapter following these guidelines:
 
 ## CRITICAL: Anti-Slop Writing Standards
 
+**NAMING RULES - ABSOLUTE REQUIREMENT**:
+
+**For NEW minor characters introduced in this chapter:**
+- ❌ NEVER generate names spontaneously (AI slop risk)
+- ✅ ALWAYS draw from name pools in CHARACTERS.md
+- Location: See "Name Pools for Minor Characters" section
+- Track used names to avoid repeats within same chapter
+- Examples: Guards, shopkeepers, servants, passersby
+
+**For NEW locations introduced in this chapter:**
+- ❌ NEVER generate place names spontaneously
+- ✅ ALWAYS follow naming conventions documented in WORLD.md
+- Location: See "Naming Conventions" section
+- Match established phonetic patterns exactly
+- Example: If existing cities are "Eisenheim, Rotenburg" (Germanic), new city should be "Grünwald" (Germanic pattern), NOT "Shadowkeep" (AI slop)
+
+**BANNED CHARACTER NAMES (AI Slop):**
+- Kael, Kaelin, Kylar, Kain
+- Elara, Elora, Elysia, Elira
+- Lyra, Lira, Liora
+- Aria, Arya, Ariana
+- Theron, Talon, Zara, Zyra
+- Seraphina, Celestia
+- Any name ending in -ael, -ara, -lyn
+
+**BANNED PLACE NAMES (AI Slop):**
+- Shadow + [anything]: Shadowmere, Shadowkeep, Shadowfen
+- Dark + [anything]: Darkwood, Darkhaven, Darkwater
+- Storm + [anything]: Stormkeep, Stormreach, Stormhaven
+- [Color] + [Generic]: Redwood, Blackwater, Greenmoor
+- Generic fantasy: The Fallen Kingdom, The Lost City
+
+**When in doubt about names:**
+- Use descriptive terms: "the guard," "the innkeeper," "the old woman"
+- Note in chapter summary that element needs naming
+- User will provide authentic name in revision pass
+- BETTER to use descriptor than AI slop name
+
+**Note new named elements in chapter summary:**
+- List any new minor characters introduced (with temporary descriptors if unnamed)
+- List any new locations mentioned
+- User will verify naming authenticity during revision
+
+---
+
 **BANNED AI WORDS** (Never use these):
 - "delve" / "delved" / "delving" → Use: explored, studied, examined, investigated
 - "tapestry" (metaphorical) → Use: web, mixture, blend, array, or be specific
