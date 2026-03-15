@@ -221,7 +221,76 @@ Premise: {premise}
 
 1. **Read Context**: Review all story context above carefully
 
-2. **Sanderson Framework Guidelines** (CRITICAL - PHASE 2 INTEGRATION):
+2. **CRITICAL: Information Delivery Standards** (ANTI-COOKIE-CUTTER):
+
+   **Before writing any scene where characters learn/discuss information, apply these rules:**
+
+   Reference: `.claude/skills/write/scene-craft-primer.md` for full details
+
+   **A. Avoid Convenient Conversations:**
+   - ❌ NEVER: NPCs openly discussing the MacGuffin protagonist needs
+   - ❌ NEVER: Strangers in tavern explaining plot
+   - ❌ NEVER: "As you know" exposition between characters
+   - ✅ ALWAYS: Protagonist ACTIVELY seeks information through conflict
+   - ✅ ALWAYS: Information costs something (social, physical, emotional)
+   - ✅ ALWAYS: Character discovers on-page through action
+
+   **B. Every Scene Needs Conflict:**
+   - If scene only delivers information → REVISE
+   - What does character WANT in this scene? (specific goal)
+   - What OPPOSES them getting it? (conflict)
+   - What CHANGES by scene end? (outcome - use YES-BUT or NO-AND)
+   - Test: Could you cut scene and replace with one-line summary?
+     * If YES → scene is weak, needs conflict added
+
+   **C. Show Through Action, Not Explanation:**
+   - Explain by DOING, not TELLING
+   - Backstory through current conflict
+   - World-building through interaction
+   - Character discovers information on-page
+   - Information emerges from struggle
+
+   **D. Red Flags to Avoid:**
+   - Tavern scenes where strangers discuss plot
+   - "Overheard conversation" delivering key information
+   - NPCs who exist only to explain things
+   - Characters explaining to each other what they both know
+   - Paragraphs over 150 words with no dialogue/action
+   - Scenes with no goal beyond "learn information"
+
+   **E. Information Delivery Methods (Use These):**
+
+   **Method 1: Information Through Conflict**
+   ```
+   Character wants info → Other character refuses/lies
+   → Protagonist must earn it (payment/favor/risk)
+   → Get partial info or info with complications
+   ```
+
+   **Method 2: Information Through Discovery**
+   ```
+   Character examines object/document/place
+   → Discovers through action (testing, triggering, reading)
+   → Learns on-page with reader watching
+   ```
+
+   **Method 3: Information Through Consequences**
+   ```
+   Character acts based on assumption
+   → Assumption proves wrong (painful lesson)
+   → Learns through experiencing consequences
+   ```
+
+   **F. Scene Goal/Conflict/Outcome Check:**
+
+   Before writing each scene, verify:
+   1. **Goal:** What does POV character want? (specific, immediate)
+   2. **Conflict:** What opposes them? (creates friction/tension)
+   3. **Outcome:** What changes? (use YES-BUT or NO-AND)
+
+   If scene lacks any element → revise or cut
+
+3. **Sanderson Framework Guidelines** (CRITICAL - PHASE 2 INTEGRATION):
 
    **Apply during chapter writing to ensure structural quality:**
 
@@ -410,7 +479,14 @@ Premise: {premise}
    - Use SPECIFIC, VARIED physical reactions
    - Example alternatives: jaw clenched, fingers drummed, shoulders tensed, voice steadied
 
-9. **Output Format**:
+9. **Reference Scene Craft Primer for Examples**:
+   - Full guide at `.claude/skills/write/scene-craft-primer.md`
+   - Shows good vs weak scene examples
+   - Demonstrates information delivery methods
+   - Lists all red flags with fixes
+   - Use as reference during writing
+
+10. **Output Format**:
    - Save to: stories/{slug}/chapters/chapter-{NN}.md
    - Include frontmatter with metadata
    - Use proper markdown formatting

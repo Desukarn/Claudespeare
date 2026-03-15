@@ -702,6 +702,125 @@ This database defines the language patterns commonly found in AI-generated text,
 
 ---
 
+### Pattern 28: Structural Exposition (Info-Dump Scenes)
+
+**Category:** Scene structure
+**Why AI-ish:** AI defaults to delivering information through convenient scenes with no conflict, making stories feel mechanical and cookie-cutter
+
+**Detection patterns:**
+
+1. **Tavern/Bar Scenes with Convenient Plot Discussion**
+   - Protagonist overhears strangers discussing exactly what they need to know
+   - NPCs in public places explaining backstory, MacGuffin location, villain plans
+   - "Conveniently overheard conversation" trope
+   - Example: "Two men at the bar were discussing the Crystal of Power. 'As you know, it's hidden in the Northern Temple,' one said."
+
+2. **"As You Know" Exposition Between Characters**
+   - Characters explaining to each other what they both already know
+   - Example: "As you know, the war started in 2045 when..." (Why would they tell each other this?)
+   - Example: "You remember when we discovered the crystal required three mages..."
+   - Characters serving as mouthpieces to deliver info to reader
+
+3. **Info-Dump Paragraphs (150+ words)**
+   - Long paragraphs of pure explanation with no dialogue, action, or character interaction
+   - Narrator stops story to explain world-building, history, or systems
+   - Character thinking encyclopedia entries
+   - Example: Three paragraphs explaining magic system mechanics without scene action
+
+4. **Scenes That Exist Only to Deliver Information**
+   - No character goal beyond "learn information"
+   - No conflict—information freely provided
+   - No real outcome except "now protagonist knows X"
+   - Test: Could you cut scene and replace with one-line summary? ("Sarah learned about the temple from Marcus")
+
+5. **NPCs Who Exist Only to Explain**
+   - Character appears solely to deliver exposition, then disappears
+   - "Helpful stranger" or "wise mentor" who conveniently knows everything
+   - Character has no goals/conflicts of their own—just exposition delivery
+   - Example: Librarian who appears once to explain ancient prophecy in detail
+
+**Why problematic:**
+- Stops narrative momentum cold
+- Feels artificial—real people don't talk like this
+- Reader engagement drops (why many readers abandon stories)
+- Characters sound like robots, not humans
+- Story feels mechanical, not organic
+- Classic sign of AI-generated or amateur writing
+
+**Replacements and fixes:**
+
+**1. Information Through Conflict:**
+- Character WANTS information, but other character REFUSES or LIES
+- Information costs something (payment, favor, risk)
+- Characters argue about meaning/interpretation
+- Example:
+  * ❌ "Marcus told Sarah everything about the temple's history."
+  * ✅ "Marcus refused to talk about the temple. Sarah had to threaten to tell his boss about the missing samples before he'd say anything. Even then, he only gave her half the truth."
+
+**2. Information Through Discovery:**
+- Character finds information on-page through action
+- Examining objects, reading documents, triggering traps, testing theories
+- Example:
+  * ❌ "Sarah thought about the ward system. It had three layers, each requiring different magic."
+  * ✅ "Sarah pressed her palm to the door. The stone hummed. Her detection crystal pulsed three times. 'Shit. Three layers.' She'd need all three types of magic."
+
+**3. Break Up Exposition with Action:**
+- If you must explain, interrupt with dialogue, movement, sensory details
+- Max 2-3 sentences of explanation before returning to scene action
+- Filter through character personality/knowledge/mood
+- Example:
+  * ❌ "The temple had been built in 1723 by the Northern Kingdom as a repository for magical artifacts. The builders used enchanted stone resistant to physical and magical attacks. The defenses included three ward layers, each requiring different magic to bypass."
+  * ✅ "Northern Kingdom construction—Sarah recognized the enchanted stone. Old. Expensive. And three wards, if her crystal was right. 'They really didn't want visitors,' she muttered."
+
+**4. Only Include What's Needed NOW:**
+- Resist explaining entire history/system upfront
+- Give only information relevant to current scene
+- Trust reader to pick up context through action
+- Save detailed explanations for when they matter
+
+**5. Dramatize Information Delivery:**
+- Turn exposition into a scene with goal/conflict/outcome
+- Character actively seeks info (goal)
+- Something opposes them getting it (conflict)
+- They get partial info or info with a cost (outcome)
+
+**Manual Review Questions:**
+
+When you find potential exposition dumps, ask:
+
+1. **Does this scene have conflict beyond delivering information?**
+   - If NO → Revise to add conflict or cut scene
+
+2. **Could this information be revealed through action instead?**
+   - Character discovers through doing
+   - Information emerges from current events
+   - Show through consequences
+
+3. **Are characters talking TO each other or AT the reader?**
+   - "As you know..." = talking AT reader
+   - Natural disagreement/discovery = talking TO each other
+
+4. **Does this scene have Goal/Conflict/Outcome?**
+   - Goal: What does POV character want?
+   - Conflict: What opposes them?
+   - Outcome: What changes?
+   - If missing any element → weak scene
+
+5. **Would a real person think/talk this way?**
+   - People don't mentally recite encyclopedias
+   - People don't explain things to others who already know them
+   - If it sounds like a lecture, it needs revision
+
+**Detection threshold:**
+- Flag any paragraph over 150 words with no dialogue or action
+- Flag "as you know" or similar constructions
+- Flag scenes where the only outcome is "character learns information"
+- Flag tavern/bar scenes with overheard conversations about plot
+
+**Special note:** This is one of the most important patterns to catch, as exposition dumps are the #1 reason readers abandon stories. Cookie-cutter AI writing defaults to explaining rather than dramatizing.
+
+---
+
 ## Custom Phrases
 
 Writers can add their own overused words or phrases to watch for.
